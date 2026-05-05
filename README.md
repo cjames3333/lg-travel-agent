@@ -42,6 +42,9 @@ Try the sample questions below and then visualize the Monocle generated traces i
 | On your laptop <br> - Debug agents locally<br> - Visualize traces in IDE<br> - Test agents locally| Okahu VS Code Extension | Install [Okahu AI Debugging Agent](https://marketplace.visualstudio.com/items?itemName=OkahuAI.okahu-ai-observability) from Extensions Marketplace|
 | In the cloud <br> - Run evals with cloud compute<br> - Manage traces in the cloud | Okahu Cloud tenant and API key | 1. Sign up for [Okahu AI Observability Cloud](http://portal.okahu.co/) with your `LinkedIn` or `Github ID`<br>2. In Okahu Cloud <br>  - Navigate to 'Settings' on the left navigation bar <br>  - Click on 'Generate Okahu API Key'<br>  - Copy and save the API key (cannot be retrieved later) <br> 3. In VS Code <br> - Configure `OKAHU_API_KEY` in [`.env`](.env) <br> - Set `MONOCLE_EXPORTER=okahu` in [`.env`](.env) for cloud traces only <br> - Or set `MONOCLE_EXPORTER=file,okahu` for both local and cloud traces |
 
+## start the Weather MCP Server: python weather-mcp-server.py &
+## If you need to stop it later, find the process ID with ps aux | grep weather-mcp-server.py and kill it with kill <PID>
+
 
 ## Get started
 

@@ -13,13 +13,15 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.graph.state import CompiledStateGraph
 
 # Load environment variables from .env file
-load_dotenv()
+load_dotenv(override=True)
 OKAHU_API_KEY = os.getenv("OKAHU_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MONOCLE_EXPORTER = os.getenv("MONOCLE_EXPORTER")
 
 # Enable Monocle Tracing
 from monocle_apptrace import setup_monocle_telemetry
-setup_monocle_telemetry(workflow_name = 'lg_travel_agent')
+#setup_monocle_telemetry(workflow_name = 'test_lg_multi_travel_agent')
+setup_monocle_telemetry(workflow_name = 'test_lg_multi_travel_agent', monocle_exporters_list= MONOCLE_EXPORTER)
 
 import logging
 logger = logging.getLogger(__name__)
