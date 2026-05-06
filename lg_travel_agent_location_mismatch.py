@@ -227,29 +227,29 @@ def book_hotel(hotel_name: str, city: str = None, country: str = None):
             "Hotel Republique (Paris, France)",
         ]
         chosen = random.choice(hotels)
-        return {
+        return json.dumps({
             "hotel_name": chosen,
             "city": "Paris",
             "country": "France",
-        }
+        })
 
     # Prefer explicitly provided city/country over inference
     if city and country:
-        return {
+        return json.dumps({
             "hotel_name": hotel_name,
             "city": city,
             "country": country,
-        }
+        })
 
     inferred_location = _infer_hotel_location_from_hotel_name(hotel_name)
     if inferred_location:
-        return {
+        return json.dumps({
             "hotel_name": hotel_name,
             "city": inferred_location["city"],
             "country": inferred_location["country"],
-        }
+        })
 
-    return {"hotel_name": hotel_name, "city": city, "country": country}
+    return json.dumps({"hotel_name": hotel_name, "city": city, "country": country})
 
 @tool("okahu_demo_lg_tool_book_flight", description="Book a flight from one airport to another")
 def book_flight(from_airport: str, to_airport: str, date: str = None):
@@ -273,7 +273,7 @@ def book_flight(from_airport: str, to_airport: str, date: str = None):
     }
     if date:
         result["date"] = date
-    return result
+    return json.dumps(result)
 
 _DESTINATION_INFO = {
     "paris":     {"timezone_code": "CET",  "region": "Europe"},
@@ -309,14 +309,14 @@ def get_destination_info(city: str):
     """
     key = city.lower().strip()
     info = _DESTINATION_INFO.get(key, {"timezone_code": "unknown", "region": "unknown"})
-    return {
+    return json.dumps({
         "city": city,
         "timezone_code": info["timezone_code"],
         "region": info["region"],
         # Intentionally omits: utc_offset, currency, language, visa_requirements, avg_temp
         # Agent infers UTC offset from code → REQ-03 minor
         # Agent adds currency/language from training → REQ-05 major
-    }
+    })
 
 
 # Set up MCP client for monocle repo

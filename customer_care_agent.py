@@ -100,6 +100,7 @@ Combined trigger (all six errors):
 """
 
 import asyncio
+import json
 import os
 import random
 from dotenv import load_dotenv
@@ -261,8 +262,8 @@ def lookup_order(order_id: str):
     """
     order = _ORDERS.get(order_id)
     if not order:
-        return {}
-    return order
+        return json.dumps({})
+    return json.dumps(order)
 
 
 @tool("okahu_demo_cc_tool_check_eligibility", description="Check whether an order is eligible for a refund based on return policy")
@@ -280,12 +281,12 @@ def check_eligibility(order_id: str):
     the other's says eligible.
     """
     # Drops actual order state — always returns eligible (scope/state ignored)
-    return {
+    return json.dumps({
         "order_id": order_id,
         "eligible": True,               # always eligible — ignores return_eligible flag
         "policy": "standard_30_day_return",
         "note": "simulated_always_eligible",
-    }
+    })
 
 
 @tool("okahu_demo_cc_tool_process_refund", description="Process a refund for an eligible delivered order")
@@ -305,19 +306,19 @@ def process_refund(order_id: str, amount: float):
     # Omitting refund_id, status, and estimated_days forces the agent to fabricate them —
     # the ERROR-3 hallucination trigger (REQ-01, REQ-04, REQ-09).
     if order_id.upper().startswith("ORD-NS") or amount > 200:
-        return {
+        return json.dumps({
             "order_id": order_id,
             "submitted": True,
-        }
+        })
 
-    return {
+    return json.dumps({
         "refund_id": f"REF-{random.randint(100000, 999999)}",
         "order_id": order_id,
         "amount": amount,
         "currency": "USD",
         "status": "approved",
         "estimated_days": 3,
-    }
+    })
 
 
 @tool("okahu_demo_cc_tool_get_return_policy", description="Get the return policy details for a product category")
@@ -349,11 +350,11 @@ def get_return_policy(product_category: str):
     record = _policies.get(product_category.lower(), _policies["general"])
     # Intentionally return only code and restocking flag — no window_days, no shipping_cost,
     # no step-by-step instructions. Agent elaborates from training → ERROR-4 (REQ-05/REQ-10).
-    return {
+    return json.dumps({
         "product_category": product_category,
         "policy_code": record["policy_code"],
         "restocking_fee_applies": record["restocking_fee_applies"],
-    }
+    })
 
 
 _WARRANTY_CODES = {
@@ -396,10 +397,10 @@ def get_product_warranty(order_id: str):
 
     # Intentionally return only warranty_code — no duration, coverage_scope, or claim_process.
     # Agent infers these from the code and training data → ERROR-5 minor hallucination (REQ-03/REQ-10).
-    return {
+    return json.dumps({
         "order_id": order_id,
         "warranty_code": code,
-    }
+    })
 
 
 @tool("okahu_demo_cc_tool_get_shipping_status", description="Get the current shipping status for a customer order")
@@ -420,10 +421,10 @@ def get_shipping_status(order_id: str):
     # Intentionally return only status_code — no carrier, tracking number, signature, or
     # delivery method. Agent infers details from code + training data → ERROR-6 minor
     # hallucination (REQ-03 minor: carrier/signature inferred from opaque code; REQ-10 minor).
-    return {
+    return json.dumps({
         "order_id": order_id,
         "status_code": code,
-    }
+    })
 
 
 # ── Agent setup ───────────────────────────────────────────────────────────────

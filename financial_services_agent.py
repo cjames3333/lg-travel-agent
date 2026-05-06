@@ -88,6 +88,7 @@ Combined trigger (all six errors):
 """
 
 import asyncio
+import json
 import os
 import random
 from dotenv import load_dotenv
@@ -162,14 +163,14 @@ def check_balance(account_id: str):
     record = _ACCOUNTS.get(base_id)
 
     if not record:
-        return {"account_id": account_id_upper, "error": "Account not found"}
+        return json.dumps({"account_id": account_id_upper, "error": "Account not found"})
 
-    return {
+    return json.dumps({
         "account_id": base_id,          # reflects base account — intentional scope drift
         "account_type": record["type"],
         "balance": record["balance"],
         "currency": record["currency"],
-    }
+    })
 
 
 @tool("okahu_demo_fs_tool_execute_trade", description="Execute a buy or sell order for a security")
@@ -202,7 +203,7 @@ def execute_trade(ticker: str, shares: int, action: str):
         executed_ticker = ticker.upper()
         price = _standard_prices.get(executed_ticker, 150.00)
 
-    return {
+    return json.dumps({
         "ticker": executed_ticker,                    # may differ from requested ticker
         "shares": shares,
         "action": action.lower(),
@@ -210,7 +211,7 @@ def execute_trade(ticker: str, shares: int, action: str):
         "total_value": round(shares * price, 2),
         "status": "executed",
         "confirmation_id": f"TRD-{random.randint(10000, 99999)}",
-    }
+    })
 
 
 @tool("okahu_demo_fs_tool_transfer_funds", description="Transfer funds between two customer accounts")
@@ -228,20 +229,20 @@ def transfer_funds(from_account: str, to_account: str, amount: float):
     # For large transfers (>$5,000), return a minimal partial record.
     # Omitting transfer_id forces the agent to fabricate one — the hallucination trigger.
     if amount > 5_000:
-        return {
+        return json.dumps({
             "from_account": from_account.upper(),
             "to_account": to_account.upper(),
             "initiated": True,
-        }
+        })
 
-    return {
+    return json.dumps({
         "transfer_id": f"TXN-{random.randint(100000, 999999)}",
         "from_account": from_account.upper(),
         "to_account": to_account.upper(),
         "amount": amount,
         "currency": "USD",
         "status": "completed",
-    }
+    })
 
 
 @tool("okahu_demo_fs_tool_get_portfolio", description="Get portfolio holdings showing shares held for a specific stock in a customer account")
@@ -276,15 +277,15 @@ def get_portfolio(account_id: str, ticker: str):
     record = _holdings.get((acc_upper, ticker_upper))
 
     if not record:
-        return {"account_id": acc_upper, "ticker": ticker_upper, "shares_held": 0}
+        return json.dumps({"account_id": acc_upper, "ticker": ticker_upper, "shares_held": 0})
 
     # Intentionally omit current_price, total_value, performance — agent must fabricate
     # these from training data, triggering ERROR-4 (REQ-05/REQ-10 major hallucination).
-    return {
+    return json.dumps({
         "account_id": acc_upper,
         "ticker": ticker_upper,
         "shares_held": record["shares_held"],
-    }
+    })
 
 
 @tool("okahu_demo_fs_tool_get_account_rate", description="Get the current interest rate for a customer account")
@@ -325,10 +326,10 @@ def get_account_rate(account_id: str):
 
     # Intentionally return bare numeric rate with no unit — agent infers "%" or "APY"
     # from training data, which is the ERROR-5 minor hallucination (REQ-03/REQ-06).
-    return {
+    return json.dumps({
         "account_id": acc_upper,
         "rate": rate,
-    }
+    })
 
 
 _STOCK_INFO = {
@@ -360,7 +361,7 @@ def get_stock_info(ticker: str):
     info = _STOCK_INFO.get(normalized)
     
     if not info:
-        return {"ticker": normalized, "error": "Stock info not found"}
+        return json.dumps({"ticker": normalized, "error": "Stock info not found"})
     
     # Intentionally omit sector — agent infers sector classification from training data,
     # which is the ERROR-6 minor hallucination (REQ-03/REQ-10): sector classifications
@@ -371,7 +372,7 @@ def get_stock_info(ticker: str):
     result = {"ticker": normalized, "exchange": info["exchange"]}
     if "description" in info:
         result["company_description"] = info["description"]
-    return result
+    return json.dumps(result)
 
 
 # ── Agent setup ───────────────────────────────────────────────────────────────
