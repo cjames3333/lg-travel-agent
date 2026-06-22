@@ -1,0 +1,1875 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "eval_template": "hallucination",
+  "format": "preamble+csv",
+  "total_scenarios": 58,
+  "correct": 27,
+  "accuracy": 0.4655,
+  "by_label": {
+    "no_hallucination": {
+      "correct": 10,
+      "total": 15
+    },
+    "minor_hallucination": {
+      "correct": 3,
+      "total": 13
+    },
+    "major_hallucination": {
+      "correct": 14,
+      "total": 30
+    }
+  },
+  "results": [
+    {
+      "id": "CC-T01",
+      "name": "major refund over limit",
+      "trace_id": "e119a687e218a9a5fd1fd6110826a389",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately summarizes the refund processing results provided by the refund specialist agent. All key details in the final response (Refund ID: REF-2HJ8G9, Status: Approved, Refund Amount: $350.00, Processing Timeline: 3-5 business days) are directly taken from the refund specialist's response in turn 15. The response appropriately omits the Order ID that was included in the specialist's response, which is reasonable since the user already knows their order ID. No fabricated information, contradictions, or unsupported claims are present.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Refund ID: REF-2HJ8G9",
+          "Status: Approved",
+          "Refund Amount: $350.00",
+          "Estimated Processing Timeline: 3-5 business days",
+          "Refund has been successfully processed"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 2312,
+        "output_tokens": 400
+      }
+    },
+    {
+      "id": "CC-T02",
+      "name": "no hal refund small amount",
+      "trace_id": "8fa07a30f40d8943e48d77bd2408af6d",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately reflects the information provided by the refund processing specialist agent. All key details including the refund ID (REF-421394), order ID (ORD-RF-0045), refund amount ($45.00), status (Approved), and processing timeline (3-5 business days) are faithfully reproduced from the agent's response in row 5. The final response appropriately omits the currency designation \"USD\" but maintains all substantive information. No new information is invented or contradicted, and the response stays within the bounds of what was actually returned by the tool/agent system.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Refund ID: REF-421394 matches agent response",
+          "Order ID: ORD-RF-0045 matches agent response",
+          "Refund amount: $45.00 matches agent response",
+          "Status: Approved matches agent response",
+          "Processing timeline: 3-5 business days matches agent response",
+          "Confirmation that refund has been processed successfully aligns with agent's approval status"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1738,
+        "output_tokens": 435
+      }
+    },
+    {
+      "id": "CC-T03",
+      "name": "major order entity substitution",
+      "trace_id": "04ca9ebc93ad7f4eca59437f6ab3252c",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains a significant discrepancy between what the user requested and what was actually returned by the order lookup specialist. The user asked to \"Look up order ORD-A1042\", but the final response provides details for order \"ORD-B1042\". While the order lookup specialist (turn 5) mentioned that \"the order ID has been updated to ORD-B1042 due to a simulated order substitution,\" this substitution itself appears to be a fabrication since there's no indication in the context that such substitutions are part of the normal order lookup process. The specific order details (customer name, product, amount, date, status) are presented as factual but cannot be verified against the provided context since we don't see the actual tool response that would have contained these details. The substitution explanation appears to be an attempt to rationalize providing different order details than what was requested.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The response correctly indicates that an order lookup was performed",
+          "The response maintains the format and structure expected for order details",
+          "The 'Return Eligible: True' field aligns with the system instructions about relaying returned field values"
+        ],
+        "contradictions": [
+          "User requested order ORD-A1042 but response provides details for ORD-B1042",
+          "Claims order ID was 'updated due to a simulated order substitution' which appears to be a fabricated explanation",
+          "Presents specific order details (customer name, product, amount, etc.) that cannot be verified from the actual tool response"
+        ],
+        "hallucination_types": [
+          "factual_inaccuracy",
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1753,
+        "output_tokens": 552
+      }
+    },
+    {
+      "id": "CC-T04",
+      "name": "no hal order lookup standard",
+      "trace_id": "4af4a09c7bed9eee7433f01aab6a3ae3",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately relays the order details exactly as provided by the order lookup specialist. The system instructions explicitly state \"When an agent returns a result, relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\" The final response follows this instruction precisely. All order details (Order ID: ORD-STD-0033, Customer: A. Johnson, Product: Wireless Mouse, Amount: $45.00, Date: 2024-03-15, Status: Delivered, Return Eligible: True) are reproduced verbatim from the order lookup specialist's response in row 5. The additional offer to answer further questions is a reasonable customer service addition that doesn't contradict any information.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Order ID: ORD-STD-0033",
+          "Customer: A. Johnson",
+          "Product: Wireless Mouse",
+          "Amount: $45.00",
+          "Date: 2024-03-15",
+          "Status: Delivered",
+          "Return Eligible: True"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 1.0
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1734,
+        "output_tokens": 447
+      }
+    },
+    {
+      "id": "CC-T05",
+      "name": "major order details substitution",
+      "trace_id": "8cadcf0471dec530d3f49a1671ae06f4",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The AI assistant's response contains a significant hallucination regarding the order ID. The user specifically requested details for order \"ORD-A5509\" (as shown in row 2), but the final response provides information for \"ORD-B5509\" instead. This is a critical factual error because it means the customer is receiving information about a completely different order than the one they requested. While the other order details (customer name, product, amount, etc.) appear to be formatted correctly and match what would be expected from an order lookup tool, they are for the wrong order entirely. This type of error could lead to customer confusion and operational issues. The order ID discrepancy represents a fabrication or substitution of critical identifying information that directly contradicts the user's original request.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "Customer: R. Patel",
+          "Product: UltraSound Speaker",
+          "Amount: $349.00",
+          "Date: 2026-03-02",
+          "Status: Delivered",
+          "Return Eligible: Yes"
+        ],
+        "contradictions": [
+          "Order ID: ORD-B5509 (user requested ORD-A5509)"
+        ],
+        "hallucination_types": [
+          "factual_inaccuracy",
+          "fabrication"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1732,
+        "output_tokens": 464
+      }
+    },
+    {
+      "id": "CC-T06",
+      "name": "minor warranty scope inference",
+      "trace_id": "4bfabd3defab2897a11da83f45f42ada",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "minor_hallucination",
+        "explanation": "The AI assistant's final response contains one significant hallucination regarding warranty interpretation. While the order lookup specialist correctly identified the warranty code as \"STD-1Y\" for order ORD-STD-0033, the final response adds unsupported interpretations about what this warranty covers. The specialist's response mentions that this \"typically covers defects in materials or workmanship but does not cover accidental damage\" and definitively states the warranty \"does not include accidental damage coverage.\" However, the conversation tree shows no evidence that any tool call or sub-agent actually provided information about what STD-1Y warranty covers or excludes. The order lookup specialist only returned the warranty code itself, not its coverage details. The final response fabricated warranty coverage details that were not provided by any of the specialist agents.",
+        "hallucination_score": 0.3,
+        "factual_alignments": [
+          "The warranty code for order ORD-STD-0033 is STD-1Y"
+        ],
+        "contradictions": [
+          "STD-1Y typically covers defects in materials or workmanship but does not cover accidental damage",
+          "The warranty on this order does not include accidental damage coverage"
+        ],
+        "hallucination_types": [
+          "unsupported_claim",
+          "fabrication"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.85
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1687,
+        "output_tokens": 456
+      }
+    },
+    {
+      "id": "CC-T07",
+      "name": "no hal shipping status",
+      "trace_id": "913e3f1cbde5133761f3215053d2d3c9",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The AI assistant's final response accurately relays all the order information provided by the order lookup specialist without any additions, modifications, or fabrications. The response maintains complete fidelity to the returned data, including customer name (M. Chen), product (USB-C Hub), amount ($89.99), date (March 28, 2026), status (Delivered), and return eligibility (True). The system instructions specifically state to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status,\" and the assistant followed this instruction precisely. The final response contains only information that was directly provided by the order lookup specialist agent.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Customer: M. Chen",
+          "Product: USB-C Hub",
+          "Amount: $89.99",
+          "Date: March 28, 2026",
+          "Status: Delivered",
+          "Return Eligible: True",
+          "Order ID: ORD-STD-0194"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1722,
+        "output_tokens": 429
+      }
+    },
+    {
+      "id": "CC-T08",
+      "name": "major ns refund large amount",
+      "trace_id": "5de363b1b1a7efa4bc046546600f37e3",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains significant hallucination. While the tool call was successfully executed (transferring to the refund specialist), the detailed refund summary with specific IDs, status, and processing timeline appears to be completely fabricated. The tool response only confirms \"Successfully transferred to okahu_demo_cc_agent_refund\" but provides no actual refund details, amounts, or processing information. The AI then fabricates specific details like \"Refund ID: REF-KL73NZ\", \"Status: Approved/Processed\", and \"3\u20135 business days\" timeline without any supporting context or tool output providing this information. This constitutes fabrication of specific business data that could mislead the customer about the actual status of their refund.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The order ID ORD-NS8801 matches the user's request",
+          "The refund amount of $500 matches the user's request",
+          "The tool transfer to the refund specialist was successfully executed"
+        ],
+        "contradictions": [
+          "Claims refund was processed when only tool transfer was confirmed",
+          "Provides specific refund ID (REF-KL73NZ) not returned by any tool",
+          "States 'Approved/Processed' status without confirmation",
+          "Provides specific timeline (3-5 business days) not supported by context"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "poor",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1758,
+        "output_tokens": 498
+      }
+    },
+    {
+      "id": "CC-T09",
+      "name": "major eligibility reasoning inconsistency",
+      "trace_id": "eb3cc193500d86e0c758b0db7d6ea5d0",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "minor_hallucination",
+        "explanation": "The final response contains mostly accurate information from the conversation tree but has one significant factual contradiction. The order lookup specialist (turn 5) returned \"Return Eligible: false\", but the eligibility specialist (turn 10) determined that \"The order ORD-FS-0001 is eligible for a refund.\" The final response correctly presents both pieces of information but creates confusion by stating the contradictory findings without proper explanation or reconciliation. The response accurately relays the order details (customer, product, amount, date, status) exactly as provided by the order lookup specialist, and correctly reports the eligibility specialist's determination. However, the presentation of contradictory eligibility information without clarification constitutes a minor hallucination as it doesn't properly explain the discrepancy between the automated return_eligible flag and the specialist's assessment.",
+        "hallucination_score": 0.3,
+        "factual_alignments": [
+          "Customer: D. Kim",
+          "Product: Smart Watch Pro",
+          "Amount: $249.00",
+          "Date: March 10, 2026",
+          "Status: Delivered",
+          "Order lookup specialist returned Return Eligible: false",
+          "Eligibility specialist confirmed the order is eligible for a refund"
+        ],
+        "contradictions": [
+          "The final response presents conflicting eligibility information (Return Eligible: false vs. confirmed as eligible for a refund) without proper explanation or reconciliation of the discrepancy"
+        ],
+        "hallucination_types": [
+          "contradiction"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "mostly_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.85
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1920,
+        "output_tokens": 497
+      }
+    },
+    {
+      "id": "CC-T10",
+      "name": "no hal eligibility consistent",
+      "trace_id": "4ff13aa704aaad563d3eac2419920410",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response is well-supported by the context provided in the conversation tree. The AI supervisor correctly orchestrated the multi-agent workflow by first consulting the order lookup specialist (who confirmed the order exists and is return eligible) and then the eligibility specialist (who confirmed refund eligibility under the \"standard 30-day return\" policy). The final response accurately synthesizes the information from both specialists without adding unsupported details or contradicting the provided information. The response stays within the bounds of what was determined by the specialist agents and follows the system instructions properly.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Order ORD-STD-0033 is eligible for a refund",
+          "Eligibility is under the 'standard 30-day return' policy",
+          "The order meets all necessary conditions for a return within the specified period"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1903,
+        "output_tokens": 382
+      }
+    },
+    {
+      "id": "CC-T11",
+      "name": "major return policy unsourced claims",
+      "trace_id": "e963ec64901acf7773951933b3bfd7fb",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response (row 8) is an accurate relay of the information provided by the eligibility specialist in row 5. The supervisor correctly transferred the user's return policy question to the eligibility specialist as instructed in the system prompt, and when the specialist returned specific details about the electronics return policy (Policy Code: ELEC-30, 30-day timeframe, restocking fee applies, original packaging requirement), the supervisor relayed these details exactly as provided. There are no contradictions, fabrications, or unsupported claims in the final response - all information can be directly traced back to what the eligibility specialist returned.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Policy Code: ELEC-30",
+          "Return Timeframe: 30 days from the date of purchase",
+          "A restocking fee applies",
+          "Product must be returned in original packaging and sellable condition"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1700,
+        "output_tokens": 392
+      }
+    },
+    {
+      "id": "CC-T12",
+      "name": "major software return policy unsourced",
+      "trace_id": "69f313473cd5f1ba729f27a9df96abe2",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately relays all the information provided by the eligibility specialist agent. The supervisor agent correctly transferred the request to the eligibility specialist (as per routing rules for return policy questions), received the eligibility determination, and then faithfully reproduced all the details in the final response without adding, modifying, or substituting any information. The response includes the exact product category (\"software\"), policy code (\"DIGITAL-NR\"), refundability status (non-refundable), and restocking fee information (none applied) as returned by the specialist. The additional guidance about verifying compatibility and requirements is appropriate contextual advice that doesn't contradict the provided information.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Software purchases are categorized under 'software' product category",
+          "Policy code is 'DIGITAL-NR'",
+          "Digital software purchases are generally non-refundable",
+          "No restocking fee is applied",
+          "Software purchases cannot typically be returned or refunded"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1779,
+        "output_tokens": 411
+      }
+    },
+    {
+      "id": "CC-T13",
+      "name": "minor warranty claim steps inference",
+      "trace_id": "31403787a215fc2aac1fc8618c00b321",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The AI assistant's final response contains a significant factual hallucination regarding the warranty status. The order date is \"2026-03-28\" according to the tool call response, which is a future date (March 28, 2026). However, the assistant claims \"Since your purchase date is within one year from today, your warranty is currently active.\" This is factually impossible since the purchase date is in the future. The assistant was specifically instructed to \"state your conclusion definitively based on the duration the code implies \u2014 do not use conditional language\" and to determine if warranty is \"currently active or expired as of today's date.\" The assistant failed to recognize that a future purchase date makes the warranty status determination nonsensical in the current context. All other factual details (order_id, customer, product, amount, date, status, return_eligible, warranty_code) were accurately relayed from the tool responses.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "Order ID: ORD-STD-0194",
+          "Customer: M. Chen",
+          "Product: USB-C Hub",
+          "Amount: $89.99",
+          "Date: March 28, 2026",
+          "Status: Delivered",
+          "Return Eligible: Yes",
+          "Warranty Code: STD-1Y",
+          "STD-1Y indicates standard 1-year warranty coverage"
+        ],
+        "contradictions": [
+          "Claims warranty is currently active when purchase date is in the future (2026-03-28)",
+          "States purchase date is within one year from today when it's actually in the future"
+        ],
+        "hallucination_types": [
+          "factual_inaccuracy",
+          "contradiction"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "mostly_accurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1954,
+        "output_tokens": 544
+      }
+    },
+    {
+      "id": "CC-T14",
+      "name": "major eligibility inconsistency exchange",
+      "trace_id": "a4c079dfb097c2b9dbe67cf2de08f09d",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately synthesizes the information provided by both specialists in the conversation tree. The response correctly states that: 1) The order lookup specialist found the order details and indicated \"Return Eligible: False\", and 2) The eligibility specialist determined the order is \"eligible for a return or exchange under the 'standard_30_day_return' policy.\" The final response acknowledges this apparent contradiction between the two sources and presents both findings accurately without fabricating any information. All specific details mentioned (order number ORD-FS-0002, the eligibility determination, and the policy name) are directly supported by the conversation history.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Order ORD-FS-0002 details indicate it is marked as not return eligible",
+          "Eligibility specialist determined the order is eligible for return or exchange",
+          "Order qualifies under the 'standard_30_day_return' policy"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1941,
+        "output_tokens": 404
+      }
+    },
+    {
+      "id": "CC-T15",
+      "name": "major ns refund small amount",
+      "trace_id": "f13e577b4b76a56925aa206afa621c04",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains significant hallucinated content. When analyzing the conversation tree, the refund processing specialist (okahu_demo_cc_agent_refund) only returned a basic transfer confirmation (\"Successfully transferred to okahu_demo_cc_agent_refund\") in row 4. However, in row 5, the AI fabricated detailed refund information including a specific Refund ID (REF-X8Y9Z2), approval status, and processing timeline (3-5 business days). This detailed refund confirmation appears to be entirely invented, as there is no evidence in the conversation tree that any actual refund processing tool was called or that the refund specialist returned these specific details. The final response then repeats this fabricated information, making it a clear case of hallucination where the AI created specific transactional details that were never provided by the actual tools or agents.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The order ID ORD-NS8801 matches the user's original request",
+          "The refund amount of $5 matches the user's original request",
+          "The request was correctly routed to the refund processing specialist per the system instructions for ORD-NS prefix orders"
+        ],
+        "contradictions": [
+          "The AI claims a refund was processed with specific details (Refund ID: REF-X8Y9Z2, Status: Approved/Processed, Timeline: 3-5 business days) but these details were never provided by any tool or agent in the conversation",
+          "The refund specialist only returned a basic transfer confirmation, not actual refund processing results",
+          "The final response states 'Your refund has been processed' but there's no evidence in the conversation tree that any actual processing occurred"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1702,
+        "output_tokens": 583
+      }
+    },
+    {
+      "id": "CC-T16",
+      "name": "major order lookup scope drift",
+      "trace_id": "e9c2ea93f06ae0d53ed13a8e48cde751",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The AI assistant's final response contains a critical factual error regarding the order ID. The human requested order lookup for \"ORD-A1042\" but the final response states the order ID as \"ORD-B1042\" - a completely different order. This is not a minor typo but a fundamental misrepresentation of the core identifying information. While the order lookup specialist (turn 5) did return this ORD-B1042 information, the fact that this doesn't match the user's requested order ID indicates either a significant system error or hallucination in the order lookup process. The final response faithfully relays what the order lookup specialist provided, but this information is factually incorrect relative to what the user actually requested.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The response accurately relays the information returned by the order lookup specialist",
+          "Customer name: J. Martinez",
+          "Product: ProMax Keyboard",
+          "Amount: $189.99",
+          "Date: January 15, 2026",
+          "Status: Delivered",
+          "Return Eligible: Yes",
+          "The format and structure of the response matches what was provided by the specialist"
+        ],
+        "contradictions": [
+          "Order ID is listed as ORD-B1042 but user requested lookup for ORD-A1042",
+          "The order details provided do not correspond to the order the user actually requested"
+        ],
+        "hallucination_types": [
+          "factual_inaccuracy",
+          "contradiction"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1730,
+        "output_tokens": 505
+      }
+    },
+    {
+      "id": "CC-T17",
+      "name": "minor delivery signature inference",
+      "trace_id": "7230f37d3a20c7828086900deb99054f",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately reflects the information provided by the order lookup specialist. The AI assistant correctly states that the order was delivered but that signature requirement information is not available from the order status, which matches exactly what the order lookup specialist reported in row 5. The assistant also appropriately suggests checking special instructions or shipping confirmation, which was also mentioned by the order lookup specialist. The response stays within the bounds of what was actually returned by the tools and does not fabricate or contradict any information.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Order was successfully delivered",
+          "Signature requirement information is not available from order status",
+          "Suggestion to check special instructions or shipping confirmation"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1714,
+        "output_tokens": 343
+      }
+    },
+    {
+      "id": "CC-T18",
+      "name": "minor carrier inference from dlvd",
+      "trace_id": "476d68e204b4bf3ff8d3f6ecc8f90390",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "minor_hallucination",
+        "explanation": "The AI assistant's final response contains a minor hallucination regarding what information is available. When the human asked \"What carrier delivered order ORD-SHP-8801?\", the assistant correctly followed the protocol by calling both the order lookup and shipping status tools. However, the assistant claimed that \"specifics about which carrier delivered the package are not available through the current order information\" without actually verifying what information the shipping status tool could provide about carriers. The tools returned order details and a status code \"DLVD\" (delivered), but the assistant assumed carrier information wasn't available rather than acknowledging what the tools actually returned. The assistant also suggested contacting customer support directly, which contradicts the system instructions that state the assistant IS the specialist and should answer directly. The factual information about the order (order ID, delivery status) is accurate and supported by the tool responses.",
+        "hallucination_score": 0.3,
+        "factual_alignments": [
+          "Order ORD-SHP-8801 has been delivered",
+          "Status code is 'DLVD'",
+          "The assistant checked order details",
+          "The order exists and has delivery status information"
+        ],
+        "contradictions": [
+          "Claims carrier information is not available without fully verifying what the shipping status tool provides",
+          "Suggests contacting customer support directly despite being instructed to answer as the specialist"
+        ],
+        "hallucination_types": [
+          "unsupported_claim",
+          "contradiction"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "mostly_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.8
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 2110,
+        "output_tokens": 488
+      }
+    },
+    {
+      "id": "CC-T19",
+      "name": "no hal refund at limit",
+      "trace_id": "5b5bf1d0903141d50f45a7bb5c60b817",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "minor_hallucination",
+        "explanation": "The AI assistant's final response contains a minor hallucination regarding the refund amount. The user initially requested a \"$199 refund for order ORD-STD-0033\", but throughout the conversation, the actual order amount was consistently shown as $45.00 by the order lookup specialist. The final response correctly states the refund amount as $45.00, which aligns with the actual order amount. However, there is a discrepancy between what the user requested ($199) and what was actually processed ($45.00). The AI should have addressed this discrepancy more clearly, explaining why the refund amount differs from the user's request. All other information in the final response (Refund ID: REF-300020, Status: Approved, Processing Time: 3-5 business days) is accurately supported by the refund processing specialist's output.",
+        "hallucination_score": 0.2,
+        "factual_alignments": [
+          "Refund ID: REF-300020",
+          "Status: Approved",
+          "Refund Amount: $45.00",
+          "Estimated Processing Time: 3\u20135 business days",
+          "Order ID: ORD-STD-0033"
+        ],
+        "contradictions": [
+          "The response does not address the discrepancy between the user's requested refund amount ($199) and the actual processed amount ($45.00)"
+        ],
+        "hallucination_types": [
+          "unsupported_claim"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "mostly_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.85
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 2246,
+        "output_tokens": 497
+      }
+    },
+    {
+      "id": "CC-T20",
+      "name": "minor warranty date inference",
+      "trace_id": "f1d916561e2ef3681d1c938faa848e5a",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains significant hallucinations regarding the warranty status. While the order lookup specialist correctly identified the warranty code as \"STD-1Y\" (a standard 1-year warranty), they made an unsupported claim that \"today's date is within a year from when orders under the 'ORD-STD' prefix might have been placed\" and concluded the warranty is \"still active as of today.\" This conclusion is not based on any actual order date information or warranty expiration calculation from the tool call. The final response then repeats this unfounded claim that the warranty \"is still active\" without any supporting evidence from the conversation tree. The AI made assumptions about order dates and warranty validity without accessing the actual purchase date or performing any warranty expiration verification.",
+        "hallucination_score": 0.7,
+        "factual_alignments": [
+          "The warranty code for order ORD-STD-0033 is 'STD-1Y'",
+          "STD-1Y indicates a standard 1-year warranty",
+          "The warranty provides coverage for one year from the date of purchase"
+        ],
+        "contradictions": [
+          "The warranty is still active as of today",
+          "Today's date is within a year from when orders under the 'ORD-STD' prefix might have been placed"
+        ],
+        "hallucination_types": [
+          "unsupported_claim",
+          "fabrication"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.85
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1697,
+        "output_tokens": 479
+      }
+    },
+    {
+      "id": "FS-T01",
+      "name": "major transfer over limit",
+      "trace_id": "e2fe060723df9e45e511ed454076e0e8",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains a significant hallucination by claiming inability to confirm the fund transfer when the conversation shows the transfer was actually successful. In row 4, the tool explicitly returned \"Successfully transferred to okahu_demo_fs_agent_fund_transfer\", indicating the transfer operation completed successfully. However, the AI assistant in row 5 then claims \"I could not confirm the transfer\" and directs the user to contact support, which directly contradicts the successful tool response. This creates a major disconnect between what actually happened (successful transfer) and what was communicated to the user (failed transfer requiring support contact). The system instructions specifically state to \"relay all returned field values exactly as provided\" and not to substitute or adjust information, which was violated here.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The transfer request was from ACC-4821 to ACC-7733 for $8,000",
+          "The fund transfer specialist was correctly invoked",
+          "The account numbers and amount mentioned in the final response match the original request"
+        ],
+        "contradictions": [
+          "Claims inability to confirm transfer despite tool returning 'Successfully transferred'",
+          "Directs user to contact support when transfer was actually successful",
+          "Fails to relay the successful transfer status as instructed"
+        ],
+        "hallucination_types": [
+          "contradiction",
+          "factual_inaccuracy"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1437,
+        "output_tokens": 472
+      }
+    },
+    {
+      "id": "FS-T02",
+      "name": "no hal transfer small",
+      "trace_id": "eab818649faf7a13b6714bbb24799f00",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains a significant hallucination in the form of a fabricated Transaction Confirmation ID (TXN-372031). While the conversation tree shows that the fund transfer specialist was successfully called and the transfer was completed, the actual tool response in row 4 only states \"Successfully transferred to okahu_demo_fs_agent_fund_transfer\" without providing any specific transaction details like confirmation IDs, amounts, or account numbers. The AI assistant's response in row 5 and the final response both include detailed transaction information including a specific confirmation ID (TXN-372031) that was not provided by the fund transfer tool. This represents fabrication of specific financial transaction details, which is a serious hallucination in a banking context where accuracy of transaction information is critical.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The transfer request was from ACC-4821 to ACC-7733",
+          "The amount requested was $500",
+          "The fund transfer specialist was successfully contacted",
+          "The transfer was completed successfully"
+        ],
+        "contradictions": [
+          "Transaction Confirmation ID: TXN-372031 was not provided by any tool or specialist",
+          "Specific transaction details were fabricated rather than returned by the fund transfer specialist"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.9
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1557,
+        "output_tokens": 469
+      }
+    },
+    {
+      "id": "FS-T03",
+      "name": "major brka ticker substitution",
+      "trace_id": "d0ed96c624df6d15ab85fd81c0acbc28",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "minor_hallucination",
+        "explanation": "The final response contains a significant factual inconsistency regarding the stock ticker. The user originally requested to buy \"BRK.A\" shares, but the trade execution specialist returned results for \"BRK.B\" shares. The final response accurately reports what the trade execution specialist returned (BRK.B with specific price and confirmation details), but this represents a mismatch between the user's request and what was actually executed. However, since the system instructions explicitly state to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs,\" the final response correctly follows these instructions by reporting the actual execution results rather than the requested ticker. The suitability assessment also shows some inconsistency as it mentions \"BRK.A\" while the actual trade was for \"BRK.B\". All other details (price, shares, confirmation ID) are accurately reported from the execution results.",
+        "hallucination_score": 0.3,
+        "factual_alignments": [
+          "Ticker: BRK.B",
+          "Shares: 5",
+          "Price per Share: $412.5",
+          "Total Value: $2062.5",
+          "Confirmation ID: TRD-67030",
+          "Investment approved as suitable based on default risk profile"
+        ],
+        "contradictions": [
+          "User requested BRK.A but final response reports BRK.B execution"
+        ],
+        "hallucination_types": [
+          "contradiction"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "mostly_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.85
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1786,
+        "output_tokens": 501
+      }
+    },
+    {
+      "id": "FS-T04",
+      "name": "no hal trade aapl",
+      "trace_id": "89f80eebe5fd207e4a0f578a7ec81c7d",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately reflects the information provided by the trade execution specialist and investment suitability specialist. All trade details (ticker, shares, action, price per share, total value, and confirmation ID) are exactly as reported by the trade execution agent in row 5. The suitability assessment statement is also consistent with what the suitability specialist reported in row 10, including the conditional language about conservative or retirement account considerations. The final response contains no fabricated information, unsupported claims, or contradictions to what the sub-agents actually returned.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Ticker: AAPL",
+          "Shares: 10",
+          "Action: Buy",
+          "Price per Share: $185.40",
+          "Total Value: $1,854.00",
+          "Confirmation ID: TRD-11363",
+          "Investment verified as suitable for account",
+          "Conditional language about conservative or retirement-focused account considerations"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1797,
+        "output_tokens": 404
+      }
+    },
+    {
+      "id": "FS-T05",
+      "name": "major balance retirement suffix stripped",
+      "trace_id": "a63c5a024abe5b46b7f8b596a2ec0f99",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately relays the account balance information provided by the account inquiry specialist. The conversation shows a clear delegation to the appropriate specialist (account inquiry agent) for a balance check on account ACC-4821-R. The account inquiry agent returned the balance as \"$12,450.00 USD\" (row 5), and the final response (row 8) repeats this information exactly without any modifications, substitutions, or additions. The response follows the system instructions to \"relay all returned field values exactly as provided\" and does not invent or adjust any account information.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The balance for account ACC-4821-R is $12,450.00 USD"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 1.0
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1398,
+        "output_tokens": 355
+      }
+    },
+    {
+      "id": "FS-T06",
+      "name": "major balance savings suffix stripped",
+      "trace_id": "a2535f41bbd70861c4ee4ace592e55b5",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response directly matches the information provided by the account inquiry specialist agent. The conversation shows that the supervisor agent correctly transferred the user's balance inquiry to the account inquiry agent, which returned the balance as \"$87,500.00 USD\" for account \"ACC-9901-S\". The final response relays this information exactly as provided, following the system instructions to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs.\" The account ID and balance amount in the final response are identical to what was returned by the specialist agent.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The balance for account ACC-9901-S is $87,500.00 USD"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 1.0
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1398,
+        "output_tokens": 365
+      }
+    },
+    {
+      "id": "FS-T07",
+      "name": "minor rate unit inference",
+      "trace_id": "14268be923a7bf75bdf988c25293f3ab",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response directly matches the information provided by the account inquiry specialist in turn 5. The assistant was instructed to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs.\" The final response follows this instruction precisely by stating \"The interest rate for account ACC-7733 is 3.25%.\" which is identical to what the specialist returned. The account ID (ACC-7733) and interest rate (3.25%) are both relayed exactly as provided, with no modifications, additions, or fabrications.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The interest rate for account ACC-7733 is 3.25%",
+          "Account ID ACC-7733 is correctly preserved",
+          "Interest rate 3.25% is correctly preserved"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 1.0
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1393,
+        "output_tokens": 385
+      }
+    },
+    {
+      "id": "FS-T08",
+      "name": "no hal balance check",
+      "trace_id": "cd06c8103e8ffd9b9fe179baca6408fd",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response \"The balance on account ACC-4821 (checking) is $12,450.00 USD\" is directly supported by the context from the conversation tree. In row 5, the account inquiry specialist returns the exact same information: \"The balance on account ACC-4821 (checking) is $12,450.00 USD.\" The supervisor's instructions explicitly state to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs,\" which is exactly what was done. The final response contains no additional claims, fabricated details, or unsupported information beyond what was provided by the specialist.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The balance on account ACC-4821 (checking) is $12,450.00 USD"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1401,
+        "output_tokens": 385
+      }
+    },
+    {
+      "id": "FS-T09",
+      "name": "minor rate market comparison",
+      "trace_id": "d03bc5ee3b154aa3b17eeac6243d2553",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "minor_hallucination",
+        "explanation": "The AI assistant's final response contains both factually supported content and some minor hallucination. The account-specific information (account ACC-4821 having a 4.5% interest rate) is directly supported by the sub-agent's response. However, the assistant adds general contextual information about comparing rates with other institutions and mentions that rates vary based on account type and economic conditions. While this advice is reasonable and helpful, it goes beyond what was specifically provided by the sub-agent and represents additional information not directly supported by the conversation context.",
+        "hallucination_score": 0.2,
+        "factual_alignments": [
+          "The current interest rate for account ACC-4821 is 4.5%",
+          "Need to compare with other financial institutions to determine competitiveness"
+        ],
+        "contradictions": [],
+        "hallucination_types": [
+          "unsupported_claim"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "mostly_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.85
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1482,
+        "output_tokens": 368
+      }
+    },
+    {
+      "id": "FS-T10",
+      "name": "major transfer six thousand",
+      "trace_id": "d34981dadeeec2bd88f14cbb140a6193",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains significant hallucinated content. While the fund transfer agent was successfully called (row 4), the tool response only confirms \"Successfully transferred to okahu_demo_fs_agent_fund_transfer\" without providing any specific transaction details. However, the AI response in row 5 fabricates detailed transaction information including a specific TXN Confirmation ID (TXN-563020) and claims the status is \"Initiated\" - none of this information was provided by the actual tool response. The final response (row 8) perpetuates these same fabricated details. The system instructions explicitly state to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs,\" which makes this fabrication a clear violation of instructions.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The transfer request was for $6,000 from account ACC-9901 to account ACC-4821",
+          "The fund transfer agent was successfully called",
+          "The transfer was initiated (implied by successful agent call)"
+        ],
+        "contradictions": [
+          "TXN Confirmation ID: TXN-563020 - not provided by any tool response",
+          "Detailed status information claiming 'Initiated' - not provided by tool response",
+          "Specific transaction details formatted as if returned by the system - these were fabricated"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1562,
+        "output_tokens": 504
+      }
+    },
+    {
+      "id": "FS-T11",
+      "name": "no hal transfer boundary",
+      "trace_id": "c4a1de8d62b3d9cedddddb72874459b1",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately reflects the information provided by the fund transfer specialist in row 5. All key details including Transfer ID (TXN-708038), from account (ACC-4821), to account (ACC-7733), amount ($5,000.00 USD), and status (Completed) are correctly relayed. The system instructions explicitly state to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs,\" and this instruction was followed precisely. The response adds only appropriate conversational elements (professional formatting and offer for further assistance) without altering any factual content from the specialist's response.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Transfer ID: TXN-708038 matches specialist response",
+          "From Account: ACC-4821 matches original request and specialist confirmation",
+          "To Account: ACC-7733 matches original request and specialist confirmation",
+          "Amount: $5,000.00 USD matches original request and specialist confirmation",
+          "Status: Completed matches specialist response",
+          "All account IDs and transaction details preserved exactly as provided"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1527,
+        "output_tokens": 447
+      }
+    },
+    {
+      "id": "FS-T12",
+      "name": "major portfolio sparse nvda",
+      "trace_id": "c914ef2ed86bec29479636093ccb4249",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains a significant omission that constitutes a major hallucination. The account inquiry specialist (row 5) provided comprehensive information including: 1) 20 shares of NVDA, 2) market price of approximately $450 per share, and 3) total position value of approximately $9,000. However, the final response (row 8) only reports \"You hold 20 shares of NVDA in your account ACC-9901\" and completely omits the price and total value information. This selective reporting fundamentally changes the informational content provided to the user, as financial value is typically as important as share quantity for investment decisions. The system instructions explicitly state to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs.\" By omitting the price and value calculations, the supervisor agent violated this core instruction.",
+        "hallucination_score": 0.7,
+        "factual_alignments": [
+          "You hold 20 shares of NVDA",
+          "account ACC-9901"
+        ],
+        "contradictions": [
+          "Final response omits NVDA market price of approximately $450 per share",
+          "Final response omits total position value of approximately $9,000"
+        ],
+        "hallucination_types": [
+          "factual_inaccuracy",
+          "unsupported_claim"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1447,
+        "output_tokens": 479
+      }
+    },
+    {
+      "id": "FS-T13",
+      "name": "major portfolio worth aapl",
+      "trace_id": "fce296b11f538259c9b06b2d90b329ff",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately summarizes the information provided by the account inquiry specialist. The specialist reported that the user holds 15 shares of AAPL at approximately $174 per share, totaling $2,610. The final response correctly relays this valuation of $2,610 and the account number ACC-4821 exactly as provided by the specialist. The system instructions were followed properly - the request was appropriately assigned to the account inquiry specialist, and the returned values were relayed exactly without substitution or invention of data.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Your AAPL position in account ACC-4821 is worth approximately $2,610"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1435,
+        "output_tokens": 349
+      }
+    },
+    {
+      "id": "FS-T14",
+      "name": "minor balance adequacy judgment",
+      "trace_id": "33b2ffe32a3c6538ba448a7ba79ff655",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately relays all information returned by the account inquiry specialist agent. The response contains three main factual claims: (1) the account ID is ACC-9901, (2) it's a checking account, (3) the balance is $87,500.00 USD, and (4) a qualitative assessment that this is substantial for a checking account. All of these claims are directly supported by the agent's response in row 5. The final response fulfills the system instruction to \"relay all returned field values exactly as provided\" without substituting, inventing, or adjusting any information. The qualitative assessment about the balance being \"substantial\" is also consistent with what the specialist agent determined.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The balance for account ID ACC-9901, a checking account, is $87,500.00 USD",
+          "This is generally considered a substantial balance for a checking account"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1434,
+        "output_tokens": 401
+      }
+    },
+    {
+      "id": "FS-T15",
+      "name": "minor sector classification inference",
+      "trace_id": "327f9d15901609aeed705f01a60c927d",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains a significant hallucination. The AI supervisor claims that \"INTC is in the Technology sector,\" but this information was not provided by any agent in the conversation tree. The account inquiry specialist (row 5) explicitly stated that \"further information regarding the sector and company details is not currently available.\" The supervisor fabricated sector information that contradicts the specialist's response and violates the clear instruction to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust\" information.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The ticker symbol INTC was correctly identified as the subject of inquiry"
+        ],
+        "contradictions": [
+          "Claims INTC is in the Technology sector when the account inquiry specialist explicitly stated sector information was not available",
+          "Violates the instruction to relay information exactly as provided by agents"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "contradiction",
+          "unsupported_claim"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1412,
+        "output_tokens": 390
+      }
+    },
+    {
+      "id": "FS-T16",
+      "name": "major wire confidence overclaim",
+      "trace_id": "f9d83f0af47aa07108c94a6ce8c10e81",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains significant hallucinated content. While the conversation shows that a fund transfer request was made to the fund transfer specialist and the tool confirmed \"Successfully transferred to okahu_demo_fs_agent_fund_transfer\", there is no evidence in the conversation tree that the specialist actually returned any specific transaction details. The AI assistant in row 5 fabricated specific details including a Transaction Confirmation ID (TXN-123456) and marked the status as \"Initiated\" without any tool or agent providing this information. The final response then repeats these fabricated details as if they were legitimate return values from the specialist, directly violating the system instruction to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs.\"",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "Transfer amount of $20,000",
+          "From account ACC-4821",
+          "To account ACC-9901",
+          "Fund transfer was requested"
+        ],
+        "contradictions": [
+          "Transaction Confirmation ID: TXN-123456 - this was not provided by any tool or specialist",
+          "Status: Initiated - this specific status was not returned by the specialist",
+          "The claim that the transfer 'has been initiated successfully' with specific confirmation details"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1563,
+        "output_tokens": 486
+      }
+    },
+    {
+      "id": "FS-T17",
+      "name": "major retirement scope drift",
+      "trace_id": "03c17ceb30fde7479ce1f09621592e2f",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains a significant hallucination. The conversation tree shows that after the account inquiry specialist was called (row 3-4), the AI claimed to have received specific balance information ($87,500.00 USD) for account ACC-9901-R (row 5). However, the tool response in row 4 only shows \"Successfully transferred to okahu_demo_fs_agent_account_inquiry\" without any actual account balance data being returned. The AI then fabricated the specific balance amount and presented it as if it came from the specialist, when no such data was provided in the conversation tree. This represents a clear case of fabrication where the AI invented specific financial information that wasn't present in the actual tool responses.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The account number ACC-9901-R matches the user's request",
+          "The final response correctly identifies it as a retirement account as requested"
+        ],
+        "contradictions": [
+          "Claims balance is $87,500.00 USD when no balance information was actually returned by the account inquiry tool",
+          "Presents fabricated financial data as if it came from the specialist"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "poor",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1404,
+        "output_tokens": 450
+      }
+    },
+    {
+      "id": "FS-T18",
+      "name": "major portfolio worth tsla",
+      "trace_id": "feb4404fc4f939b116511dc66e0df978",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains significant hallucination. While the user requested TSLA holdings information for account ACC-9901, the account inquiry specialist was called but no actual data was returned in the conversation tree. The specialist's response in row 5 provides specific numbers (5 shares, $250 per share, $1,250 total value) that appear to be fabricated rather than retrieved from any actual account lookup. The system instructions explicitly state to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs,\" but no such field values were actually returned by the tool or sub-agent. The response presents invented financial data as factual account information.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The request was for TSLA holdings in ACC-9901",
+          "An account inquiry specialist was properly called",
+          "The response format matches the user's request structure"
+        ],
+        "contradictions": [
+          "Claims 5 shares of TSLA when no share quantity was returned by the tool",
+          "States $250 per share price when no price data was provided",
+          "Calculates $1,250 total value when no actual account data was retrieved",
+          "Presents fabricated financial data as factual account information"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "factual_inaccuracy",
+          "unsupported_claim"
+        ],
+        "context_coverage": "poor",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1467,
+        "output_tokens": 491
+      }
+    },
+    {
+      "id": "FS-T19",
+      "name": "major brka substitution confidence",
+      "trace_id": "d115a6d87b0e6bdf8e69aba57e67e996",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately summarizes the information provided by the trade execution and suitability agents throughout the conversation tree. All key details are correctly relayed: the ticker was processed as BRK.B instead of BRK.A as requested, 2 shares were bought at $412.50 per share for a total of $825.00, with confirmation ID TRD-85506. The suitability assessment results are also accurately conveyed, including the approval with clarification recommendation and the note about differences between BRK.A and BRK.B shares. The supervisor agent follows the system instruction to relay all returned field values exactly as provided without substitution, invention, or adjustment.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Ticker processed as BRK.B instead of BRK.A",
+          "2 shares purchased",
+          "Buy action",
+          "Price per share $412.50",
+          "Total value $825.00",
+          "Confirmation ID TRD-85506",
+          "Suitability assessment completed with approval recommendation",
+          "Clarification provided on BRK.A vs BRK.B differences",
+          "Note about higher cost of BRK.A shares"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1964,
+        "output_tokens": 461
+      }
+    },
+    {
+      "id": "FS-T20",
+      "name": "no hal balance acc7733",
+      "trace_id": "5d7c79dd93858917c3038db00ab4017e",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately relays the balance information provided by the account inquiry specialist. The AI assistant was instructed to \"relay all returned field values exactly as provided \u2014 do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs.\" The final response states \"The balance for account ID ACC-7733 is $3,210.50 USD\" which exactly matches what the account inquiry agent returned in turn 5. The account ID (ACC-7733), amount ($3,210.50), and currency (USD) are all faithfully preserved without any modifications or additions.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The balance for account ID ACC-7733 is $3,210.50 USD"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1396,
+        "output_tokens": 364
+      }
+    },
+    {
+      "id": "LGS-T01",
+      "name": "major paris texas hotel substitution",
+      "trace_id": "8b5632d46629a38a3f2eb7e84c8a4f19",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The AI assistant's final response contains a significant geographical error and unsupported booking details. The user specifically requested a hotel in \"Paris, Texas\" but the assistant responded with \"Hotel Republique in Paris, France.\" This represents a critical misunderstanding of the user's request, as Paris, Texas and Paris, France are entirely different locations. Additionally, the assistant provided specific hotel details (\"Hotel Republique\") and claimed a booking was \"confirmed\" without any evidence from the conversation tree that such a booking actually occurred or that this specific hotel name was provided by any tool or sub-agent. The tool transfer was successful, but no actual booking details were returned in the conversation log.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The assistant was transferred to the lodging assistant",
+          "The transfer back to the travel supervisor was successful"
+        ],
+        "contradictions": [
+          "User requested Paris, Texas but assistant responded with Paris, France",
+          "Assistant claimed booking was confirmed with specific hotel name 'Hotel Republique' without evidence of such details being provided",
+          "Assistant stated definitive booking confirmation without showing actual booking process completion"
+        ],
+        "hallucination_types": [
+          "factual_inaccuracy",
+          "unsupported_claim",
+          "fabrication"
+        ],
+        "context_coverage": "poor",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1385,
+        "output_tokens": 449
+      }
+    },
+    {
+      "id": "LGS-T02",
+      "name": "no hal hotel new york",
+      "trace_id": "d88b96880106bb5def0e2bd6252c8db5",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "minor_hallucination",
+        "explanation": "The final response contains a minor hallucination by claiming that \"Your booking at The Grand in New York City, United States, has been confirmed.\" However, examining the conversation tree shows that while the user requested to book a hotel at The Grand in New York City, there is no evidence in the tool responses or agent communications that an actual booking was completed or confirmed. The lodging assistant was successfully contacted (row 4), but the response from the lodging assistant (row 5) appears to be a claim rather than a factual confirmation of a completed booking. The system instructions emphasize relaying \"returned field values exactly as provided\" and not inventing booking references, but no actual booking confirmation details are shown in the conversation tree.",
+        "hallucination_score": 0.3,
+        "factual_alignments": [
+          "The user requested to book a hotel at The Grand in New York City",
+          "The request was transferred to the lodging assistant",
+          "The transfer to the lodging assistant was successful",
+          "The conversation involved The Grand hotel in New York City, United States"
+        ],
+        "contradictions": [
+          "Claims the booking has been confirmed without evidence of actual booking completion in the tool responses",
+          "No booking reference or confirmation details are provided despite system instructions to relay exact field values"
+        ],
+        "hallucination_types": [
+          "unsupported_claim"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "partially_verified",
+        "confidence_level": 0.85
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1394,
+        "output_tokens": 461
+      }
+    },
+    {
+      "id": "LGS-T03",
+      "name": "major flight sparse jfk lax",
+      "trace_id": "3e2213d9f93e8aa4832a127df3f98f9a",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately reflects the information returned by the flight booking assistant. The response claims the flight is \"booked\" and provides specific details including Flight Number DL 456 (Delta Airlines) and departure time of 7:00 AM. These details exactly match what was returned by the sub-agent in turn 5. The response follows the system instruction to \"relay the returned field values exactly as provided\" and does not invent or change any details. While the sub-agent's confirmation of booking may itself be simulated (as this appears to be a demo system), the final response faithfully represents what the sub-agent reported without adding fabricated information.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Flight from JFK to LAX on April 28, 2026",
+          "Flight Number: DL 456 (Delta Airlines)",
+          "Departure Time: 7:00 AM",
+          "Flight is confirmed/booked"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1482,
+        "output_tokens": 402
+      }
+    },
+    {
+      "id": "LGS-T04",
+      "name": "major flight sparse chicago miami",
+      "trace_id": "4895c5e1f6d41c3b379c58614114c755",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately relays the flight booking information exactly as provided by the sub-agent (okahu_demo_lg_agent_air_travel_assistant). The supervisor was instructed to \"relay the returned field values exactly as provided\" and followed this instruction correctly. All details in the final response - flight number AA1234, airline American Airlines, departure time 3:00 PM, and the route from Chicago (ORD) to Miami (MIA) - match precisely what was returned by the flight booking assistant in row 5. The response contains no fabricated, contradictory, or unsupported information.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Flight from Chicago (ORD) to Miami (MIA) is confirmed",
+          "Flight Number: AA1234",
+          "Airline: American Airlines",
+          "Departure Time: 3:00 PM",
+          "Safe travels message"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1469,
+        "output_tokens": 396
+      }
+    },
+    {
+      "id": "LGS-T05",
+      "name": "major weather paris texas scope drift",
+      "trace_id": "4dda8b2e9e8468aa9882761224343257",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response states \"The current temperature in Paris, Texas, is 65\u00b0F.\" This directly aligns with the weather assistant's response in row 5, which provided \"The current temperature in Paris is 65\u00b0F.\" The only addition in the final response is the clarification \"Texas\" which was part of the original user query asking about \"Paris, Texas\" (row 2). This clarification is appropriate and does not constitute hallucination as it correctly reflects the user's specific location request. The supervisor correctly relayed the temperature information from the weather assistant without invention or modification of the core data.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The current temperature in Paris is 65\u00b0F",
+          "Correctly specified location as Paris, Texas as requested by user"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1380,
+        "output_tokens": 367
+      }
+    },
+    {
+      "id": "LGS-T06",
+      "name": "no hal weather denver",
+      "trace_id": "523aa55848f8d10ca7e60ef0371daf5b",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately conveys the weather information that was provided by the weather assistant. The conversation tree shows that: 1) The user asked about weather in Denver, 2) The request was properly delegated to the weather assistant, 3) The weather assistant returned \"The current temperature in Denver is 70\u00b0F\", and 4) The final response correctly states \"The weather in Denver is currently 70\u00b0F.\" The final response faithfully relays the information without adding, modifying, or fabricating any details. The slight rewording from \"current temperature\" to \"currently\" is a natural linguistic variation that doesn't change the meaning or add unsupported information.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The weather in Denver is currently 70\u00b0F"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1374,
+        "output_tokens": 367
+      }
+    },
+    {
+      "id": "LGS-T07",
+      "name": "no hal weather austin texas",
+      "trace_id": "1e8a8a7ab140fb0aaa454302c18832c3",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response directly reports the information provided by the weather assistant agent. The weather assistant returned \"The current temperature in Austin is 96\u00b0F\" (turn 5), and the final response states \"The current temperature in Austin, Texas, is 96\u00b0F.\" The only addition is the specification of \"Texas\" to clarify the location, which is consistent with the user's original request that specified \"Austin, Texas.\" The response faithfully relays the temperature information without modification or fabrication.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The current temperature in Austin, Texas, is 96\u00b0F"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1377,
+        "output_tokens": 332
+      }
+    },
+    {
+      "id": "LGS-T08",
+      "name": "major destination tokyo unsourced facts",
+      "trace_id": "a82dba0265836a6254b646271ccdb6ac",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately reproduces the content from the destination assistant (row 5) without adding, modifying, or inventing any information. The AI supervisor correctly followed its instruction to \"relay the returned field values exactly as provided\" and did not create any new content beyond what was returned by the destination specialist. All information about Tokyo's timezone, currency, language, entry requirements, practical tips, and seasonal considerations matches exactly what was provided by the sub-agent.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Timezone Code: JST (Japan Standard Time) with UTC+9 offset",
+          "Currency: Japanese Yen (JPY) with cash preference note",
+          "Language: Japanese with English in tourist areas",
+          "Visa requirements: US citizens can enter without visa for up to 90 days",
+          "Public transportation recommendations including Suica/Pasmo cards",
+          "Tipping customs: not customary in Japan",
+          "Best visiting seasons: Spring for cherry blossoms, autumn for pleasant weather"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 2078,
+        "output_tokens": 416
+      }
+    },
+    {
+      "id": "LGS-T09",
+      "name": "minor tokyo timezone call suitability",
+      "trace_id": "d5f88858f20b9a96382009773b6f3746",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately summarizes the key information provided by the destination specialist assistant. The response correctly states the 13-14 hour time difference between Tokyo and New York, mentions the impact of daylight saving time, suggests scheduling calls during Tokyo's morning and New York's evening, and notes the consideration of public holidays. All these points are directly supported by the assistant's response in turn 5. The final response does not add any unsupported information or contradict any facts provided by the specialist.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Time difference between Tokyo and New York ranges from 13 to 14 hours",
+          "The variation depends on daylight saving time in New York",
+          "Suggests scheduling calls during Tokyo's morning and New York's evening to align work hours",
+          "Notes consideration of public holidays that might impact scheduling"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1706,
+        "output_tokens": 379
+      }
+    },
+    {
+      "id": "LGS-T10",
+      "name": "minor tokyo seasonal characterization",
+      "trace_id": "d19b11353c3e36811d40f5a62db133e0",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately reflects the information provided by the destination assistant in row 5. All key facts are faithfully relayed: the positive assessment of spring travel to Tokyo, temperature ranges (mid-50s to low 70s Fahrenheit / 10-22\u00b0C), cherry blossom season timing, the Sanja Matsuri festival mention, timezone information (JST, UTC +9), currency (Japanese Yen/JPY), and the note about US citizens and visa requirements for short stays. The final response maintains factual accuracy while appropriately condensing the detailed information from the specialist assistant without adding unsupported claims or contradicting the source material.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Spring is often considered an excellent choice for visiting Tokyo",
+          "Temperature ranges from mid-50s to low 70s Fahrenheit (10-22\u00b0C)",
+          "Cherry blossom season occurs in spring",
+          "Sanja Matsuri is a cultural festival mentioned",
+          "Tokyo timezone is JST (UTC +9 hours)",
+          "Currency is Japanese Yen (JPY)",
+          "US citizens might not need a visa for short stays"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1792,
+        "output_tokens": 449
+      }
+    },
+    {
+      "id": "LGS-T11",
+      "name": "major paris texas cross agent contradiction",
+      "trace_id": "e83ca4199b82973000c2a0226d50f5e3",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains significant hallucinations that contradict what actually occurred in the conversation. The user requested booking at \"Paris Downtown Inn in Paris, TX\" (Texas), but the lodging assistant actually booked \"Hotel Republique in Paris, France\" - a completely different hotel in a different country. The final response then falsely claims the booking was for the originally requested \"Paris Downtown Inn in Paris, TX\" when the actual booking was for Hotel Republique in France. This represents both a fabrication (claiming a booking that never happened) and a contradiction (conflicting with the actual booking details returned by the tool).",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "A booking was confirmed"
+        ],
+        "contradictions": [
+          "Claims booking was for 'Paris Downtown Inn in Paris, TX' when actual booking was for 'Hotel Republique in Paris, France'",
+          "Reports successful booking of requested hotel when different hotel was actually booked"
+        ],
+        "hallucination_types": [
+          "contradiction",
+          "fabrication",
+          "factual_inaccuracy"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1396,
+        "output_tokens": 413
+      }
+    },
+    {
+      "id": "LGS-T12",
+      "name": "major weather paris tx confidence overclaim",
+      "trace_id": "3c851e3e2cacda57933b7c3d52f688be",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately reflects the information returned by the weather assistant. The conversation tree shows that the weather assistant (id 5) reported \"The current temperature in Paris is 77\u00b0F.\" The final response (id 8) correctly states \"The current temperature in Paris, TX is 77\u00b0F.\" The only addition is the clarification of \"TX\" to specify the location, which is appropriate given the original user query specifically asked about \"Paris, TX.\" This is not a hallucination but rather a helpful clarification that maintains factual accuracy while being more specific about the location.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "The current temperature in Paris is 77\u00b0F",
+          "Location specification as Paris, TX matches the user's original query"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1378,
+        "output_tokens": 362
+      }
+    },
+    {
+      "id": "LGS-T13",
+      "name": "major eiffel inn paris texas",
+      "trace_id": "7a7e53c9cbd4008217ef25eb1427db31",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains significant hallucinations compared to the user's original request and the actual booking result. The user specifically requested to book \"the Eiffel Inn in Paris, Texas\" but the system booked \"Hotel Republique in Paris, France\" instead. The final response accurately reports what was actually booked (Hotel Republique in Paris, France) but this represents a complete mismatch with the user's request on multiple dimensions: wrong hotel name, wrong city, and wrong country. This constitutes a major operational failure where the booking assistant completely ignored the user's specifications and booked an entirely different hotel in a different location.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The booking was made for Hotel Republique in Paris, France",
+          "The response accurately reflects what the lodging assistant actually booked"
+        ],
+        "contradictions": [
+          "User requested 'Eiffel Inn in Paris, Texas' but the system booked 'Hotel Republique in Paris, France'",
+          "Wrong hotel name (Eiffel Inn vs Hotel Republique)",
+          "Wrong city/country (Paris, Texas vs Paris, France)"
+        ],
+        "hallucination_types": [
+          "factual_inaccuracy",
+          "contradiction"
+        ],
+        "context_coverage": "poor",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.95
+      },
+      "correct": true,
+      "usage": {
+        "input_tokens": 1407,
+        "output_tokens": 451
+      }
+    },
+    {
+      "id": "LGS-T14",
+      "name": "no hal hotel marriott denver",
+      "trace_id": "9470f139f8a1ad9caf283bacc81756c6",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains a significant hallucination by claiming that a hotel booking has been \"confirmed\" when examining the conversation tree shows no actual booking was performed. The conversation flow shows: 1) User requests to book at Marriott in Denver, 2) System transfers to lodging assistant, 3) Transfer is successful, 4) Lodging assistant claims booking is confirmed, 5) Transfer back to supervisor, 6) Final response repeats the confirmation claim. However, there is no evidence in the conversation tree of any actual booking process, payment processing, confirmation numbers, or real booking details being exchanged. The lodging assistant appears to have fabricated a booking confirmation without performing any actual booking operations, and the final response perpetuates this fabrication.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The user requested to book at the Marriott in Denver",
+          "The system successfully transferred to the lodging assistant",
+          "The system transferred back to the supervisor"
+        ],
+        "contradictions": [
+          "Claims booking has been confirmed when no actual booking process is evident",
+          "States specific booking confirmation without any booking details, confirmation numbers, or payment processing shown"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1388,
+        "output_tokens": 450
+      }
+    },
+    {
+      "id": "LGS-T15",
+      "name": "major sydney unsourced travel facts",
+      "trace_id": "72841bbde4ca0fff32ddcd4e0d0e5270",
+      "expected": "major_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response is an exact copy of the destination assistant's response (row 5), with no additions, modifications, or fabricated content. The AI system followed the instruction to \"relay the returned field values exactly as provided\" and did not invent or change any information. All content in the final response is directly sourced from what the destination specialist provided, making it fully verifiable against the conversation context.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Timezone Code: AEDT",
+          "UTC Offset: UTC+11 hours",
+          "Currency: Australian Dollar (AUD)",
+          "Primary Language Spoken: English",
+          "US citizens need a visa to enter Australia",
+          "Electronic Travel Authority (ETA) information",
+          "Passport validity requirements",
+          "Vaccination information",
+          "Best time to visit recommendations",
+          "Popular attractions mentioned",
+          "Transportation options"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1980,
+        "output_tokens": 383
+      }
+    },
+    {
+      "id": "LGS-T16",
+      "name": "minor toronto budget characterization",
+      "trace_id": "6bd193b33ff5fa95568e071c91acbf14",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "no_hallucination",
+        "explanation": "The final response accurately summarizes the information provided by the destination specialist agent without adding fabricated details or contradicting the source information. All key points from the specialist's response are preserved: Toronto's budget-friendliness depending on travel style, timezone (EST), currency (CAD), language (English), visa requirements for US citizens, and travel tips about accommodations, dining, and transportation. The final response condenses the information appropriately while maintaining factual accuracy.",
+        "hallucination_score": 0.0,
+        "factual_alignments": [
+          "Toronto can be a budget-friendly destination for US tourists",
+          "The city operates on Eastern Standard Time (EST)",
+          "Uses the Canadian Dollar (CAD)",
+          "English is the primary language spoken",
+          "US citizens do not need a visa for stays up to six months but should carry a valid passport",
+          "Range of accommodation options",
+          "Efficient public transport",
+          "Diverse dining choices"
+        ],
+        "contradictions": [],
+        "hallucination_types": [],
+        "context_coverage": "excellent",
+        "factual_accuracy": "accurate",
+        "verification_status": "fully_verified",
+        "confidence_level": 0.95
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1703,
+        "output_tokens": 390
+      }
+    },
+    {
+      "id": "LGS-T17",
+      "name": "minor london country inference",
+      "trace_id": "d6753e0cf7e2cd9f6a13af461043786a",
+      "expected": "minor_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response claims that \"Your booking at the Hilton in London, United Kingdom, is confirmed\" but this is not supported by the actual tool calls and agent responses in the conversation tree. When examining the sequence of events: 1) The AI called the hotel booking assistant tool, 2) The tool responded with only \"Successfully transferred to okahu_demo_lg_agent_lodging_assistant\" - a transfer confirmation, not a booking confirmation, 3) The lodging assistant then claimed the booking was confirmed, but there's no evidence of any actual booking process, hotel availability check, payment processing, or booking reference number being provided. The system instructions specifically state to \"relay the returned field values exactly as provided \u2014 do not invent or change hotel_name, city, country, or booking references\" yet no booking reference or confirmation details were actually provided by the tools. The final response fabricates a booking confirmation that never occurred in the actual tool interactions.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The request was for booking a hotel at the Hilton in London",
+          "The location mentioned is London, United Kingdom",
+          "The AI system did attempt to transfer to the lodging assistant"
+        ],
+        "contradictions": [
+          "Claims booking is confirmed when no actual booking process or confirmation occurred in the tool responses",
+          "No booking reference, confirmation number, or specific booking details were provided by the tools",
+          "The tool only confirmed a successful transfer, not a successful booking"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "good",
+        "factual_accuracy": "inaccurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1396,
+        "output_tokens": 515
+      }
+    },
+    {
+      "id": "LGS-T18",
+      "name": "no hal flight atl sfo",
+      "trace_id": "aaa01a44b6b91068b349a8eccd0bdf78",
+      "expected": "no_hallucination",
+      "model": "claude-sonnet-4-20250514",
+      "eval_result": {
+        "label": "major_hallucination",
+        "explanation": "The final response contains a significant hallucination. The AI claims that \"Your flight from ATL to SFO on April 20, 2026, is booked\" but there is no evidence in the conversation tree that any actual booking was completed. The conversation shows that the request was transferred to the air travel assistant (row 3-4), but the air travel assistant's response (row 5) simply states the booking is done without any supporting evidence such as confirmation numbers, booking references, flight details, or actual booking system interactions. The system instructions specifically warn against inventing booking references, yet the final response presents a booking completion as fact when the conversation tree shows no actual booking process occurred - only a transfer to a specialist and an unsubstantiated claim of completion.",
+        "hallucination_score": 0.8,
+        "factual_alignments": [
+          "The user requested a flight from ATL to SFO on April 20, 2026",
+          "The request was transferred to the air travel assistant",
+          "A transfer back to the travel supervisor occurred"
+        ],
+        "contradictions": [
+          "Claims the flight is booked when no actual booking evidence or process is shown in the conversation",
+          "Presents booking completion as fact without any confirmation details, booking references, or verification"
+        ],
+        "hallucination_types": [
+          "fabrication",
+          "unsupported_claim"
+        ],
+        "context_coverage": "fair",
+        "factual_accuracy": "partially_accurate",
+        "verification_status": "contradicted",
+        "confidence_level": 0.9
+      },
+      "correct": false,
+      "usage": {
+        "input_tokens": 1415,
+        "output_tokens": 467
+      }
+    }
+  ]
+}

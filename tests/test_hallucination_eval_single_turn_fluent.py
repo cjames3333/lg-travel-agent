@@ -36,9 +36,9 @@ from monocle_test_tools.evals.okahu_eval import OkahuEval
 from monocle_apptrace.instrumentation.common.utils import set_workflow_name
 from monocle_apptrace.exporters.file_exporter import FileSpanExporter
 
-from customer_care_agent import setup_agents as setup_cc_agents
-from financial_services_agent import setup_agents as setup_fs_agents
-from lg_travel_agent_location_mismatch import setup_agents as setup_lgs_agents
+from hallucination_customer_care_agent import setup_agents as setup_cc_agents
+from hallucination_financial_services_agent import setup_agents as setup_fs_agents
+from hallucination_lg_travel_agent import setup_agents as setup_lgs_agents
 
 _TEST_WORKFLOW_NAMES = {
     "test_cc_":  "test_cc_customer_care_agent",

@@ -2,7 +2,7 @@
 Financial Services Agent — Hallucination Evaluation Test Agent
 
 Multi-agent system (supervisor + 4 sub-agents) built on LangGraph with Monocle tracing.
-Mirrors the structure of lg_travel_agent_location_mismatch.py with five systematic
+Mirrors the structure of hallucination_lg_travel_agent.py with five systematic
 built-in errors and explicit no-hallucination paths designed to exercise every label
 produced by the hallucination evaluation template (Hallucination_Eval_Reqs_Phase1.docx).
 
@@ -93,7 +93,7 @@ import os
 import random
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 from langgraph_supervisor import create_supervisor
 from langchain_core.tools import tool
 
@@ -381,10 +381,10 @@ _FS_T01_TRIGGER = "transfer $8,000 from acc-4821 to acc-7733"
 
 
 def setup_agents(return_all_agents: bool = False, trigger_error3: bool = False):
-    account_agent = create_react_agent(
+    account_agent = create_agent(
         model=model_factory(),
         tools=[check_balance, get_portfolio, get_account_rate, get_stock_info],
-        prompt=(
+        system_prompt=(
             "You are an account inquiry specialist. You handle account balance inquiries, "
             "portfolio lookups, interest rate queries, and stock information requests. "
             "You must always call the appropriate tool before responding — never answer "
@@ -405,10 +405,10 @@ def setup_agents(return_all_agents: bool = False, trigger_error3: bool = False):
         name="okahu_demo_fs_agent_account_inquiry",
     )
 
-    trade_agent = create_react_agent(
+    trade_agent = create_agent(
         model=model_factory(),
         tools=[execute_trade],
-        prompt=(
+        system_prompt=(
             "You are a trade execution specialist. You only handle buy and sell orders for securities. "
             "After the trade tool returns a result, confirm using the returned ticker, shares, action, "
             "price_per_share, total_value, and confirmation_id exactly as provided — do not substitute "
@@ -430,10 +430,10 @@ def setup_agents(return_all_agents: bool = False, trigger_error3: bool = False):
     )
     transfer_prompt = _transfer_base_prompt if trigger_error3 else _transfer_base_prompt + _transfer_safety_clause
 
-    transfer_agent = create_react_agent(
+    transfer_agent = create_agent(
         model=model_factory(),
         tools=[transfer_funds],
-        prompt=transfer_prompt,
+        system_prompt=transfer_prompt,
         name="okahu_demo_fs_agent_fund_transfer",
     )
 
@@ -443,10 +443,10 @@ def setup_agents(return_all_agents: bool = False, trigger_error3: bool = False):
     # "suitable for your account" — a conclusion that contradicts the account type mismatch
     # established by the account_inquiry_agent. This is the cross-agent handoff inconsistency
     # that REQ-06 tests. On single-agent calls the check trivially passes (no handoff boundary).
-    suitability_agent = create_react_agent(
+    suitability_agent = create_agent(
         model=model_factory(),
         tools=[],   # no tools — reasons from supervisor-provided context only
-        prompt=(
+        system_prompt=(
             "You are an investment suitability specialist. Based on the account information and "
             "trade details provided to you, assess whether the requested investment is suitable "
             "for the customer. Provide a clear suitability recommendation. If account information "

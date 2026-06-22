@@ -1,3 +1,4 @@
+
 import asyncio
 import os
 import time
@@ -6,7 +7,7 @@ from typing import Any, Optional
 from uuid import UUID
 from langchain_core.messages import HumanMessage, ToolMessage
 from langchain_openai import ChatOpenAI
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 from langgraph_supervisor import create_supervisor
 from langchain_core.tools import tool
 from langchain_mcp_adapters.client import MultiServerMCPClient
@@ -20,8 +21,7 @@ MONOCLE_EXPORTER = os.getenv("MONOCLE_EXPORTER")
 
 # Enable Monocle Tracing
 from monocle_apptrace import setup_monocle_telemetry
-#setup_monocle_telemetry(workflow_name = 'test_lg_multi_travel_agent')
-setup_monocle_telemetry(workflow_name = 'test_lg_multi_travel_agent', monocle_exporters_list= MONOCLE_EXPORTER)
+setup_monocle_telemetry(workflow_name = 'lg-travel-agent', monocle_exporters_list = MONOCLE_EXPORTER)
 
 import logging
 logger = logging.getLogger(__name__)
@@ -68,24 +68,24 @@ async def setup_agents():
 
     weather_tools = await get_mcp_tools()
 
-    flight_assistant = create_react_agent(
+    flight_assistant = create_agent(
     model=model_factory(),
         tools=[book_flight],
-        prompt="You are a flight booking assistant. You only handle flight booking. Just handle that part from what the user says, ignore other parts of the requests.",
+        system_prompt="You are a flight booking assistant. You only handle flight booking. Just handle that part from what the user says, ignore other parts of the requests.",
         name="okahu_demo_lg_agent_air_travel_assistant"
     )
 
-    hotel_assistant = create_react_agent(
+    hotel_assistant = create_agent(
     model=model_factory(),
         tools=[book_hotel],
-        prompt="You are a hotel booking assistant. You only handle hotel booking. Book hotel if the user explicitly asks, just handle that part from what the user says, ignore other parts of the requests.",
+        system_prompt="You are a hotel booking assistant. You only handle hotel booking. Book hotel if the user explicitly asks, just handle that part from what the user says, ignore other parts of the requests.",
         name="okahu_demo_lg_agent_lodging_assistant"
     )
 
-    weather_agent = create_react_agent(
+    weather_agent = create_agent(
     model=model_factory(),
         tools=weather_tools,
-        prompt="You are a weather information assistant. Please use the tool available to you for checking weather. Extract city name from the user query and pass it to the weather tool, and ignore other parts of the requests.",
+        system_prompt="You are a weather information assistant. Please use the tool available to you for checking weather. Extract city name from the user query and pass it to the weather tool, and ignore other parts of the requests.",
         name="okahu_demo_lg_agent_weather_assistant"
     )
     supervisor = create_supervisor(
@@ -130,14 +130,36 @@ async def run_agent_session(session_id: str):
         print(exc)
         return
 
+    print("\n✓ Agent ready.\n")
+    
     while True:
         try:
-            request: str = input("\nI am a travel booking agent. How can I assist you with your travel plans? (You can ask me to book flights, hotels, or check the weather at any location.): \n")
+            request: str = input(
+                "\nI am a travel booking agent. How can I assist you? "
+                "(Book flights, hotels, or check weather. Type 'exit' or 'quit' to leave, or press Ctrl+D):\n> "
+            )
+            
+            # Check for explicit exit commands
+            if request.lower().strip() in ("exit", "quit"):
+                print("Thank you for using the travel booking agent. Goodbye!")
+                break
+            
+            # Skip empty input
+            if not request.strip():
+                continue
+                
+            chunk = await run_agent_turn(supervisor, request, session_id)
+            print(chunk["messages"][-1].content)
+            
+        except KeyboardInterrupt:
+            print("\n\nSession interrupted. Goodbye!")
+            break
         except EOFError:
             print("\nBye...")
             break
-        chunk = await run_agent_turn(supervisor, request, session_id)
-        print(chunk["messages"][-1].content)
+        except Exception as exc:
+            logger.error(f"Error during agent invocation: {exc}")
+            print(f"An error occurred: {exc}. Please try again.")
 
 def generate_session_id() -> str:
     return str(UUID(int=time.time_ns()))  # Simple UUID based on current time

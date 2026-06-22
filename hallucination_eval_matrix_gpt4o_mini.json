@@ -1,0 +1,190 @@
+{
+  "trace_id": "31352875cbf7baf3f8143fa8a4a2cb74",
+  "model": "gpt-4o-mini",
+  "runs": [
+    {
+      "run": 1,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 0.9,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 1,
+      "hallucination_types": [
+        "location misrepresentation",
+        "factual inaccuracy"
+      ],
+      "contradictions": [
+        "The hotel is claimed to be in Paris, Tennessee, but the context specifies it is in Paris, France."
+      ],
+      "explanation": "The AI response states that the hotel is located in Paris, Tennessee, which is a fabrication since the context identifies the hotel as located in Paris, France. This indicates a significant misalignment with the provided context.",
+      "tokens": 488
+    },
+    {
+      "run": 2,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 9,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 2,
+      "hallucination_types": [
+        "location error"
+      ],
+      "contradictions": [
+        "Hotel de la Seine is in Paris, France, not in Paris, Tennessee."
+      ],
+      "explanation": "The AI assistant stated that the hotel is booked at 'Hotel de la Seine in Paris, Tennessee, USA', which incorrectly associates this hotel with a city that does not match the provided context. The correct location of Hotel de la Seine is Paris, France, not Tennessee. Therefore, this is a major hallucination because the response contradicts the factual information given in the context.",
+      "tokens": 507
+    },
+    {
+      "run": 3,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 8,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 0.95,
+      "hallucination_types": [
+        "location misrepresentation"
+      ],
+      "contradictions": [
+        "The hotel is stated to be in Paris, Tennessee, while context indicates it is in Paris, France."
+      ],
+      "explanation": "The AI incorrectly claims that the Hotel de la Seine is located in Paris, Tennessee, when it is actually in Paris, France. This statement creates a significant factual error as it misrepresents the location of the hotel.",
+      "tokens": 484
+    },
+    {
+      "run": 4,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 0.9,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 0.8,
+      "hallucination_types": [
+        "factual_inaccuracy"
+      ],
+      "contradictions": [
+        "Hotel de la Seine is stated to be in Paris, France, not Paris, Tennessee."
+      ],
+      "explanation": "The AI response incorrectly states that the hotel is located in Paris, Tennessee, while the provided context clearly indicates that it is in Paris, France. This is a major factual error as it misrepresents the location of the hotel.",
+      "tokens": 486
+    },
+    {
+      "run": 5,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 0.9,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "good",
+      "confidence_level": 0.85,
+      "hallucination_types": [
+        "location mismatch"
+      ],
+      "contradictions": [
+        "AI states hotel is in Paris, Tennessee, but context states hotel is in Paris, France."
+      ],
+      "explanation": "The AI assistant incorrectly booked a hotel in Paris, Tennessee, while the provided context clearly states that the hotel is in Paris, France. This represents a significant mismatch between the user's request and the context given.",
+      "tokens": 496
+    },
+    {
+      "run": 6,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 8.5,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 0.2,
+      "hallucination_types": [
+        "location error",
+        "factually incorrect information"
+      ],
+      "contradictions": [
+        "The hotel is located in Paris, France, not Paris, Tennessee."
+      ],
+      "explanation": "The response incorrectly states that the hotel 'Hotel de la Seine' is located in Paris, Tennessee. In reality, the hotel is in Paris, France. This constitutes a major hallucination as it provides incorrect location information that cannot be supported by the context provided.",
+      "tokens": 491
+    },
+    {
+      "run": 7,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 0.9,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 0.95,
+      "hallucination_types": [
+        "geographic misrepresentation",
+        "false location"
+      ],
+      "contradictions": [
+        "AI stated the hotel is in Paris, Tennessee, but it is actually in Paris, France."
+      ],
+      "explanation": "The response incorrectly states that Hotel de la Seine is located in Paris, Tennessee. The context clearly indicates that the hotel is in Paris, France, which is a significant error.",
+      "tokens": 479
+    },
+    {
+      "run": 8,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 0.9,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 0.7,
+      "hallucination_types": [
+        "location error"
+      ],
+      "contradictions": [
+        "Hotel de la Seine is in Paris, France, not Paris, Tennessee."
+      ],
+      "explanation": "The AI assistant incorrectly states that the Hotel de la Seine is located in Paris, Tennessee, when in fact it is in Paris, France. This misrepresentation is a significant error as it misleads the user regarding the hotel's location.",
+      "tokens": 482
+    },
+    {
+      "run": 9,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 0.9,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 0.8,
+      "hallucination_types": [
+        "location error"
+      ],
+      "contradictions": [
+        "Hotel de la Seine is not in Paris, Tennessee; it is in Paris, France."
+      ],
+      "explanation": "The AI assistant claims that the booking was made at 'Hotel de la Seine in Paris, Tennessee', which is incorrect. Hotel de la Seine is actually located in Paris, France, not Tennessee. This indicates a critical error in factual representation and geographic location, leading to a major misinformation issue.",
+      "tokens": 496
+    },
+    {
+      "run": 10,
+      "model": "gpt-4o-mini-2024-07-18",
+      "label": "major_hallucination",
+      "hallucination_score": 0.9,
+      "factual_accuracy": "inaccurate",
+      "verification_status": "contradicted",
+      "context_coverage": "poor",
+      "confidence_level": 0.95,
+      "hallucination_types": [
+        "location misrepresentation",
+        "factual error"
+      ],
+      "contradictions": [
+        "Hotel de la Seine is not in Paris, Tennessee."
+      ],
+      "explanation": "The assistant claims that a booking was made at 'Hotel de la Seine' in 'Paris, Tennessee, USA', which is a significant misrepresentation. 'Hotel de la Seine' is located in Paris, France, not in Tennessee. This indicates a complete misunderstanding of the context and provides incorrect geographical information.",
+      "tokens": 508
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "url": "https://sre-agent.okahu.co/api/v1/ask_agent",
+  "env": "prod",
+  "api_key_prefix": "okh_pkxauNTt",
+  "validated_at": "2026-04-23T00:00:00Z"
+}

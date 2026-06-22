@@ -2,7 +2,7 @@
 Customer Care Agent — Hallucination Evaluation Test Agent
 
 Multi-agent system (supervisor + 3 sub-agents) built on LangGraph with Monocle tracing.
-Mirrors the structure of lg_travel_agent_location_mismatch.py with four systematic
+Mirrors the structure of hallucination_lg_travel_agent.py with four systematic
 built-in errors and explicit no-hallucination paths designed to exercise every label
 produced by the hallucination evaluation template (Hallucination_Eval_Reqs_Phase1.docx).
 
@@ -105,7 +105,7 @@ import os
 import random
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 from langgraph_supervisor import create_supervisor
 from langchain_core.tools import tool
 
@@ -430,10 +430,10 @@ def get_shipping_status(order_id: str):
 # ── Agent setup ───────────────────────────────────────────────────────────────
 
 def setup_agents(return_all_agents: bool = False):
-    order_lookup_agent = create_react_agent(
+    order_lookup_agent = create_agent(
         model=model_factory(),
         tools=[lookup_order, get_product_warranty, get_shipping_status],
-        prompt=(
+        system_prompt=(
             "You are an order lookup specialist. You look up customer order details, "
             "warranty information, and shipping status. "
             "You must always call the appropriate tool before responding — never answer "
@@ -461,10 +461,10 @@ def setup_agents(return_all_agents: bool = False):
         name="okahu_demo_cc_agent_order_lookup",
     )
 
-    eligibility_agent = create_react_agent(
+    eligibility_agent = create_agent(
         model=model_factory(),
         tools=[check_eligibility, get_return_policy],
-        prompt=(
+        system_prompt=(
             "You are a refund eligibility and return policy specialist. You assess whether orders "
             "qualify for a refund and explain the applicable return policy to customers. "
             "\nWhen asked about eligibility:\n"
@@ -478,10 +478,10 @@ def setup_agents(return_all_agents: bool = False):
         name="okahu_demo_cc_agent_eligibility",
     )
 
-    refund_agent = create_react_agent(
+    refund_agent = create_agent(
         model=model_factory(),
         tools=[process_refund],
-        prompt=(
+        system_prompt=(
             "You are a refund processing specialist. You only process refunds for eligible orders. "
             "Always confirm the outcome with a complete summary that includes: "
             "a specific refund ID in the format REF-XXXXXX (six alphanumeric digits), "
