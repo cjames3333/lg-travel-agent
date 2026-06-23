@@ -13,7 +13,7 @@ Hotel booking for any non-Paris city (e.g. "Book a hotel at The Grand in New Yor
 
 Flight booking that does NOT trigger REQ-05 details (see ERROR-2 note):
     There is no clean flight path — book_flight always returns sparse data.
-    Use hallucination_customer_care_agent.py or hallucination_financial_services_agent.py for a clean flight-equivalent.
+    Use customer_care_agent.py or financial_services_agent.py for a clean flight-equivalent.
 
 Weather query for a city with no qualifier:
     "What is the weather in Denver?" → weather_agent passes "Denver" exactly → no mismatch
@@ -98,7 +98,7 @@ from uuid import UUID
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, ToolMessage
 from langchain_openai import ChatOpenAI
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 from langgraph_supervisor import create_supervisor
 from langchain_core.tools import tool
 from langchain_mcp_adapters.client import MultiServerMCPClient
@@ -109,12 +109,13 @@ from langgraph.graph.state import CompiledStateGraph
 load_dotenv(override=True)
 OKAHU_API_KEY = os.getenv("OKAHU_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MONOCLE_EXPORTER = os.getenv("MONOCLE_EXPORTER")
+#MONOCLE_EXPORTER = os.getenv("MONOCLE_EXPORTER")
 
 # Enable Monocle Tracing
 from monocle_apptrace import setup_monocle_telemetry
 #setup_monocle_telemetry(workflow_name = 'test_lg_travel_agent', monocle_exporters_list = 'file,okahu')
-setup_monocle_telemetry(workflow_name = 'cj_test_lg_travel_agent', monocle_exporters_list= MONOCLE_EXPORTER)
+#setup_monocle_telemetry(workflow_name = 'hal_eval_lg_travel_agent', monocle_exporters_list= MONOCLE_EXPORTER)
+setup_monocle_telemetry(workflow_name = 'hal_eval_lg_travel_agent')
 
 import logging
 logger = logging.getLogger(__name__)
@@ -341,10 +342,10 @@ async def setup_agents(return_all_agents: bool = False):
 
     weather_tools = await get_mcp_tools()
 
-    flight_assistant = create_react_agent(
+    flight_assistant = create_agent(
     model=model_factory(),
         tools=[book_flight],
-        prompt=(
+        system_prompt=(
             "You are a flight booking assistant. You only handle flight booking. "
             "When a flight booking is confirmed, follow these rules based on the route: "
             "Rule 1 — JFK to LAX on April 28, or ORD to MIA: you MUST provide a complete, specific confirmation "
@@ -359,10 +360,10 @@ async def setup_agents(return_all_agents: bool = False):
         name="okahu_demo_lg_agent_air_travel_assistant"
     )
 
-    hotel_assistant = create_react_agent(
+    hotel_assistant = create_agent(
     model=model_factory(),
         tools=[book_hotel],
-        prompt=(
+        system_prompt=(
             "You are a hotel booking assistant. You only handle hotel booking. "
             "Book the hotel if the user explicitly asks — just handle that part, ignore other parts of the request. "
             "Do not ask for clarification — if the user does not name a specific hotel, use 'any available hotel' "
@@ -378,10 +379,10 @@ async def setup_agents(return_all_agents: bool = False):
         name="okahu_demo_lg_agent_lodging_assistant"
     )
 
-    destination_assistant = create_react_agent(
+    destination_assistant = create_agent(
     model=model_factory(),
         tools=[get_destination_info],
-        prompt=(
+        system_prompt=(
             "You are a travel destination specialist. For any question about a specific destination "
             "or city — including seasonal advice, timezone questions, travel tips, or general "
             "destination queries — always call the destination info tool first before responding. "
@@ -393,10 +394,10 @@ async def setup_agents(return_all_agents: bool = False):
         name="okahu_demo_lg_agent_destination_assistant"
     )
 
-    weather_agent = create_react_agent(
+    weather_agent = create_agent(
     model=model_factory(),
         tools=weather_tools,
-        prompt=(
+        system_prompt=(
             "You are a weather information assistant. Please use the tool available to you for checking weather. "
             "Extract ONLY the city name (no state or country qualifier) from the user query "
             "and pass just that bare city name to the weather tool. "
