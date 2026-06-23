@@ -232,3 +232,9 @@ run_hallucination*.py
 update_hallucination_scenarios.py
 hallucination_silent_failures_guide.md
 okahu_eval_test_scenarios.json
+add_lossless_scenarios.py
+OPERATION_FIXES_PROPOSAL.md
+Trace:.md.md
+okahu_pipeline_llm_input_*.json
+review the traces associated with scope.md
+test_run_analysis_*.md
