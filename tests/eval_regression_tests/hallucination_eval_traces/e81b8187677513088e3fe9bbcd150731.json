@@ -1,0 +1,745 @@
+{
+  "trace_id": "e81b8187677513088e3fe9bbcd150731",
+  "start_time": "2026-05-27T04:21:39.011887Z",
+  "end_time": "2026-05-27T04:21:45.725002Z",
+  "duration_ms": 6713,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:21:39.011887Z",
+      "end_time": "2026-05-27T04:21:45.725002Z",
+      "duration_ms": 6713,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3e15ba631766dd65",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "e022ba1d5d0087cb",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "f705000463201ab0:*",
+        "monocle.last.agent.invocation.id": "0c0a0caf82782ded",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Book a flight from ATL to SFO on April 20, 2026"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:39.011887Z"
+        },
+        {
+          "attributes": {
+            "response": "Your flight from ATL to SFO on April 20, 2026, has been successfully booked. If you need further details or assistance, please let me know!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:45.725002Z"
+        }
+      ]
+    },
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:21:39.011887Z",
+      "end_time": "2026-05-27T04:21:45.725002Z",
+      "duration_ms": 6713,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e022ba1d5d0087cb",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "f705000463201ab0:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:21:39.015728Z",
+      "end_time": "2026-05-27T04:21:40.991452Z",
+      "duration_ms": 1976,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c2b87bcbeb0eea3d",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "3e15ba631766dd65",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "fd12eaf1b214390d:transfer_to_okahu_demo_lg_agent_air_travel_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d792c4fa5d8e0c7ffde6de772514e6ff",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Book a flight from ATL to SFO on April 20, 2026"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:39.015728Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_air_travel_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:40.991452Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:21:39.024707Z",
+      "end_time": "2026-05-27T04:21:40.991452Z",
+      "duration_ms": 1967,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "fd12eaf1b214390d",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "c2b87bcbeb0eea3d",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_air_travel_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d792c4fa5d8e0c7ffde6de772514e6ff",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Book a flight from ATL to SFO on April 20, 2026\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:39.025697Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_air_travel_assistant\", \"args\": {}, \"id\": \"call_f40rMQj1vRfBilqwAlctkd3J\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:40.991452Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 21,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 290,
+            "total_tokens": 311
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:21:40.991452Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:21:39.027696Z",
+      "end_time": "2026-05-27T04:21:40.991452Z",
+      "duration_ms": 1964,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1ad60227f0f4bd45",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "fd12eaf1b214390d",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d792c4fa5d8e0c7ffde6de772514e6ff",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:21:41.004007Z",
+      "end_time": "2026-05-27T04:21:41.856467Z",
+      "duration_ms": 852,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a15866d1670fdbf0",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "68f99cc48e52d94b",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c313ef50d0cf5e32fa1e18a03215f034",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:21:41.004007Z",
+      "end_time": "2026-05-27T04:21:41.856467Z",
+      "duration_ms": 852,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "68f99cc48e52d94b",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "3978f26299687b6c",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_lg_tool_book_flight",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c313ef50d0cf5e32fa1e18a03215f034",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a flight booking assistant. You only handle flight booking. After the booking tool returns a result, confirm the booking using the returned fields. Ignore other parts of the requests.\"}",
+              "{\"human\": \"Book a flight from ATL to SFO on April 20, 2026\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_air_travel_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_f40rMQj1vRfBilqwAlctkd3J\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_air_travel_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:41.004007Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_lg_tool_book_flight\", \"args\": {\"from_airport\": \"ATL\", \"to_airport\": \"SFO\", \"date\": \"2026-04-20\"}, \"id\": \"call_VkebZahTnB6lIId0BB1iQMOK\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:41.856467Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 39,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 326,
+            "total_tokens": 365
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:21:41.856467Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:21:41.004007Z",
+      "end_time": "2026-05-27T04:21:42.790231Z",
+      "duration_ms": 1786,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3978f26299687b6c",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "3e15ba631766dd65",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "c2b87bcbeb0eea3d",
+            "name": "okahu_demo_lg_agent_air_travel_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "fd12eaf1b214390d",
+        "last.inference": "e0422dcd8c0e9261:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c313ef50d0cf5e32fa1e18a03215f034",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Book a flight from ATL to SFO on April 20, 2026"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:41.004007Z"
+        },
+        {
+          "attributes": {
+            "response": "Your flight from ATL to SFO on April 20, 2026, has been booked. If you need further details or assistance, please let me know!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:42.789232Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:21:41.861158Z",
+      "end_time": "2026-05-27T04:21:41.861158Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "bf51291b88fbe127",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "3978f26299687b6c",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Book a flight from one airport to another",
+            "name": "okahu_demo_lg_tool_book_flight",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_lg_agent_air_travel_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "68f99cc48e52d94b",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c313ef50d0cf5e32fa1e18a03215f034",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'from_airport': 'ATL', 'to_airport': 'SFO', 'date': '2026-04-20'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:41.861158Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"from_airport\": \"ATL\", \"to_airport\": \"SFO\", \"status\": \"booked\", \"date\": \"2026-04-20\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:41.861158Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:21:41.865224Z",
+      "end_time": "2026-05-27T04:21:42.788088Z",
+      "duration_ms": 923,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e0422dcd8c0e9261",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "3978f26299687b6c",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c313ef50d0cf5e32fa1e18a03215f034",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a flight booking assistant. You only handle flight booking. After the booking tool returns a result, confirm the booking using the returned fields. Ignore other parts of the requests.\"}",
+              "{\"human\": \"Book a flight from ATL to SFO on April 20, 2026\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_air_travel_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_f40rMQj1vRfBilqwAlctkd3J\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_air_travel_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_lg_tool_book_flight\\\", \\\"args\\\": {\\\"from_airport\\\": \\\"ATL\\\", \\\"to_airport\\\": \\\"SFO\\\", \\\"date\\\": \\\"2026-04-20\\\"}, \\\"id\\\": \\\"call_VkebZahTnB6lIId0BB1iQMOK\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"from_airport\\\": \\\"ATL\\\", \\\"to_airport\\\": \\\"SFO\\\", \\\"status\\\": \\\"booked\\\", \\\"date\\\": \\\"2026-04-20\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:41.865224Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Your flight from ATL to SFO on April 20, 2026, has been booked. If you need further details or assistance, please let me know!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:42.787745Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 34,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 427,
+            "total_tokens": 461
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:21:42.788088Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:21:41.865224Z",
+      "end_time": "2026-05-27T04:21:42.785304Z",
+      "duration_ms": 920,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "cadc2cc527cdd41f",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "e0422dcd8c0e9261",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c313ef50d0cf5e32fa1e18a03215f034",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:21:42.792693Z",
+      "end_time": "2026-05-27T04:21:45.722987Z",
+      "duration_ms": 2930,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0c0a0caf82782ded",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "3e15ba631766dd65",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_air_travel_assistant",
+            "from_agent_span_id": "3978f26299687b6c",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "e0422dcd8c0e9261",
+        "last.inference": "f705000463201ab0:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3fa0a95ad6eaa240cbb8952ad2bb5adb",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Book a flight from ATL to SFO on April 20, 2026"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:42.792693Z"
+        },
+        {
+          "attributes": {
+            "response": "Your flight from ATL to SFO on April 20, 2026, has been successfully booked. If you need further details or assistance, please let me know!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:45.722987Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:21:42.797072Z",
+      "end_time": "2026-05-27T04:21:45.718957Z",
+      "duration_ms": 2922,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "f705000463201ab0",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "0c0a0caf82782ded",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3fa0a95ad6eaa240cbb8952ad2bb5adb",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Book a flight from ATL to SFO on April 20, 2026\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_air_travel_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_f40rMQj1vRfBilqwAlctkd3J\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_air_travel_assistant\"}",
+              "{\"ai\": \"Your flight from ATL to SFO on April 20, 2026, has been booked. If you need further details or assistance, please let me know!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:21:42.798069Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Your flight from ATL to SFO on April 20, 2026, has been successfully booked. If you need further details or assistance, please let me know!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:21:45.718957Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 35,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 501,
+            "total_tokens": 536
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:21:45.718957Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:21:42.799848Z",
+      "end_time": "2026-05-27T04:21:45.713319Z",
+      "duration_ms": 2913,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "629a33c90e14fea4",
+      "trace_id": "e81b8187677513088e3fe9bbcd150731",
+      "parent_id": "f705000463201ab0",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3fa0a95ad6eaa240cbb8952ad2bb5adb",
+        "scope.agentic.session": "6b64620859764cad83089f2f5fe6d1c4",
+        "scope.agentic.turn": "54fa2804f6d48bd4e591d333054e338",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t18_no_hal_flight_atl_sfo",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    }
+  ]
+}

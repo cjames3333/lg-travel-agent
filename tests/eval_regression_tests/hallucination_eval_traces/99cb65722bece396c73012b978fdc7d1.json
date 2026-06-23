@@ -1,0 +1,745 @@
+{
+  "trace_id": "99cb65722bece396c73012b978fdc7d1",
+  "start_time": "2026-05-28T02:44:14.246880Z",
+  "end_time": "2026-05-28T02:44:20.075117Z",
+  "duration_ms": 5828,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-28T02:44:14.246880Z",
+      "end_time": "2026-05-28T02:44:20.075117Z",
+      "duration_ms": 5828,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "7b9364f3c805b3a3",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_fs_financial_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "b461f9c2b6b98251:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-28T02:44:14.246880Z",
+      "end_time": "2026-05-28T02:44:20.075117Z",
+      "duration_ms": 5828,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c7c587ecd531d888",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "7b9364f3c805b3a3",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "b461f9c2b6b98251:*",
+        "monocle.last.agent.invocation.id": "78f5d16e2db9bf93",
+        "monocle.last.agent.name": "okahu_demo_fs_agent_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is the balance on account ACC-9901 substantial for a checking account?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:14.246880Z"
+        },
+        {
+          "attributes": {
+            "response": "The balance on account ACC-9901 is $87,500.00 USD, which is considered substantial for a checking account."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:20.075117Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-28T02:44:14.250904Z",
+      "end_time": "2026-05-28T02:44:16.716922Z",
+      "duration_ms": 2466,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ff45b6ea10cb6743",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "c7c587ecd531d888",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_fs_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "756b02e160461a80:transfer_to_okahu_demo_fs_agent_account_inquiry",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ff82abeec70759419f5b03a925017fa9",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is the balance on account ACC-9901 substantial for a checking account?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:14.250904Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_fs_agent_account_inquiry"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:16.716922Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-28T02:44:14.257797Z",
+      "end_time": "2026-05-28T02:44:16.708230Z",
+      "duration_ms": 2450,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "756b02e160461a80",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "ff45b6ea10cb6743",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_fs_agent_account_inquiry",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ff82abeec70759419f5b03a925017fa9",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an account inquiry specialist, a trade execution specialist, a fund transfer specialist, and an investment suitability specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles only their area. Account inquiry handles: balance checks, portfolio lookups, interest rate queries, and stock ticker information requests. When an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs. For investment requests, check suitability after the trade is executed.\"}",
+              "{\"human\": \"Is the balance on account ACC-9901 substantial for a checking account?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:14.257797Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_fs_agent_account_inquiry\", \"args\": {}, \"id\": \"call_Vwrap0soy1EqJJxhhxtsMUld\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:16.708230Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 18,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 271,
+            "total_tokens": 289
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-28T02:44:16.708230Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-28T02:44:14.257797Z",
+      "end_time": "2026-05-28T02:44:16.708230Z",
+      "duration_ms": 2450,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3cf7e838865ee34a",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "756b02e160461a80",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ff82abeec70759419f5b03a925017fa9",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-28T02:44:16.716922Z",
+      "end_time": "2026-05-28T02:44:19.166705Z",
+      "duration_ms": 2450,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "da8d495496005f87",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "c7c587ecd531d888",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_fs_agent_supervisor",
+            "from_agent_span_id": "ff45b6ea10cb6743",
+            "name": "okahu_demo_fs_agent_account_inquiry",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "756b02e160461a80",
+        "last.inference": "5f94b8c241792e07:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3f68bff361dbfa76899710c69577bb61",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is the balance on account ACC-9901 substantial for a checking account?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:16.716922Z"
+        },
+        {
+          "attributes": {
+            "response": "The current balance for account ACC-9901, which is a checking account, is $87,500.00 USD. This amount is considered substantial for a checking account."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:19.166705Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-28T02:44:16.720847Z",
+      "end_time": "2026-05-28T02:44:17.702704Z",
+      "duration_ms": 982,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0b851f1c0da687a1",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "da8d495496005f87",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_fs_tool_check_balance",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3f68bff361dbfa76899710c69577bb61",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an account inquiry specialist. You handle account balance inquiries, portfolio lookups, interest rate queries, and stock information requests. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. Always pass the full account ID when calling tools. After each tool returns a result, relay the returned fields exactly as provided. When a customer asks about a portfolio position, relay the data returned by the portfolio tool. When providing stock information, relay the data returned by the tool.\"}",
+              "{\"human\": \"Is the balance on account ACC-9901 substantial for a checking account?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_account_inquiry\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Vwrap0soy1EqJJxhhxtsMUld\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_account_inquiry\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:16.720847Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_fs_tool_check_balance\", \"args\": {\"account_id\": \"ACC-9901\"}, \"id\": \"call_ivWXWrc9764nksFuMyq7gFm0\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:17.702704Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 23,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 458,
+            "total_tokens": 481
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-28T02:44:17.702704Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-28T02:44:16.722739Z",
+      "end_time": "2026-05-28T02:44:17.702704Z",
+      "duration_ms": 980,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e5145a467425269c",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "0b851f1c0da687a1",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3f68bff361dbfa76899710c69577bb61",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-28T02:44:17.708418Z",
+      "end_time": "2026-05-28T02:44:19.166705Z",
+      "duration_ms": 1458,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "afd34e4fa211a5a5",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "5f94b8c241792e07",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3f68bff361dbfa76899710c69577bb61",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-28T02:44:17.708418Z",
+      "end_time": "2026-05-28T02:44:19.166705Z",
+      "duration_ms": 1458,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "5f94b8c241792e07",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "da8d495496005f87",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3f68bff361dbfa76899710c69577bb61",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an account inquiry specialist. You handle account balance inquiries, portfolio lookups, interest rate queries, and stock information requests. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. Always pass the full account ID when calling tools. After each tool returns a result, relay the returned fields exactly as provided. When a customer asks about a portfolio position, relay the data returned by the portfolio tool. When providing stock information, relay the data returned by the tool.\"}",
+              "{\"human\": \"Is the balance on account ACC-9901 substantial for a checking account?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_account_inquiry\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Vwrap0soy1EqJJxhhxtsMUld\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_account_inquiry\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_fs_tool_check_balance\\\", \\\"args\\\": {\\\"account_id\\\": \\\"ACC-9901\\\"}, \\\"id\\\": \\\"call_ivWXWrc9764nksFuMyq7gFm0\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"account_id\\\": \\\"ACC-9901\\\", \\\"account_type\\\": \\\"checking\\\", \\\"balance\\\": 87500.0, \\\"currency\\\": \\\"USD\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:17.708418Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The current balance for account ACC-9901, which is a checking account, is $87,500.00 USD. This amount is considered substantial for a checking account.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:19.166705Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 36,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 535,
+            "total_tokens": 571
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-28T02:44:19.166705Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-28T02:44:17.708418Z",
+      "end_time": "2026-05-28T02:44:17.708418Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6ba439f0cac25367",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "da8d495496005f87",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Check the current balance for a customer account by account ID",
+            "name": "okahu_demo_fs_tool_check_balance",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_fs_agent_account_inquiry",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "0b851f1c0da687a1",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3f68bff361dbfa76899710c69577bb61",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'account_id': 'ACC-9901'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:17.708418Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"account_id\": \"ACC-9901\", \"account_type\": \"checking\", \"balance\": 87500.0, \"currency\": \"USD\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:17.708418Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-28T02:44:19.166705Z",
+      "end_time": "2026-05-28T02:44:20.075117Z",
+      "duration_ms": 908,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "78f5d16e2db9bf93",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "c7c587ecd531d888",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_fs_agent_account_inquiry",
+            "from_agent_span_id": "da8d495496005f87",
+            "name": "okahu_demo_fs_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "5f94b8c241792e07",
+        "last.inference": "b461f9c2b6b98251:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "e0f87b943fa9c9a18ab66d60a07ab537",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is the balance on account ACC-9901 substantial for a checking account?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:19.166705Z"
+        },
+        {
+          "attributes": {
+            "response": "The balance on account ACC-9901 is $87,500.00 USD, which is considered substantial for a checking account."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:20.075117Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-28T02:44:19.177389Z",
+      "end_time": "2026-05-28T02:44:20.075117Z",
+      "duration_ms": 898,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "b461f9c2b6b98251",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "78f5d16e2db9bf93",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "e0f87b943fa9c9a18ab66d60a07ab537",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an account inquiry specialist, a trade execution specialist, a fund transfer specialist, and an investment suitability specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles only their area. Account inquiry handles: balance checks, portfolio lookups, interest rate queries, and stock ticker information requests. When an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs. For investment requests, check suitability after the trade is executed.\"}",
+              "{\"human\": \"Is the balance on account ACC-9901 substantial for a checking account?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_account_inquiry\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Vwrap0soy1EqJJxhhxtsMUld\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_account_inquiry\"}",
+              "{\"ai\": \"The current balance for account ACC-9901, which is a checking account, is $87,500.00 USD. This amount is considered substantial for a checking account.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_fs_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_fs_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:44:19.177389Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The balance on account ACC-9901 is $87,500.00 USD, which is considered substantial for a checking account.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:44:20.075117Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 27,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 451,
+            "total_tokens": 478
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-28T02:44:20.075117Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-28T02:44:19.177389Z",
+      "end_time": "2026-05-28T02:44:20.075117Z",
+      "duration_ms": 898,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0bc08ad2bef5f8c1",
+      "trace_id": "99cb65722bece396c73012b978fdc7d1",
+      "parent_id": "b461f9c2b6b98251",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "e0f87b943fa9c9a18ab66d60a07ab537",
+        "scope.agentic.session": "75165d231e9a44a5970b52fe3c33f9ed",
+        "scope.agentic.turn": "c9e1c7b2e549f9e2caabe603edc90d48",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:43:19.814771",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t14_minor_balance_adequacy_judgment",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    }
+  ]
+}

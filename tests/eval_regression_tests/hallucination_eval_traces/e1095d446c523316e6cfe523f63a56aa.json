@@ -1,0 +1,745 @@
+{
+  "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+  "start_time": "2026-05-27T04:20:30.214231Z",
+  "end_time": "2026-05-27T04:20:36.817234Z",
+  "duration_ms": 6603,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:20:30.214231Z",
+      "end_time": "2026-05-27T04:20:36.817234Z",
+      "duration_ms": 6603,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "60d10ddc678662a9",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "ee40030473ae0d0d",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "c67cadb0ba074469:*",
+        "monocle.last.agent.invocation.id": "3248200769089428",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is Toronto a budget-friendly destination for US tourists?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:30.215237Z"
+        },
+        {
+          "attributes": {
+            "response": "Toronto offers a wealth of experiences for US tourists, with English as the primary language aligning with ease of communication. While the city is bustling and vibrant, it can be relatively expensive. However, there are numerous budget-friendly options like hostels, public transportation, and free cultural festivals. Ensure to have some Canadian Dollars (CAD) as cash for smaller purchases, though many places accept cards. Check out local parks and free events for an enriching yet cost-effective experience."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:36.817234Z"
+        }
+      ]
+    },
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:20:30.214231Z",
+      "end_time": "2026-05-27T04:20:36.817234Z",
+      "duration_ms": 6603,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ee40030473ae0d0d",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "c67cadb0ba074469:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:20:30.221426Z",
+      "end_time": "2026-05-27T04:20:31.327245Z",
+      "duration_ms": 1106,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "b6548af571245c2e",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "60d10ddc678662a9",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "aeb0513e88bbe278:transfer_to_okahu_demo_lg_agent_destination_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b15f612e98ef773932a5c17f9bf343a9",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is Toronto a budget-friendly destination for US tourists?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:30.221426Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_destination_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:31.327245Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:20:30.224421Z",
+      "end_time": "2026-05-27T04:20:31.327245Z",
+      "duration_ms": 1103,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "aeb0513e88bbe278",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "b6548af571245c2e",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_destination_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b15f612e98ef773932a5c17f9bf343a9",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Is Toronto a budget-friendly destination for US tourists?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:30.224421Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_destination_assistant\", \"args\": {}, \"id\": \"call_Gs5Oad5jmUylI2Ux4sgzDPfe\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:31.327245Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 19,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 284,
+            "total_tokens": 303
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:20:31.327245Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:20:30.225422Z",
+      "end_time": "2026-05-27T04:20:31.327245Z",
+      "duration_ms": 1102,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e0cb7646cb0b7b8e",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "aeb0513e88bbe278",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b15f612e98ef773932a5c17f9bf343a9",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:20:31.327245Z",
+      "end_time": "2026-05-27T04:20:31.988239Z",
+      "duration_ms": 661,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "9745a1d6ee377d4d",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "093d2ce147372051",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_lg_tool_get_destination_info",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "dfe548aa6f3aec491790e3895182edfc",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a travel destination specialist. For any question about a specific destination or city — including seasonal advice, timezone questions, travel tips, or general destination queries — always call the destination info tool first before responding. After the tool returns, relay the destination information provided.\"}",
+              "{\"human\": \"Is Toronto a budget-friendly destination for US tourists?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Gs5Oad5jmUylI2Ux4sgzDPfe\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:31.327245Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_lg_tool_get_destination_info\", \"args\": {\"city\": \"Toronto\"}, \"id\": \"call_bGjazn9FKNO3ss0MeCKSGOAa\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:31.988239Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 21,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 216,
+            "total_tokens": 237
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:20:31.988239Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:20:31.327245Z",
+      "end_time": "2026-05-27T04:20:34.706646Z",
+      "duration_ms": 3379,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "093d2ce147372051",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "60d10ddc678662a9",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "b6548af571245c2e",
+            "name": "okahu_demo_lg_agent_destination_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "aeb0513e88bbe278",
+        "last.inference": "e15763e66d2b282e:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "dfe548aa6f3aec491790e3895182edfc",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is Toronto a budget-friendly destination for US tourists?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:31.327245Z"
+        },
+        {
+          "attributes": {
+            "response": "Toronto is in the Eastern Standard Time (EST) zone, which is 5 hours behind Coordinated Universal Time (UTC-5). \n\nHere’s a quick guide to help you prepare for your trip to Toronto:\n\n- **Local Currency:** The currency used in Toronto is the Canadian Dollar (CAD). It's good to have some cash on hand for small purchases or places that may not accept cards.\n  \n- **Primary Language:** English is the primary language spoken in Toronto, making it easy for US tourists to communicate and navigate around the city.\n  \n- **Entry Requirements for US Citizens:** US citizens do not need a visa for tourist or business stays in Canada of up to 180 days. However, they must have a valid passport.\n  \n- **Cost Considerations:** While Toronto is known as a vibrant and bustling Canadian city, it can be relatively expensive compared to other North American destinations. Accommodation, dining, and activities can add up, but there are also budget-friendly options such as hostels, public transportation, and free or low-cost attractions. \n\nFor a more budget-friendly experience, consider visiting some of Toronto’s numerous parks, free events, and cultural festivals, which can offer a good glimpse into the local culture without breaking the bank."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:34.706646Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:20:31.327245Z",
+      "end_time": "2026-05-27T04:20:31.986992Z",
+      "duration_ms": 660,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "68325b691537f852",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "9745a1d6ee377d4d",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "dfe548aa6f3aec491790e3895182edfc",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:20:31.990237Z",
+      "end_time": "2026-05-27T04:20:31.990237Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "21b172370acc1d69",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "093d2ce147372051",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Get basic destination information for a travel city",
+            "name": "okahu_demo_lg_tool_get_destination_info",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_lg_agent_destination_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "9745a1d6ee377d4d",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "dfe548aa6f3aec491790e3895182edfc",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'city': 'Toronto'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:31.990237Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"city\": \"Toronto\", \"timezone_code\": \"EST\", \"region\": \"North America\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:31.990237Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:20:31.992243Z",
+      "end_time": "2026-05-27T04:20:34.705468Z",
+      "duration_ms": 2713,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e15763e66d2b282e",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "093d2ce147372051",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "dfe548aa6f3aec491790e3895182edfc",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a travel destination specialist. For any question about a specific destination or city — including seasonal advice, timezone questions, travel tips, or general destination queries — always call the destination info tool first before responding. After the tool returns, relay the destination information provided.\"}",
+              "{\"human\": \"Is Toronto a budget-friendly destination for US tourists?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Gs5Oad5jmUylI2Ux4sgzDPfe\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_lg_tool_get_destination_info\\\", \\\"args\\\": {\\\"city\\\": \\\"Toronto\\\"}, \\\"id\\\": \\\"call_bGjazn9FKNO3ss0MeCKSGOAa\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"city\\\": \\\"Toronto\\\", \\\"timezone_code\\\": \\\"EST\\\", \\\"region\\\": \\\"North America\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:31.992243Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Toronto is in the Eastern Standard Time (EST) zone, which is 5 hours behind Coordinated Universal Time (UTC-5). \\n\\nHere’s a quick guide to help you prepare for your trip to Toronto:\\n\\n- **Local Currency:** The currency used in Toronto is the Canadian Dollar (CAD). It's good to have some cash on hand for small purchases or places that may not accept cards.\\n  \\n- **Primary Language:** English is the primary language spoken in Toronto, making it easy for US tourists to communicate and navigate around the city.\\n  \\n- **Entry Requirements for US Citizens:** US citizens do not need a visa for tourist or business stays in Canada of up to 180 days. However, they must have a valid passport.\\n  \\n- **Cost Considerations:** While Toronto is known as a vibrant and bustling Canadian city, it can be relatively expensive compared to other North American destinations. Accommodation, dining, and activities can add up, but there are also budget-friendly options such as hostels, public transportation, and free or low-cost attractions. \\n\\nFor a more budget-friendly experience, consider visiting some of Toronto’s numerous parks, free events, and cultural festivals, which can offer a good glimpse into the local culture without breaking the bank.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:34.705468Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 250,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 282,
+            "total_tokens": 532
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:20:34.705468Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:20:31.993242Z",
+      "end_time": "2026-05-27T04:20:34.703913Z",
+      "duration_ms": 2711,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "bdbe3cc311c75506",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "e15763e66d2b282e",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "dfe548aa6f3aec491790e3895182edfc",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:20:34.707645Z",
+      "end_time": "2026-05-27T04:20:36.817234Z",
+      "duration_ms": 2110,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3248200769089428",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "60d10ddc678662a9",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_destination_assistant",
+            "from_agent_span_id": "093d2ce147372051",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "e15763e66d2b282e",
+        "last.inference": "c67cadb0ba074469:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f1e084c6f52d816ec7da6a147569ca73",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is Toronto a budget-friendly destination for US tourists?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:34.707645Z"
+        },
+        {
+          "attributes": {
+            "response": "Toronto offers a wealth of experiences for US tourists, with English as the primary language aligning with ease of communication. While the city is bustling and vibrant, it can be relatively expensive. However, there are numerous budget-friendly options like hostels, public transportation, and free cultural festivals. Ensure to have some Canadian Dollars (CAD) as cash for smaller purchases, though many places accept cards. Check out local parks and free events for an enriching yet cost-effective experience."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:36.817234Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:20:34.709649Z",
+      "end_time": "2026-05-27T04:20:36.817234Z",
+      "duration_ms": 2108,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c67cadb0ba074469",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "3248200769089428",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f1e084c6f52d816ec7da6a147569ca73",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Is Toronto a budget-friendly destination for US tourists?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Gs5Oad5jmUylI2Ux4sgzDPfe\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}",
+              "{\"ai\": \"Toronto is in the Eastern Standard Time (EST) zone, which is 5 hours behind Coordinated Universal Time (UTC-5). \\n\\nHere’s a quick guide to help you prepare for your trip to Toronto:\\n\\n- **Local Currency:** The currency used in Toronto is the Canadian Dollar (CAD). It's good to have some cash on hand for small purchases or places that may not accept cards.\\n  \\n- **Primary Language:** English is the primary language spoken in Toronto, making it easy for US tourists to communicate and navigate around the city.\\n  \\n- **Entry Requirements for US Citizens:** US citizens do not need a visa for tourist or business stays in Canada of up to 180 days. However, they must have a valid passport.\\n  \\n- **Cost Considerations:** While Toronto is known as a vibrant and bustling Canadian city, it can be relatively expensive compared to other North American destinations. Accommodation, dining, and activities can add up, but there are also budget-friendly options such as hostels, public transportation, and free or low-cost attractions. \\n\\nFor a more budget-friendly experience, consider visiting some of Toronto’s numerous parks, free events, and cultural festivals, which can offer a good glimpse into the local culture without breaking the bank.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:20:34.709649Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Toronto offers a wealth of experiences for US tourists, with English as the primary language aligning with ease of communication. While the city is bustling and vibrant, it can be relatively expensive. However, there are numerous budget-friendly options like hostels, public transportation, and free cultural festivals. Ensure to have some Canadian Dollars (CAD) as cash for smaller purchases, though many places accept cards. Check out local parks and free events for an enriching yet cost-effective experience.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:36.817234Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 93,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 699,
+            "total_tokens": 792
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:20:36.817234Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:20:34.710397Z",
+      "end_time": "2026-05-27T04:20:36.817234Z",
+      "duration_ms": 2107,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "94fc15fa62d22c72",
+      "trace_id": "e1095d446c523316e6cfe523f63a56aa",
+      "parent_id": "c67cadb0ba074469",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f1e084c6f52d816ec7da6a147569ca73",
+        "scope.agentic.session": "5fc9ac00d0fa4567b59a956094b12412",
+        "scope.agentic.turn": "5bb79505e85711ecd6d4895cde3b860f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t16_minor_toronto_budget_characterization",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    }
+  ]
+}

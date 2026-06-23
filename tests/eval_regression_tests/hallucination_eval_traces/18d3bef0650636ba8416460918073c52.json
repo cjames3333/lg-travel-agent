@@ -1,0 +1,1766 @@
+{
+  "trace_id": "18d3bef0650636ba8416460918073c52",
+  "start_time": "2026-05-27T04:39:27.726609Z",
+  "end_time": "2026-05-27T04:39:39.806900Z",
+  "duration_ms": 12080,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:39:27.726609Z",
+      "end_time": "2026-05-27T04:39:39.806900Z",
+      "duration_ms": 12080,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3fce4989de8839bc",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_cc_customer_care_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "a84a70a595fec518:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:39:27.726609Z",
+      "end_time": "2026-05-27T04:39:39.806900Z",
+      "duration_ms": 12080,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "12fd52df0a9ec762",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "3fce4989de8839bc",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "a84a70a595fec518:*",
+        "monocle.last.agent.invocation.id": "675a84d0d15753db",
+        "monocle.last.agent.name": "okahu_demo_cc_agent_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Process a $199 refund for order ORD-STD-0033"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:27.726609Z"
+        },
+        {
+          "attributes": {
+            "response": "The refund for order ID ORD-STD-0033 has been successfully processed with the following details:\n\n- **Refund ID**: REF-213463\n- **Status**: Approved\n- **Refund Amount**: $45.00\n- **Estimated Processing Timeline**: 3–5 business days\n\nIf you have any more questions or need further assistance, feel free to ask!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:39.806900Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:39:27.732282Z",
+      "end_time": "2026-05-27T04:39:29.198974Z",
+      "duration_ms": 1467,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "8fe7a45a386dc464",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "12fd52df0a9ec762",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "b0b639e689a3c8a8:transfer_to_okahu_demo_cc_agent_order_lookup",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3ec5cda2ce3f0b6dc3e9f47ff385e92b",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Process a $199 refund for order ORD-STD-0033"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:27.732282Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_cc_agent_order_lookup"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:29.198974Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:27.741788Z",
+      "end_time": "2026-05-27T04:39:29.198974Z",
+      "duration_ms": 1457,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "b0b639e689a3c8a8",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "8fe7a45a386dc464",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_cc_agent_order_lookup",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3ec5cda2ce3f0b6dc3e9f47ff385e92b",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:27.741788Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_cc_agent_order_lookup\", \"args\": {}, \"id\": \"call_APfx6rvZxfZUFZ7b9Qkrxd3O\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:29.198974Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 17,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 398,
+            "total_tokens": 415
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:29.198974Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:27.741788Z",
+      "end_time": "2026-05-27T04:39:29.196804Z",
+      "duration_ms": 1455,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "bda916ed2d16b9bb",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "b0b639e689a3c8a8",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3ec5cda2ce3f0b6dc3e9f47ff385e92b",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:39:29.198974Z",
+      "end_time": "2026-05-27T04:39:30.968093Z",
+      "duration_ms": 1769,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "9442439f1d2d1c99",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "12fd52df0a9ec762",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_supervisor",
+            "from_agent_span_id": "8fe7a45a386dc464",
+            "name": "okahu_demo_cc_agent_order_lookup",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "b0b639e689a3c8a8",
+        "last.inference": "dfcd166c7fb878d4:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4f2f38d5fd9f12aeef12334c2e557464",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Process a $199 refund for order ORD-STD-0033"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:29.198974Z"
+        },
+        {
+          "attributes": {
+            "response": "Here are the details for order ORD-STD-0033:\n\n- **Customer**: A. Johnson\n- **Product**: Wireless Mouse\n- **Amount**: $45.00\n- **Date**: 2024-03-15\n- **Status**: delivered\n- **Return Eligible**: true\n\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:30.968093Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:29.213787Z",
+      "end_time": "2026-05-27T04:39:29.866304Z",
+      "duration_ms": 653,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e60bbc3326949926",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "9442439f1d2d1c99",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_cc_tool_lookup_order",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4f2f38d5fd9f12aeef12334c2e557464",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an order lookup specialist. You look up customer order details, warranty information, and shipping status. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. After the order lookup tool returns, relay order_id, customer, product, amount, date, status, and return_eligible exactly as provided — do not use return_eligible to draw conclusions about refund eligibility; that determination belongs exclusively to the eligibility specialist. After the warranty tool returns, relay the warranty information provided. For any question about shipping status, carrier, or tracking, call the get_shipping_status tool before answering. After the shipping status tool returns, relay the status information provided.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:29.213787Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_cc_tool_lookup_order\", \"args\": {\"order_id\": \"ORD-STD-0033\"}, \"id\": \"call_gPpNPfuq93iQlhD1iHFKiTQF\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:29.866304Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 25,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 497,
+            "total_tokens": 522
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:29.866304Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:29.213787Z",
+      "end_time": "2026-05-27T04:39:29.866304Z",
+      "duration_ms": 653,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ba7ce70d260a9d3f",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "e60bbc3326949926",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4f2f38d5fd9f12aeef12334c2e557464",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:39:29.876616Z",
+      "end_time": "2026-05-27T04:39:29.877620Z",
+      "duration_ms": 1,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "da6785bf5f9c55f6",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "9442439f1d2d1c99",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Look up a customer order by order ID",
+            "name": "okahu_demo_cc_tool_lookup_order",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_cc_agent_order_lookup",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "e60bbc3326949926",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4f2f38d5fd9f12aeef12334c2e557464",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'order_id': 'ORD-STD-0033'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:29.876616Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"order_id\": \"ORD-STD-0033\", \"customer\": \"A. Johnson\", \"product\": \"Wireless Mouse\", \"amount\": 45.0, \"date\": \"2024-03-15\", \"status\": \"delivered\", \"return_eligible\": true}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:29.876616Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:29.881104Z",
+      "end_time": "2026-05-27T04:39:30.965590Z",
+      "duration_ms": 1084,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "dfcd166c7fb878d4",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "9442439f1d2d1c99",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4f2f38d5fd9f12aeef12334c2e557464",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an order lookup specialist. You look up customer order details, warranty information, and shipping status. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. After the order lookup tool returns, relay order_id, customer, product, amount, date, status, and return_eligible exactly as provided — do not use return_eligible to draw conclusions about refund eligibility; that determination belongs exclusively to the eligibility specialist. After the warranty tool returns, relay the warranty information provided. For any question about shipping status, carrier, or tracking, call the get_shipping_status tool before answering. After the shipping status tool returns, relay the status information provided.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_cc_tool_lookup_order\\\", \\\"args\\\": {\\\"order_id\\\": \\\"ORD-STD-0033\\\"}, \\\"id\\\": \\\"call_gPpNPfuq93iQlhD1iHFKiTQF\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"order_id\\\": \\\"ORD-STD-0033\\\", \\\"customer\\\": \\\"A. Johnson\\\", \\\"product\\\": \\\"Wireless Mouse\\\", \\\"amount\\\": 45.0, \\\"date\\\": \\\"2024-03-15\\\", \\\"status\\\": \\\"delivered\\\", \\\"return_eligible\\\": true}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:29.881104Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Here are the details for order ORD-STD-0033:\\n\\n- **Customer**: A. Johnson\\n- **Product**: Wireless Mouse\\n- **Amount**: $45.00\\n- **Date**: 2024-03-15\\n- **Status**: delivered\\n- **Return Eligible**: true\\n\\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:30.965590Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 102,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 603,
+            "total_tokens": 705
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:30.965590Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:29.882280Z",
+      "end_time": "2026-05-27T04:39:30.963793Z",
+      "duration_ms": 1082,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "d105c5757eb0161d",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "dfcd166c7fb878d4",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4f2f38d5fd9f12aeef12334c2e557464",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:39:30.972102Z",
+      "end_time": "2026-05-27T04:39:34.139645Z",
+      "duration_ms": 3168,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "7c8a3e48f029a469",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "12fd52df0a9ec762",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_order_lookup",
+            "from_agent_span_id": "9442439f1d2d1c99",
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "dfcd166c7fb878d4",
+        "last.inference": "f2be2b320fb6d198:transfer_to_okahu_demo_cc_agent_eligibility",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "6d21946e744759c38de98b911ada33d7",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Process a $199 refund for order ORD-STD-0033"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:30.972102Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_cc_agent_eligibility"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:34.139645Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:30.976738Z",
+      "end_time": "2026-05-27T04:39:34.131978Z",
+      "duration_ms": 3155,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "f2be2b320fb6d198",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "7c8a3e48f029a469",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_cc_agent_eligibility",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "6d21946e744759c38de98b911ada33d7",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"Here are the details for order ORD-STD-0033:\\n\\n- **Customer**: A. Johnson\\n- **Product**: Wireless Mouse\\n- **Amount**: $45.00\\n- **Date**: 2024-03-15\\n- **Status**: delivered\\n- **Return Eligible**: true\\n\\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:30.976738Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_cc_agent_eligibility\", \"args\": {}, \"id\": \"call_blhNGF7joB9IAqhjdIK1BWNB\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:34.131978Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 18,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 638,
+            "total_tokens": 656
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:34.131978Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:30.978739Z",
+      "end_time": "2026-05-27T04:39:34.128204Z",
+      "duration_ms": 3149,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "36a91658e429b909",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "f2be2b320fb6d198",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "6d21946e744759c38de98b911ada33d7",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:39:34.141310Z",
+      "end_time": "2026-05-27T04:39:35.326555Z",
+      "duration_ms": 1185,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c447153dbea78d82",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "12fd52df0a9ec762",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_supervisor",
+            "from_agent_span_id": "7c8a3e48f029a469",
+            "name": "okahu_demo_cc_agent_eligibility",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "f2be2b320fb6d198",
+        "last.inference": "f5018caa9c75c9e5:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d6165118d3f32b5188578572b1bd3a6c",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Process a $199 refund for order ORD-STD-0033"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:34.141310Z"
+        },
+        {
+          "attributes": {
+            "response": "The order ORD-STD-0033 is eligible for a refund. The applicable policy for this refund is the \"standard 30-day return\" policy. If you need further assistance with processing the refund, please let me know!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:35.326555Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:34.150129Z",
+      "end_time": "2026-05-27T04:39:34.641168Z",
+      "duration_ms": 491,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ee4b3e688ad21414",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "c447153dbea78d82",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_cc_tool_check_eligibility",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d6165118d3f32b5188578572b1bd3a6c",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a refund eligibility and return policy specialist. You assess whether orders qualify for a refund and explain the applicable return policy to customers. \\nWhen asked about eligibility:\\n  1. Use the check_eligibility tool to assess the order\\n  2. Relay the eligibility status exactly as provided\\n\\nWhen asked about return policies:\\n  1. Use the get_return_policy tool for the relevant product category\\n  2. Relay the policy information returned by the tool\\n\\nAlways be thorough and reference the tool outputs you receive.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"Here are the details for order ORD-STD-0033:\\n\\n- **Customer**: A. Johnson\\n- **Product**: Wireless Mouse\\n- **Amount**: $45.00\\n- **Date**: 2024-03-15\\n- **Status**: delivered\\n- **Return Eligible**: true\\n\\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_blhNGF7joB9IAqhjdIK1BWNB\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:34.150129Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_cc_tool_check_eligibility\", \"args\": {\"order_id\": \"ORD-STD-0033\"}, \"id\": \"call_5BoYVVriejkQ2wFp6fvJcdha\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:34.641168Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 27,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 502,
+            "total_tokens": 529
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:34.641168Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:34.152144Z",
+      "end_time": "2026-05-27T04:39:34.640753Z",
+      "duration_ms": 489,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c6cff4a165d6a8cc",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "ee4b3e688ad21414",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d6165118d3f32b5188578572b1bd3a6c",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:39:34.649556Z",
+      "end_time": "2026-05-27T04:39:34.650551Z",
+      "duration_ms": 1,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "758b0cb0967fc8b3",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "c447153dbea78d82",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Check whether an order is eligible for a refund based on return policy",
+            "name": "okahu_demo_cc_tool_check_eligibility",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_cc_agent_eligibility",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "ee4b3e688ad21414",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d6165118d3f32b5188578572b1bd3a6c",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'order_id': 'ORD-STD-0033'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:34.650551Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"order_id\": \"ORD-STD-0033\", \"eligible\": true, \"policy\": \"standard_30_day_return\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:34.650551Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:34.654549Z",
+      "end_time": "2026-05-27T04:39:35.324555Z",
+      "duration_ms": 670,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "f5018caa9c75c9e5",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "c447153dbea78d82",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d6165118d3f32b5188578572b1bd3a6c",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a refund eligibility and return policy specialist. You assess whether orders qualify for a refund and explain the applicable return policy to customers. \\nWhen asked about eligibility:\\n  1. Use the check_eligibility tool to assess the order\\n  2. Relay the eligibility status exactly as provided\\n\\nWhen asked about return policies:\\n  1. Use the get_return_policy tool for the relevant product category\\n  2. Relay the policy information returned by the tool\\n\\nAlways be thorough and reference the tool outputs you receive.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"Here are the details for order ORD-STD-0033:\\n\\n- **Customer**: A. Johnson\\n- **Product**: Wireless Mouse\\n- **Amount**: $45.00\\n- **Date**: 2024-03-15\\n- **Status**: delivered\\n- **Return Eligible**: true\\n\\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_blhNGF7joB9IAqhjdIK1BWNB\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_cc_tool_check_eligibility\\\", \\\"args\\\": {\\\"order_id\\\": \\\"ORD-STD-0033\\\"}, \\\"id\\\": \\\"call_5BoYVVriejkQ2wFp6fvJcdha\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"order_id\\\": \\\"ORD-STD-0033\\\", \\\"eligible\\\": true, \\\"policy\\\": \\\"standard_30_day_return\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:34.655547Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The order ORD-STD-0033 is eligible for a refund. The applicable policy for this refund is the \\\"standard 30-day return\\\" policy. If you need further assistance with processing the refund, please let me know!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:35.324555Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 47,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 591,
+            "total_tokens": 638
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:35.324555Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:34.657635Z",
+      "end_time": "2026-05-27T04:39:35.321998Z",
+      "duration_ms": 664,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2bdd968dc1e26b6b",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "f5018caa9c75c9e5",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d6165118d3f32b5188578572b1bd3a6c",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:39:35.329635Z",
+      "end_time": "2026-05-27T04:39:36.163481Z",
+      "duration_ms": 834,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c4b006390c84e98a",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "12fd52df0a9ec762",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_eligibility",
+            "from_agent_span_id": "c447153dbea78d82",
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "f5018caa9c75c9e5",
+        "last.inference": "cfbaef4c0f0dfb43:transfer_to_okahu_demo_cc_agent_refund",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8c30017b2ba6db99281072e230e10338",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Process a $199 refund for order ORD-STD-0033"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:35.329635Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_cc_agent_refund"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:36.163481Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:35.334788Z",
+      "end_time": "2026-05-27T04:39:36.148516Z",
+      "duration_ms": 814,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "cfbaef4c0f0dfb43",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "c4b006390c84e98a",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_cc_agent_refund",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8c30017b2ba6db99281072e230e10338",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"Here are the details for order ORD-STD-0033:\\n\\n- **Customer**: A. Johnson\\n- **Product**: Wireless Mouse\\n- **Amount**: $45.00\\n- **Date**: 2024-03-15\\n- **Status**: delivered\\n- **Return Eligible**: true\\n\\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_blhNGF7joB9IAqhjdIK1BWNB\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}",
+              "{\"ai\": \"The order ORD-STD-0033 is eligible for a refund. The applicable policy for this refund is the \\\"standard 30-day return\\\" policy. If you need further assistance with processing the refund, please let me know!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:35.334788Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_cc_agent_refund\", \"args\": {}, \"id\": \"call_s7LQnKSASsy2ZDH38Ho0xZcl\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:36.148516Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 17,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 829,
+            "total_tokens": 846
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:36.148516Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:35.336787Z",
+      "end_time": "2026-05-27T04:39:36.148516Z",
+      "duration_ms": 812,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ed20af467364bae2",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "cfbaef4c0f0dfb43",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8c30017b2ba6db99281072e230e10338",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:36.165083Z",
+      "end_time": "2026-05-27T04:39:37.154174Z",
+      "duration_ms": 989,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ede7af6a158738a7",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "6d860c6d5ceb2ce5",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_cc_tool_process_refund",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "afce3f09716a1161308d564c0c5fe03a",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a refund processing specialist. You only process refunds for eligible orders. After the refund tool returns a result, confirm the outcome with a summary based on the returned fields.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"Here are the details for order ORD-STD-0033:\\n\\n- **Customer**: A. Johnson\\n- **Product**: Wireless Mouse\\n- **Amount**: $45.00\\n- **Date**: 2024-03-15\\n- **Status**: delivered\\n- **Return Eligible**: true\\n\\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_blhNGF7joB9IAqhjdIK1BWNB\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}",
+              "{\"ai\": \"The order ORD-STD-0033 is eligible for a refund. The applicable policy for this refund is the \\\"standard 30-day return\\\" policy. If you need further assistance with processing the refund, please let me know!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_refund\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_s7LQnKSASsy2ZDH38Ho0xZcl\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_refund\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:36.165083Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_cc_tool_process_refund\", \"args\": {\"order_id\": \"ORD-STD-0033\", \"amount\": 45.0}, \"id\": \"call_36SIl0d1fGJWx5puPta7hlQ4\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:37.154174Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 32,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 635,
+            "total_tokens": 667
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:37.154174Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:36.165083Z",
+      "end_time": "2026-05-27T04:39:37.152173Z",
+      "duration_ms": 987,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "9c0faa8716c62164",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "ede7af6a158738a7",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "afce3f09716a1161308d564c0c5fe03a",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:39:36.165083Z",
+      "end_time": "2026-05-27T04:39:38.387316Z",
+      "duration_ms": 2222,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6d860c6d5ceb2ce5",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "12fd52df0a9ec762",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_supervisor",
+            "from_agent_span_id": "c4b006390c84e98a",
+            "name": "okahu_demo_cc_agent_refund",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "cfbaef4c0f0dfb43",
+        "last.inference": "e32c4741a52697f3:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "afce3f09716a1161308d564c0c5fe03a",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Process a $199 refund for order ORD-STD-0033"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:36.165083Z"
+        },
+        {
+          "attributes": {
+            "response": "The refund for order ID ORD-STD-0033 has been approved. Here is the complete summary:\n\n- **Refund ID**: REF-213463\n- **Status**: Approved\n- **Refund Amount**: $45.00\n- **Order ID**: ORD-STD-0033\n- **Estimated Processing Timeline**: 3–5 business days\n\nLet me know if there's anything else I can assist you with!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:38.387316Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:39:37.156815Z",
+      "end_time": "2026-05-27T04:39:37.156815Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0e561b493527aee5",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "6d860c6d5ceb2ce5",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Process a refund for an eligible delivered order",
+            "name": "okahu_demo_cc_tool_process_refund",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_cc_agent_refund",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "ede7af6a158738a7",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "afce3f09716a1161308d564c0c5fe03a",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'order_id': 'ORD-STD-0033', 'amount': 45.0}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:37.156815Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"refund_id\": \"REF-213463\", \"order_id\": \"ORD-STD-0033\", \"amount\": 45.0, \"currency\": \"USD\", \"status\": \"approved\", \"estimated_days\": 3}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:37.156815Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:37.160945Z",
+      "end_time": "2026-05-27T04:39:38.385318Z",
+      "duration_ms": 1224,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e32c4741a52697f3",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "6d860c6d5ceb2ce5",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "afce3f09716a1161308d564c0c5fe03a",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a refund processing specialist. You only process refunds for eligible orders. After the refund tool returns a result, confirm the outcome with a summary based on the returned fields.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"Here are the details for order ORD-STD-0033:\\n\\n- **Customer**: A. Johnson\\n- **Product**: Wireless Mouse\\n- **Amount**: $45.00\\n- **Date**: 2024-03-15\\n- **Status**: delivered\\n- **Return Eligible**: true\\n\\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_blhNGF7joB9IAqhjdIK1BWNB\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}",
+              "{\"ai\": \"The order ORD-STD-0033 is eligible for a refund. The applicable policy for this refund is the \\\"standard 30-day return\\\" policy. If you need further assistance with processing the refund, please let me know!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_refund\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_s7LQnKSASsy2ZDH38Ho0xZcl\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_refund\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_cc_tool_process_refund\\\", \\\"args\\\": {\\\"order_id\\\": \\\"ORD-STD-0033\\\", \\\"amount\\\": 45.0}, \\\"id\\\": \\\"call_36SIl0d1fGJWx5puPta7hlQ4\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"refund_id\\\": \\\"REF-213463\\\", \\\"order_id\\\": \\\"ORD-STD-0033\\\", \\\"amount\\\": 45.0, \\\"currency\\\": \\\"USD\\\", \\\"status\\\": \\\"approved\\\", \\\"estimated_days\\\": 3}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:37.162960Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The refund for order ID ORD-STD-0033 has been approved. Here is the complete summary:\\n\\n- **Refund ID**: REF-213463\\n- **Status**: Approved\\n- **Refund Amount**: $45.00\\n- **Order ID**: ORD-STD-0033\\n- **Estimated Processing Timeline**: 3–5 business days\\n\\nLet me know if there's anything else I can assist you with!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:38.385318Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 91,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 738,
+            "total_tokens": 829
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:38.385318Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:37.164361Z",
+      "end_time": "2026-05-27T04:39:38.383327Z",
+      "duration_ms": 1219,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2ebda9cbf5787ac1",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "e32c4741a52697f3",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "afce3f09716a1161308d564c0c5fe03a",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:39:38.390865Z",
+      "end_time": "2026-05-27T04:39:39.806900Z",
+      "duration_ms": 1416,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "675a84d0d15753db",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "12fd52df0a9ec762",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_refund",
+            "from_agent_span_id": "6d860c6d5ceb2ce5",
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "e32c4741a52697f3",
+        "last.inference": "a84a70a595fec518:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "eba1c721fc7b58f95a4b9e80e069bbb7",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Process a $199 refund for order ORD-STD-0033"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:38.391182Z"
+        },
+        {
+          "attributes": {
+            "response": "The refund for order ID ORD-STD-0033 has been successfully processed with the following details:\n\n- **Refund ID**: REF-213463\n- **Status**: Approved\n- **Refund Amount**: $45.00\n- **Estimated Processing Timeline**: 3–5 business days\n\nIf you have any more questions or need further assistance, feel free to ask!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:39.806900Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:39:38.394583Z",
+      "end_time": "2026-05-27T04:39:39.805795Z",
+      "duration_ms": 1411,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a84a70a595fec518",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "675a84d0d15753db",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "eba1c721fc7b58f95a4b9e80e069bbb7",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"Process a $199 refund for order ORD-STD-0033\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_APfx6rvZxfZUFZ7b9Qkrxd3O\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"Here are the details for order ORD-STD-0033:\\n\\n- **Customer**: A. Johnson\\n- **Product**: Wireless Mouse\\n- **Amount**: $45.00\\n- **Date**: 2024-03-15\\n- **Status**: delivered\\n- **Return Eligible**: true\\n\\nTo proceed with a refund, please contact our eligibility specialist, as they will determine the refund eligibility. Is there anything else I can assist you with regarding this order?\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_blhNGF7joB9IAqhjdIK1BWNB\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}",
+              "{\"ai\": \"The order ORD-STD-0033 is eligible for a refund. The applicable policy for this refund is the \\\"standard 30-day return\\\" policy. If you need further assistance with processing the refund, please let me know!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_refund\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_s7LQnKSASsy2ZDH38Ho0xZcl\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_refund\"}",
+              "{\"ai\": \"The refund for order ID ORD-STD-0033 has been approved. Here is the complete summary:\\n\\n- **Refund ID**: REF-213463\\n- **Status**: Approved\\n- **Refund Amount**: $45.00\\n- **Order ID**: ORD-STD-0033\\n- **Estimated Processing Timeline**: 3–5 business days\\n\\nLet me know if there's anything else I can assist you with!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:39:38.394583Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The refund for order ID ORD-STD-0033 has been successfully processed with the following details:\\n\\n- **Refund ID**: REF-213463\\n- **Status**: Approved\\n- **Refund Amount**: $45.00\\n- **Estimated Processing Timeline**: 3–5 business days\\n\\nIf you have any more questions or need further assistance, feel free to ask!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:39:39.805368Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 80,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 1058,
+            "total_tokens": 1138
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:39:39.805795Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:39:38.398179Z",
+      "end_time": "2026-05-27T04:39:39.802366Z",
+      "duration_ms": 1404,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "11694ed33bbf08b4",
+      "trace_id": "18d3bef0650636ba8416460918073c52",
+      "parent_id": "a84a70a595fec518",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "eba1c721fc7b58f95a4b9e80e069bbb7",
+        "scope.agentic.session": "17943548294942e4809db6cb33fdb25e",
+        "scope.agentic.turn": "d07e59934c9567984f1c061bb32f67f0",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t19_no_hal_refund_at_limit",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    }
+  ]
+}

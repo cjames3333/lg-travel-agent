@@ -1,0 +1,745 @@
+{
+  "trace_id": "836f65d865b72c21af56499d8ab956e8",
+  "start_time": "2026-05-27T04:19:50.387029Z",
+  "end_time": "2026-05-27T04:20:00.083272Z",
+  "duration_ms": 9696,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:19:50.387029Z",
+      "end_time": "2026-05-27T04:20:00.083272Z",
+      "duration_ms": 9696,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ab6ba7c3e9902f87",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "e190f6100429c4ab",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "acfd4bc065bb3e9a:*",
+        "monocle.last.agent.invocation.id": "ccc46c470b95fd88",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Give me a full travel briefing for Sydney, Australia"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:50.387029Z"
+        },
+        {
+          "attributes": {
+            "response": "Here is your travel briefing for Sydney, Australia:\n\n1. **Timezone**: Sydney operates on Australian Eastern Daylight Time (AEDT), which is UTC+11.\n\n2. **Currency**: Australian Dollar (AUD).\n\n3. **Language**: English.\n\n4. **Entry Requirements for US Citizens**: You need a valid passport and a visa, such as the Electronic Travel Authority (ETA).\n\n5. **Travel Tips**:\n   - **Transport**: Sydney's public transport includes trains, buses, and ferries.\n   - **Attractions**: Visit the Sydney Opera House, Sydney Harbour Bridge, and Bondi Beach.\n   - **Climate**: Temperate climate with warm summers and mild winters.\n\nEnjoy your trip!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:00.083272Z"
+        }
+      ]
+    },
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:19:50.387029Z",
+      "end_time": "2026-05-27T04:20:00.083272Z",
+      "duration_ms": 9696,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e190f6100429c4ab",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "acfd4bc065bb3e9a:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:19:50.399716Z",
+      "end_time": "2026-05-27T04:19:51.849065Z",
+      "duration_ms": 1449,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "cf309e4ac23e8757",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "ab6ba7c3e9902f87",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "6d2ec395c57307e4:transfer_to_okahu_demo_lg_agent_destination_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3649c088870ebbeb396152df8652998e",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Give me a full travel briefing for Sydney, Australia"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:50.399716Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_destination_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:19:51.849065Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:19:50.402143Z",
+      "end_time": "2026-05-27T04:19:51.843397Z",
+      "duration_ms": 1441,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6d2ec395c57307e4",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "cf309e4ac23e8757",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_destination_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3649c088870ebbeb396152df8652998e",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Give me a full travel briefing for Sydney, Australia\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:50.402143Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_destination_assistant\", \"args\": {}, \"id\": \"call_5oJb7hGtxCWEajdEkShznjZP\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:19:51.843397Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 19,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 284,
+            "total_tokens": 303
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:19:51.843397Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:19:50.403334Z",
+      "end_time": "2026-05-27T04:19:51.842794Z",
+      "duration_ms": 1439,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1281c3a9c1f58654",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "6d2ec395c57307e4",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3649c088870ebbeb396152df8652998e",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:19:51.852426Z",
+      "end_time": "2026-05-27T04:19:52.636638Z",
+      "duration_ms": 784,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ed887fced204719a",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "0e479d8ea51428a4",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_lg_tool_get_destination_info",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ecc1ba7fde0e27de63e17ad9deb090c1",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a travel destination specialist. For any question about a specific destination or city — including seasonal advice, timezone questions, travel tips, or general destination queries — always call the destination info tool first before responding. After the tool returns, relay the destination information provided.\"}",
+              "{\"human\": \"Give me a full travel briefing for Sydney, Australia\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_5oJb7hGtxCWEajdEkShznjZP\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:51.852426Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_lg_tool_get_destination_info\", \"args\": {\"city\": \"Sydney\"}, \"id\": \"call_HSQZVxRzdUH6WesSJ9gx85Hz\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:19:52.636638Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 21,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 216,
+            "total_tokens": 237
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:19:52.636638Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:19:51.852426Z",
+      "end_time": "2026-05-27T04:19:56.475573Z",
+      "duration_ms": 4623,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0e479d8ea51428a4",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "ab6ba7c3e9902f87",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "cf309e4ac23e8757",
+            "name": "okahu_demo_lg_agent_destination_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "6d2ec395c57307e4",
+        "last.inference": "891e799089a13b53:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ecc1ba7fde0e27de63e17ad9deb090c1",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Give me a full travel briefing for Sydney, Australia"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:51.852426Z"
+        },
+        {
+          "attributes": {
+            "response": "Let's get you ready for a trip to Sydney, Australia:\n\n1. **Timezone**: Sydney operates on Australian Eastern Daylight Time (AEDT), which is UTC+11. This means Sydney is 11 hours ahead of Coordinated Universal Time (UTC).\n\n2. **Currency**: The local currency in Sydney is the Australian Dollar (AUD). Make sure to exchange some money beforehand or upon arrival for convenience.\n\n3. **Language**: The primary language spoken in Sydney is English, so you should have no trouble communicating in local shops, restaurants, or with people in general.\n\n4. **Entry Requirements for US Citizens**: \n   - To enter Australia, US citizens need a valid passport and a visa. The most commonly used visa for tourists is the Electronic Travel Authority (ETA), which can be applied for online before you travel.\n   - Make sure your passport is valid for at least six months from your date of entry into Australia.\n\n5. **Travel Tips**:\n   - **Transport**: Sydney has an efficient public transport system, including trains, buses, and ferries, which makes getting around the city easy.\n   - **Wonders to See**: Don't miss iconic landmarks such as the Sydney Opera House, the Sydney Harbour Bridge, and Bondi Beach.\n   - **Weather**: Sydney enjoys a temperate climate, but if you're traveling in summer (December through February), be prepared for warm temperatures. Winter (June through August) is mild.\n\nWith this information, you should be well-prepared for your exciting trip to Sydney! If you need personalized advice or more details about specific places or activities, feel free to ask. Safe travels!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:19:56.475573Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:19:51.852426Z",
+      "end_time": "2026-05-27T04:19:52.636638Z",
+      "duration_ms": 784,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "fdc42fbcdc1e0ce4",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "ed887fced204719a",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ecc1ba7fde0e27de63e17ad9deb090c1",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:19:52.636638Z",
+      "end_time": "2026-05-27T04:19:52.636638Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "df04b44e862e4c16",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "0e479d8ea51428a4",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Get basic destination information for a travel city",
+            "name": "okahu_demo_lg_tool_get_destination_info",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_lg_agent_destination_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "ed887fced204719a",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ecc1ba7fde0e27de63e17ad9deb090c1",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'city': 'Sydney'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:52.636638Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"city\": \"Sydney\", \"timezone_code\": \"AEDT\", \"region\": \"Oceania\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:19:52.636638Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:19:52.636638Z",
+      "end_time": "2026-05-27T04:19:56.469088Z",
+      "duration_ms": 3832,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a6d7eef4ac3f6cd2",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "891e799089a13b53",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ecc1ba7fde0e27de63e17ad9deb090c1",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:19:52.636638Z",
+      "end_time": "2026-05-27T04:19:56.473561Z",
+      "duration_ms": 3837,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "891e799089a13b53",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "0e479d8ea51428a4",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ecc1ba7fde0e27de63e17ad9deb090c1",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a travel destination specialist. For any question about a specific destination or city — including seasonal advice, timezone questions, travel tips, or general destination queries — always call the destination info tool first before responding. After the tool returns, relay the destination information provided.\"}",
+              "{\"human\": \"Give me a full travel briefing for Sydney, Australia\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_5oJb7hGtxCWEajdEkShznjZP\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_lg_tool_get_destination_info\\\", \\\"args\\\": {\\\"city\\\": \\\"Sydney\\\"}, \\\"id\\\": \\\"call_HSQZVxRzdUH6WesSJ9gx85Hz\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"city\\\": \\\"Sydney\\\", \\\"timezone_code\\\": \\\"AEDT\\\", \\\"region\\\": \\\"Oceania\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:52.636638Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Let's get you ready for a trip to Sydney, Australia:\\n\\n1. **Timezone**: Sydney operates on Australian Eastern Daylight Time (AEDT), which is UTC+11. This means Sydney is 11 hours ahead of Coordinated Universal Time (UTC).\\n\\n2. **Currency**: The local currency in Sydney is the Australian Dollar (AUD). Make sure to exchange some money beforehand or upon arrival for convenience.\\n\\n3. **Language**: The primary language spoken in Sydney is English, so you should have no trouble communicating in local shops, restaurants, or with people in general.\\n\\n4. **Entry Requirements for US Citizens**: \\n   - To enter Australia, US citizens need a valid passport and a visa. The most commonly used visa for tourists is the Electronic Travel Authority (ETA), which can be applied for online before you travel.\\n   - Make sure your passport is valid for at least six months from your date of entry into Australia.\\n\\n5. **Travel Tips**:\\n   - **Transport**: Sydney has an efficient public transport system, including trains, buses, and ferries, which makes getting around the city easy.\\n   - **Wonders to See**: Don't miss iconic landmarks such as the Sydney Opera House, the Sydney Harbour Bridge, and Bondi Beach.\\n   - **Weather**: Sydney enjoys a temperate climate, but if you're traveling in summer (December through February), be prepared for warm temperatures. Winter (June through August) is mild.\\n\\nWith this information, you should be well-prepared for your exciting trip to Sydney! If you need personalized advice or more details about specific places or activities, feel free to ask. Safe travels!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:19:56.473561Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 337,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 284,
+            "total_tokens": 621
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:19:56.473561Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:19:56.479062Z",
+      "end_time": "2026-05-27T04:20:00.082275Z",
+      "duration_ms": 3603,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ccc46c470b95fd88",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "ab6ba7c3e9902f87",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_destination_assistant",
+            "from_agent_span_id": "0e479d8ea51428a4",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "891e799089a13b53",
+        "last.inference": "acfd4bc065bb3e9a:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "20408191a5fa6b3b736e2ebfb18004df",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Give me a full travel briefing for Sydney, Australia"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:56.479575Z"
+        },
+        {
+          "attributes": {
+            "response": "Here is your travel briefing for Sydney, Australia:\n\n1. **Timezone**: Sydney operates on Australian Eastern Daylight Time (AEDT), which is UTC+11.\n\n2. **Currency**: Australian Dollar (AUD).\n\n3. **Language**: English.\n\n4. **Entry Requirements for US Citizens**: You need a valid passport and a visa, such as the Electronic Travel Authority (ETA).\n\n5. **Travel Tips**:\n   - **Transport**: Sydney's public transport includes trains, buses, and ferries.\n   - **Attractions**: Visit the Sydney Opera House, Sydney Harbour Bridge, and Bondi Beach.\n   - **Climate**: Temperate climate with warm summers and mild winters.\n\nEnjoy your trip!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:00.082275Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:19:56.482766Z",
+      "end_time": "2026-05-27T04:20:00.078344Z",
+      "duration_ms": 3596,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "acfd4bc065bb3e9a",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "ccc46c470b95fd88",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "20408191a5fa6b3b736e2ebfb18004df",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Give me a full travel briefing for Sydney, Australia\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_5oJb7hGtxCWEajdEkShznjZP\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}",
+              "{\"ai\": \"Let's get you ready for a trip to Sydney, Australia:\\n\\n1. **Timezone**: Sydney operates on Australian Eastern Daylight Time (AEDT), which is UTC+11. This means Sydney is 11 hours ahead of Coordinated Universal Time (UTC).\\n\\n2. **Currency**: The local currency in Sydney is the Australian Dollar (AUD). Make sure to exchange some money beforehand or upon arrival for convenience.\\n\\n3. **Language**: The primary language spoken in Sydney is English, so you should have no trouble communicating in local shops, restaurants, or with people in general.\\n\\n4. **Entry Requirements for US Citizens**: \\n   - To enter Australia, US citizens need a valid passport and a visa. The most commonly used visa for tourists is the Electronic Travel Authority (ETA), which can be applied for online before you travel.\\n   - Make sure your passport is valid for at least six months from your date of entry into Australia.\\n\\n5. **Travel Tips**:\\n   - **Transport**: Sydney has an efficient public transport system, including trains, buses, and ferries, which makes getting around the city easy.\\n   - **Wonders to See**: Don't miss iconic landmarks such as the Sydney Opera House, the Sydney Harbour Bridge, and Bondi Beach.\\n   - **Weather**: Sydney enjoys a temperate climate, but if you're traveling in summer (December through February), be prepared for warm temperatures. Winter (June through August) is mild.\\n\\nWith this information, you should be well-prepared for your exciting trip to Sydney! If you need personalized advice or more details about specific places or activities, feel free to ask. Safe travels!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:19:56.483851Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Here is your travel briefing for Sydney, Australia:\\n\\n1. **Timezone**: Sydney operates on Australian Eastern Daylight Time (AEDT), which is UTC+11.\\n\\n2. **Currency**: Australian Dollar (AUD).\\n\\n3. **Language**: English.\\n\\n4. **Entry Requirements for US Citizens**: You need a valid passport and a visa, such as the Electronic Travel Authority (ETA).\\n\\n5. **Travel Tips**:\\n   - **Transport**: Sydney's public transport includes trains, buses, and ferries.\\n   - **Attractions**: Visit the Sydney Opera House, Sydney Harbour Bridge, and Bondi Beach.\\n   - **Climate**: Temperate climate with warm summers and mild winters.\\n\\nEnjoy your trip!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:20:00.078344Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 150,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 786,
+            "total_tokens": 936
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:20:00.078344Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:19:56.485376Z",
+      "end_time": "2026-05-27T04:20:00.076657Z",
+      "duration_ms": 3591,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "9e97806ff95670cf",
+      "trace_id": "836f65d865b72c21af56499d8ab956e8",
+      "parent_id": "acfd4bc065bb3e9a",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "20408191a5fa6b3b736e2ebfb18004df",
+        "scope.agentic.session": "f2f172f1f7b74843b8f7e52246748a33",
+        "scope.agentic.turn": "87bed83a83696a3e6cf089e8eedc030e",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t15_major_sydney_unsourced_travel_facts",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    }
+  ]
+}

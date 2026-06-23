@@ -1,0 +1,801 @@
+{
+  "trace_id": "11a97a578c88573c87e8198e346ed96d",
+  "start_time": "2026-05-27T22:59:06.094875Z",
+  "end_time": "2026-05-27T22:59:11.325197Z",
+  "duration_ms": 5230,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:59:06.094875Z",
+      "end_time": "2026-05-27T22:59:11.325197Z",
+      "duration_ms": 5230,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c07e74e279328fb7",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "02b7f65b71b4e5e5",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "7c3ce665ff01a911:*",
+        "monocle.last.agent.invocation.id": "4dc98d0880f0e164",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Paris, Texas?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:06.100352Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Paris is 44°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:11.325197Z"
+        }
+      ]
+    },
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T22:59:06.094875Z",
+      "end_time": "2026-05-27T22:59:11.325197Z",
+      "duration_ms": 5230,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "02b7f65b71b4e5e5",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "7c3ce665ff01a911:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:59:06.111146Z",
+      "end_time": "2026-05-27T22:59:07.172405Z",
+      "duration_ms": 1061,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "7dce15322a15a807",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "c07e74e279328fb7",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "98fea07d68e1c4c3:transfer_to_okahu_demo_lg_agent_weather_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ed9cd3f4a98437dcf3e1abb2ebda3efe",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Paris, Texas?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:06.111146Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_weather_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:07.172405Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:59:06.119097Z",
+      "end_time": "2026-05-27T22:59:07.162282Z",
+      "duration_ms": 1043,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "98fea07d68e1c4c3",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "7dce15322a15a807",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_weather_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ed9cd3f4a98437dcf3e1abb2ebda3efe",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"What is the weather in Paris, Texas?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:06.119097Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_weather_assistant\", \"args\": {}, \"id\": \"call_jFN3do68bIUibUR1DGvvXqfO\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:07.162282Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 19,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 283,
+            "total_tokens": 302
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:59:07.162282Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:59:06.127098Z",
+      "end_time": "2026-05-27T22:59:07.143527Z",
+      "duration_ms": 1016,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ae573d08d4d4c42b",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "98fea07d68e1c4c3",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ed9cd3f4a98437dcf3e1abb2ebda3efe",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:59:07.177339Z",
+      "end_time": "2026-05-27T22:59:10.671460Z",
+      "duration_ms": 3494,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "42e1218b62da110c",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "c07e74e279328fb7",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "7dce15322a15a807",
+            "name": "okahu_demo_lg_agent_weather_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "98fea07d68e1c4c3",
+        "last.inference": "48c49ec58319cd10:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "22485618dd24d8a6af9a56aa23e93070",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Paris, Texas?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:07.177339Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Paris is 44°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:10.671460Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:59:07.181360Z",
+      "end_time": "2026-05-27T22:59:08.504915Z",
+      "duration_ms": 1324,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "bd330bd45e55374b",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "093900a42ce3d2bb",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "22485618dd24d8a6af9a56aa23e93070",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:59:07.181360Z",
+      "end_time": "2026-05-27T22:59:08.520748Z",
+      "duration_ms": 1339,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "093900a42ce3d2bb",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "42e1218b62da110c",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "demo_get_weather",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "22485618dd24d8a6af9a56aa23e93070",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a weather information assistant. Please use the tool available to you for checking weather. Pass the city name to the weather tool. Ignore other parts of the requests.\"}",
+              "{\"human\": \"What is the weather in Paris, Texas?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_jFN3do68bIUibUR1DGvvXqfO\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:07.181360Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"demo_get_weather\", \"args\": {\"city\": \"Paris\"}, \"id\": \"call_bTemnJSqsiiIhNxOh8Dpp2vG\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:08.520748Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 15,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 234,
+            "total_tokens": 249
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:59:08.520748Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._arun",
+      "start_time": "2026-05-27T22:59:08.525289Z",
+      "end_time": "2026-05-27T22:59:09.963580Z",
+      "duration_ms": 1438,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "28438b3a186c7c8f",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "42e1218b62da110c",
+      "attributes": {
+        "entity": [
+          {
+            "description": "\n    Get mock weather information for a specified city.\n    \n    Args:\n        city: Name of the city to get weather for (e.g., \"London\", \"New York\", \"Tokyo\")\n    \n    Returns:\n        Dictionary containing mock weather information with random temperature between 40-100.\n    ",
+            "name": "demo_get_weather",
+            "type": "tool.mcp"
+          },
+          {
+            "name": "okahu_demo_lg_agent_weather_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "093900a42ce3d2bb",
+        "is_mcp": true,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "22485618dd24d8a6af9a56aa23e93070",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:1096",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'city': 'Paris'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:08.525289Z"
+        },
+        {
+          "attributes": {
+            "response": "{'temperature': 44}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:09.962581Z"
+        }
+      ]
+    },
+    {
+      "span_name": "mcp.shared.session.BaseSession.send_request",
+      "start_time": "2026-05-27T22:59:09.134205Z",
+      "end_time": "2026-05-27T22:59:09.678754Z",
+      "duration_ms": 545,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c7bb5d1b5cad021f",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "28438b3a186c7c8f",
+      "attributes": {
+        "entity": [
+          {
+            "name": "demo_get_weather",
+            "server_name": "WeatherServer",
+            "type": "mcp.server",
+            "url": "http://localhost:8007/weather/mcp/"
+          }
+        ],
+        "entity.count": 1,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "22485618dd24d8a6af9a56aa23e93070",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "routing",
+        "span.type": "agentic.mcp.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\mcp\\client\\session.py:383",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"city\": \"Paris\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:09.134205Z"
+        },
+        {
+          "attributes": {
+            "output": "{\n  \"temperature\": 44\n}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:09.678754Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:59:09.967498Z",
+      "end_time": "2026-05-27T22:59:10.666427Z",
+      "duration_ms": 699,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6eebc7ae598fe93d",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "48c49ec58319cd10",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "22485618dd24d8a6af9a56aa23e93070",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:59:09.967498Z",
+      "end_time": "2026-05-27T22:59:10.668465Z",
+      "duration_ms": 701,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "48c49ec58319cd10",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "42e1218b62da110c",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "22485618dd24d8a6af9a56aa23e93070",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a weather information assistant. Please use the tool available to you for checking weather. Pass the city name to the weather tool. Ignore other parts of the requests.\"}",
+              "{\"human\": \"What is the weather in Paris, Texas?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_jFN3do68bIUibUR1DGvvXqfO\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"demo_get_weather\\\", \\\"args\\\": {\\\"city\\\": \\\"Paris\\\"}, \\\"id\\\": \\\"call_bTemnJSqsiiIhNxOh8Dpp2vG\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": [{\"type\": \"text\", \"text\": \"{\\n  \\\"temperature\\\": 44\\n}\", \"id\": \"lc_3e5e962a-0357-437c-b8f3-fa579d60913e\"}]}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:09.967498Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The current temperature in Paris is 44°F.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:10.668465Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 11,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 277,
+            "total_tokens": 288
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:59:10.668465Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:59:10.673465Z",
+      "end_time": "2026-05-27T22:59:11.325197Z",
+      "duration_ms": 652,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "4dc98d0880f0e164",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "c07e74e279328fb7",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_weather_assistant",
+            "from_agent_span_id": "42e1218b62da110c",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "48c49ec58319cd10",
+        "last.inference": "7c3ce665ff01a911:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "99407d72e0bb3df10b1fbb45237f90a6",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Paris, Texas?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:10.673465Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Paris is 44°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:11.325197Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:59:10.676272Z",
+      "end_time": "2026-05-27T22:59:11.318981Z",
+      "duration_ms": 643,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "7edfa3376779f0c6",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "7c3ce665ff01a911",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "99407d72e0bb3df10b1fbb45237f90a6",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:59:10.676272Z",
+      "end_time": "2026-05-27T22:59:11.325197Z",
+      "duration_ms": 649,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "7c3ce665ff01a911",
+      "trace_id": "11a97a578c88573c87e8198e346ed96d",
+      "parent_id": "4dc98d0880f0e164",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "99407d72e0bb3df10b1fbb45237f90a6",
+        "scope.agentic.session": "15ffd0f980d544e9890b07f12ef592f4",
+        "scope.agentic.turn": "e43ff6c3b5ae1553e744b6eaf2be3611",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t05_major_weather_paris_texas_scope_drift",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"What is the weather in Paris, Texas?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_jFN3do68bIUibUR1DGvvXqfO\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}",
+              "{\"ai\": \"The current temperature in Paris is 44°F.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:10.676272Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The current temperature in Paris is 44°F.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:11.325197Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 11,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 459,
+            "total_tokens": 470
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:59:11.325197Z"
+        }
+      ]
+    }
+  ]
+}

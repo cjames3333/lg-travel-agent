@@ -1,0 +1,801 @@
+{
+  "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+  "start_time": "2026-05-27T04:14:52.493321Z",
+  "end_time": "2026-05-27T04:14:57.493371Z",
+  "duration_ms": 5000,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:14:52.493321Z",
+      "end_time": "2026-05-27T04:14:57.493371Z",
+      "duration_ms": 5000,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "8c0ddc09da248a93",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "57309de7bf839b6a:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:14:52.493321Z",
+      "end_time": "2026-05-27T04:14:54.412741Z",
+      "duration_ms": 1919,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3b0fa529334b7ce7",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "6f4808c5fccd4df1",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "c0df20c65a2e6e5f:transfer_to_okahu_demo_lg_agent_weather_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f2d4d0bda7934c7cd8493fb5f9e4b2d3",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Austin, Texas?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:52.493321Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_weather_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:54.412741Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:14:52.493321Z",
+      "end_time": "2026-05-27T04:14:57.493371Z",
+      "duration_ms": 5000,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6f4808c5fccd4df1",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "8c0ddc09da248a93",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "57309de7bf839b6a:*",
+        "monocle.last.agent.invocation.id": "2be555424bf1670d",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Austin, Texas?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:52.493321Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Austin is 87°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:57.493371Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:14:52.493321Z",
+      "end_time": "2026-05-27T04:14:54.412741Z",
+      "duration_ms": 1919,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "f553975ce4cbb611",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "c0df20c65a2e6e5f",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f2d4d0bda7934c7cd8493fb5f9e4b2d3",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:14:52.493321Z",
+      "end_time": "2026-05-27T04:14:54.412741Z",
+      "duration_ms": 1919,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c0df20c65a2e6e5f",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "3b0fa529334b7ce7",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_weather_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f2d4d0bda7934c7cd8493fb5f9e4b2d3",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"What is the weather in Austin, Texas?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:52.493321Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_weather_assistant\", \"args\": {}, \"id\": \"call_VoEp3D13P71sn1V7GkpBuS9x\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:54.412741Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 19,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 283,
+            "total_tokens": 302
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:14:54.412741Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:14:54.412741Z",
+      "end_time": "2026-05-27T04:14:54.897768Z",
+      "duration_ms": 485,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1e461e084d88c772",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "a71fd67d0b527ccc",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2c5a94c16724cb20d9158b2827408f38",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:14:54.412741Z",
+      "end_time": "2026-05-27T04:14:56.785095Z",
+      "duration_ms": 2372,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6e38e814bf0bd3d9",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "6f4808c5fccd4df1",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "3b0fa529334b7ce7",
+            "name": "okahu_demo_lg_agent_weather_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "c0df20c65a2e6e5f",
+        "last.inference": "3df4c39a1ad8b1c6:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2c5a94c16724cb20d9158b2827408f38",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Austin, Texas?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:54.412741Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Austin is 87°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:56.785095Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:14:54.412741Z",
+      "end_time": "2026-05-27T04:14:54.897768Z",
+      "duration_ms": 485,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a71fd67d0b527ccc",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "6e38e814bf0bd3d9",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "demo_get_weather",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2c5a94c16724cb20d9158b2827408f38",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a weather information assistant. Please use the tool available to you for checking weather. Pass the city name to the weather tool. Ignore other parts of the requests.\"}",
+              "{\"human\": \"What is the weather in Austin, Texas?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_VoEp3D13P71sn1V7GkpBuS9x\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:54.412741Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"demo_get_weather\", \"args\": {\"city\": \"Austin\"}, \"id\": \"call_uymYt6FItT5mrNpDYW9MXq3A\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:54.897768Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 15,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 234,
+            "total_tokens": 249
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:14:54.897768Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._arun",
+      "start_time": "2026-05-27T04:14:54.897768Z",
+      "end_time": "2026-05-27T04:14:56.209153Z",
+      "duration_ms": 1311,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0a549bf30933d3a6",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "6e38e814bf0bd3d9",
+      "attributes": {
+        "entity": [
+          {
+            "description": "\n    Get mock weather information for a specified city.\n    \n    Args:\n        city: Name of the city to get weather for (e.g., \"London\", \"New York\", \"Tokyo\")\n    \n    Returns:\n        Dictionary containing mock weather information with random temperature between 40-100.\n    ",
+            "name": "demo_get_weather",
+            "type": "tool.mcp"
+          },
+          {
+            "name": "okahu_demo_lg_agent_weather_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "a71fd67d0b527ccc",
+        "is_mcp": true,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2c5a94c16724cb20d9158b2827408f38",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:1096",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'city': 'Austin'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:54.897768Z"
+        },
+        {
+          "attributes": {
+            "response": "{'temperature': 87}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:56.209153Z"
+        }
+      ]
+    },
+    {
+      "span_name": "mcp.shared.session.BaseSession.send_request",
+      "start_time": "2026-05-27T04:14:55.426397Z",
+      "end_time": "2026-05-27T04:14:55.943347Z",
+      "duration_ms": 517,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "b8ed94fcfd20b5e6",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "0a549bf30933d3a6",
+      "attributes": {
+        "entity": [
+          {
+            "name": "demo_get_weather",
+            "server_name": "WeatherServer",
+            "type": "mcp.server",
+            "url": "http://localhost:8007/weather/mcp/"
+          }
+        ],
+        "entity.count": 1,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2c5a94c16724cb20d9158b2827408f38",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "routing",
+        "span.type": "agentic.mcp.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\mcp\\client\\session.py:383",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"city\": \"Austin\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:55.426397Z"
+        },
+        {
+          "attributes": {
+            "output": "{\n  \"temperature\": 87\n}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:55.943347Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:14:56.209153Z",
+      "end_time": "2026-05-27T04:14:56.785095Z",
+      "duration_ms": 576,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3df4c39a1ad8b1c6",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "6e38e814bf0bd3d9",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2c5a94c16724cb20d9158b2827408f38",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a weather information assistant. Please use the tool available to you for checking weather. Pass the city name to the weather tool. Ignore other parts of the requests.\"}",
+              "{\"human\": \"What is the weather in Austin, Texas?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_VoEp3D13P71sn1V7GkpBuS9x\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"demo_get_weather\\\", \\\"args\\\": {\\\"city\\\": \\\"Austin\\\"}, \\\"id\\\": \\\"call_uymYt6FItT5mrNpDYW9MXq3A\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": [{\"type\": \"text\", \"text\": \"{\\n  \\\"temperature\\\": 87\\n}\", \"id\": \"lc_d09ba8ab-b018-427a-8af1-f1a79e08335e\"}]}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:56.209153Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The current temperature in Austin is 87°F.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:56.785095Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 11,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 277,
+            "total_tokens": 288
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:14:56.785095Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:14:56.209153Z",
+      "end_time": "2026-05-27T04:14:56.785095Z",
+      "duration_ms": 576,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "82435aa3a7225b6f",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "3df4c39a1ad8b1c6",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2c5a94c16724cb20d9158b2827408f38",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:14:56.785095Z",
+      "end_time": "2026-05-27T04:14:57.493371Z",
+      "duration_ms": 708,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2be555424bf1670d",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "6f4808c5fccd4df1",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_weather_assistant",
+            "from_agent_span_id": "6e38e814bf0bd3d9",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "3df4c39a1ad8b1c6",
+        "last.inference": "57309de7bf839b6a:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3b1b46fccbed3ad01dd0845c40ca05ec",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Austin, Texas?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:56.800997Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Austin is 87°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:57.493371Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:14:56.800997Z",
+      "end_time": "2026-05-27T04:14:57.493371Z",
+      "duration_ms": 692,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "70c7c4518c3b7150",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "57309de7bf839b6a",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3b1b46fccbed3ad01dd0845c40ca05ec",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:14:56.800997Z",
+      "end_time": "2026-05-27T04:14:57.493371Z",
+      "duration_ms": 692,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "57309de7bf839b6a",
+      "trace_id": "039d1cf57ec5c02655cb8c4229f66a76",
+      "parent_id": "2be555424bf1670d",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3b1b46fccbed3ad01dd0845c40ca05ec",
+        "scope.agentic.session": "ba5f1f912ae24a079362bf4bfc7ff2a0",
+        "scope.agentic.turn": "415a43966d83d19665376893b0b21a2",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t07_no_hal_weather_austin_texas",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"What is the weather in Austin, Texas?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_VoEp3D13P71sn1V7GkpBuS9x\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}",
+              "{\"ai\": \"The current temperature in Austin is 87°F.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:14:56.800997Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The current temperature in Austin is 87°F.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:14:57.493371Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 11,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 459,
+            "total_tokens": 470
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:14:57.493371Z"
+        }
+      ]
+    }
+  ]
+}

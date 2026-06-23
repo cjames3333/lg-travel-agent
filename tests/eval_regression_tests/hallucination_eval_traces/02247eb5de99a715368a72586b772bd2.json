@@ -1,0 +1,745 @@
+{
+  "trace_id": "02247eb5de99a715368a72586b772bd2",
+  "start_time": "2026-05-27T23:16:23.321463Z",
+  "end_time": "2026-05-27T23:16:35.248105Z",
+  "duration_ms": 11927,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T23:16:23.321463Z",
+      "end_time": "2026-05-27T23:16:35.248105Z",
+      "duration_ms": 11927,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2c001b80a149baf2",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_fs_financial_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "9cf3f26c3372133b:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:16:23.322274Z",
+      "end_time": "2026-05-27T23:16:35.248105Z",
+      "duration_ms": 11926,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "5ab54d7b3a97dd66",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "2c001b80a149baf2",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "9cf3f26c3372133b:*",
+        "monocle.last.agent.invocation.id": "82a2c522aacc7ac5",
+        "monocle.last.agent.name": "okahu_demo_fs_agent_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the balance on account ACC-4821?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:23.322274Z"
+        },
+        {
+          "attributes": {
+            "response": "The balance on account ACC-4821 is $12,450.00 USD."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:35.248105Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:16:23.330821Z",
+      "end_time": "2026-05-27T23:16:25.747746Z",
+      "duration_ms": 2417,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ad53d5d41c2efab4",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "5ab54d7b3a97dd66",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_fs_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "d91e90180b2d8d92:transfer_to_okahu_demo_fs_agent_account_inquiry",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "466391343039c34756f9148a1a573d1",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the balance on account ACC-4821?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:23.330821Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_fs_agent_account_inquiry"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:25.747746Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:16:23.330821Z",
+      "end_time": "2026-05-27T23:16:25.739165Z",
+      "duration_ms": 2408,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "d91e90180b2d8d92",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "ad53d5d41c2efab4",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_fs_agent_account_inquiry",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "466391343039c34756f9148a1a573d1",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an account inquiry specialist, a trade execution specialist, a fund transfer specialist, and an investment suitability specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles only their area. Account inquiry handles: balance checks, portfolio lookups, interest rate queries, and stock ticker information requests. When an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs. For investment requests, check suitability after the trade is executed.\"}",
+              "{\"human\": \"What is the balance on account ACC-4821?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:23.338272Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_fs_agent_account_inquiry\", \"args\": {}, \"id\": \"call_eGq238kaOmBmFCHfYQR8Sszk\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:25.731898Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 18,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 267,
+            "total_tokens": 285
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:16:25.739165Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:16:23.339288Z",
+      "end_time": "2026-05-27T23:16:25.731898Z",
+      "duration_ms": 2393,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6e0ff707252daeca",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "d91e90180b2d8d92",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "466391343039c34756f9148a1a573d1",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:16:25.747746Z",
+      "end_time": "2026-05-27T23:16:28.714168Z",
+      "duration_ms": 2966,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "59b5693b307e9158",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "5ab54d7b3a97dd66",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_fs_agent_supervisor",
+            "from_agent_span_id": "ad53d5d41c2efab4",
+            "name": "okahu_demo_fs_agent_account_inquiry",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "d91e90180b2d8d92",
+        "last.inference": "ae82300d4c123cb2:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2aaa4e843b38e6c93485dfbf4889b6a0",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the balance on account ACC-4821?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:25.747746Z"
+        },
+        {
+          "attributes": {
+            "response": "The balance on account ACC-4821, which is a checking account, is $12,450.00 USD."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:28.714168Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:16:25.756908Z",
+      "end_time": "2026-05-27T23:16:27.797890Z",
+      "duration_ms": 2041,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "229196ddf4e4e090",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "59b5693b307e9158",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_fs_tool_check_balance",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2aaa4e843b38e6c93485dfbf4889b6a0",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an account inquiry specialist. You handle account balance inquiries, portfolio lookups, interest rate queries, and stock information requests. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. Always pass the full account ID when calling tools. After each tool returns a result, relay the returned fields exactly as provided. When a customer asks about a portfolio position, relay the data returned by the portfolio tool. When providing stock information, relay the data returned by the tool.\"}",
+              "{\"human\": \"What is the balance on account ACC-4821?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_account_inquiry\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_eGq238kaOmBmFCHfYQR8Sszk\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_account_inquiry\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:25.756908Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_fs_tool_check_balance\", \"args\": {\"account_id\": \"ACC-4821\"}, \"id\": \"call_2jb9DSaPolyaQeNuyPs2a9RX\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:27.797890Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 23,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 454,
+            "total_tokens": 477
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:16:27.797890Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:16:25.756908Z",
+      "end_time": "2026-05-27T23:16:27.797890Z",
+      "duration_ms": 2041,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a54fa80624bb3d1d",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "229196ddf4e4e090",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2aaa4e843b38e6c93485dfbf4889b6a0",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T23:16:27.806117Z",
+      "end_time": "2026-05-27T23:16:27.806117Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ba4dfb60c9db80b8",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "59b5693b307e9158",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Check the current balance for a customer account by account ID",
+            "name": "okahu_demo_fs_tool_check_balance",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_fs_agent_account_inquiry",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "229196ddf4e4e090",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2aaa4e843b38e6c93485dfbf4889b6a0",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'account_id': 'ACC-4821'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:27.806117Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"account_id\": \"ACC-4821\", \"account_type\": \"checking\", \"balance\": 12450.0, \"currency\": \"USD\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:27.806117Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:16:27.806117Z",
+      "end_time": "2026-05-27T23:16:28.705843Z",
+      "duration_ms": 900,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ae82300d4c123cb2",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "59b5693b307e9158",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2aaa4e843b38e6c93485dfbf4889b6a0",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an account inquiry specialist. You handle account balance inquiries, portfolio lookups, interest rate queries, and stock information requests. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. Always pass the full account ID when calling tools. After each tool returns a result, relay the returned fields exactly as provided. When a customer asks about a portfolio position, relay the data returned by the portfolio tool. When providing stock information, relay the data returned by the tool.\"}",
+              "{\"human\": \"What is the balance on account ACC-4821?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_account_inquiry\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_eGq238kaOmBmFCHfYQR8Sszk\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_account_inquiry\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_fs_tool_check_balance\\\", \\\"args\\\": {\\\"account_id\\\": \\\"ACC-4821\\\"}, \\\"id\\\": \\\"call_2jb9DSaPolyaQeNuyPs2a9RX\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"account_id\\\": \\\"ACC-4821\\\", \\\"account_type\\\": \\\"checking\\\", \\\"balance\\\": 12450.0, \\\"currency\\\": \\\"USD\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:27.806117Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The balance on account ACC-4821, which is a checking account, is $12,450.00 USD.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:28.705843Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 25,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 531,
+            "total_tokens": 556
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:16:28.705843Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:16:27.813275Z",
+      "end_time": "2026-05-27T23:16:28.705843Z",
+      "duration_ms": 893,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "4dafa042874a6f3d",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "ae82300d4c123cb2",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2aaa4e843b38e6c93485dfbf4889b6a0",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:16:28.714921Z",
+      "end_time": "2026-05-27T23:16:35.248105Z",
+      "duration_ms": 6533,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "82a2c522aacc7ac5",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "5ab54d7b3a97dd66",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_fs_agent_account_inquiry",
+            "from_agent_span_id": "59b5693b307e9158",
+            "name": "okahu_demo_fs_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "ae82300d4c123cb2",
+        "last.inference": "9cf3f26c3372133b:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "6a11344fbd61bbd60bb590cb614c0958",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the balance on account ACC-4821?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:28.714921Z"
+        },
+        {
+          "attributes": {
+            "response": "The balance on account ACC-4821 is $12,450.00 USD."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:35.248105Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:16:28.722646Z",
+      "end_time": "2026-05-27T23:16:35.248105Z",
+      "duration_ms": 6525,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "9cf3f26c3372133b",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "82a2c522aacc7ac5",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "6a11344fbd61bbd60bb590cb614c0958",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an account inquiry specialist, a trade execution specialist, a fund transfer specialist, and an investment suitability specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles only their area. Account inquiry handles: balance checks, portfolio lookups, interest rate queries, and stock ticker information requests. When an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs. For investment requests, check suitability after the trade is executed.\"}",
+              "{\"human\": \"What is the balance on account ACC-4821?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_account_inquiry\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_eGq238kaOmBmFCHfYQR8Sszk\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_account_inquiry\"}",
+              "{\"ai\": \"The balance on account ACC-4821, which is a checking account, is $12,450.00 USD.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_fs_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_fs_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:16:28.722646Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The balance on account ACC-4821 is $12,450.00 USD.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:16:35.248105Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 18,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 436,
+            "total_tokens": 454
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:16:35.248105Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:16:28.722646Z",
+      "end_time": "2026-05-27T23:16:35.246250Z",
+      "duration_ms": 6524,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2e6a560ab2380479",
+      "trace_id": "02247eb5de99a715368a72586b772bd2",
+      "parent_id": "9cf3f26c3372133b",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "6a11344fbd61bbd60bb590cb614c0958",
+        "scope.agentic.session": "e56db10e7b2444eaaeeee00e32feb144",
+        "scope.agentic.turn": "eea06e8b6ad77d4324557b180213626d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:15:28.881086",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t08_no_hal_balance_check",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    }
+  ]
+}

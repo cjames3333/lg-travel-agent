@@ -1,0 +1,745 @@
+{
+  "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+  "start_time": "2026-05-27T04:38:44.728264Z",
+  "end_time": "2026-05-27T04:38:49.351285Z",
+  "duration_ms": 4623,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:38:44.728264Z",
+      "end_time": "2026-05-27T04:38:49.351285Z",
+      "duration_ms": 4623,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3341dcf8255b2e77",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "3d83c46ed994f53d",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "e814d3e3b759eccf:*",
+        "monocle.last.agent.invocation.id": "42e68343c1442549",
+        "monocle.last.agent.name": "okahu_demo_cc_agent_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What carrier delivered order ORD-SHP-8801?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:44.728264Z"
+        },
+        {
+          "attributes": {
+            "response": "The order ORD-SHP-8801 has been delivered, but the status code did not include the carrier name. For carrier details, please contact the order lookup specialist again, as they typically use a dedicated shipping status tool for this information."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:49.351285Z"
+        }
+      ]
+    },
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:38:44.728264Z",
+      "end_time": "2026-05-27T04:38:49.351285Z",
+      "duration_ms": 4623,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3d83c46ed994f53d",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_cc_customer_care_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "e814d3e3b759eccf:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:38:44.733936Z",
+      "end_time": "2026-05-27T04:38:46.641698Z",
+      "duration_ms": 1908,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "49785c860c7e76cf",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "3341dcf8255b2e77",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "47cdc2019fc2469c:transfer_to_okahu_demo_cc_agent_order_lookup",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d7a487a5af296e9e9fafe84b6ed80bea",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What carrier delivered order ORD-SHP-8801?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:44.733936Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_cc_agent_order_lookup"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:46.641698Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:38:44.733936Z",
+      "end_time": "2026-05-27T04:38:46.635444Z",
+      "duration_ms": 1902,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "47cdc2019fc2469c",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "49785c860c7e76cf",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_cc_agent_order_lookup",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d7a487a5af296e9e9fafe84b6ed80bea",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"What carrier delivered order ORD-SHP-8801?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:44.741149Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_cc_agent_order_lookup\", \"args\": {}, \"id\": \"call_yrxXWRRrvDOiogG2VIXB00iu\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:46.635444Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 17,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 396,
+            "total_tokens": 413
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:38:46.635444Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:38:44.741832Z",
+      "end_time": "2026-05-27T04:38:46.633430Z",
+      "duration_ms": 1892,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "9ceee88fe87e436f",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "47cdc2019fc2469c",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d7a487a5af296e9e9fafe84b6ed80bea",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:38:46.643712Z",
+      "end_time": "2026-05-27T04:38:48.211570Z",
+      "duration_ms": 1568,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c15b5de8a29bcc80",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "3341dcf8255b2e77",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_supervisor",
+            "from_agent_span_id": "49785c860c7e76cf",
+            "name": "okahu_demo_cc_agent_order_lookup",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "47cdc2019fc2469c",
+        "last.inference": "fda815d6f0690ebf:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3046e02db618664ba140cc0a60cb61a6",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What carrier delivered order ORD-SHP-8801?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:46.643712Z"
+        },
+        {
+          "attributes": {
+            "response": "The shipping status for order ORD-SHP-8801 is \"DLVD,\" which means your order has been delivered. However, the status code does not include details about the carrier name."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:48.208077Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:38:46.647740Z",
+      "end_time": "2026-05-27T04:38:47.257234Z",
+      "duration_ms": 609,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1a0bf7451f7ef68e",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "c15b5de8a29bcc80",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_cc_tool_get_shipping_status",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3046e02db618664ba140cc0a60cb61a6",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an order lookup specialist. You look up customer order details, warranty information, and shipping status. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. After the order lookup tool returns, relay order_id, customer, product, amount, date, status, and return_eligible exactly as provided — do not use return_eligible to draw conclusions about refund eligibility; that determination belongs exclusively to the eligibility specialist. After the warranty tool returns, relay the warranty information provided. For any question about shipping status, carrier, or tracking, call the get_shipping_status tool before answering. After the shipping status tool returns, relay the status information provided.\"}",
+              "{\"human\": \"What carrier delivered order ORD-SHP-8801?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_yrxXWRRrvDOiogG2VIXB00iu\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:46.648935Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_cc_tool_get_shipping_status\", \"args\": {\"order_id\": \"ORD-SHP-8801\"}, \"id\": \"call_5Pjkgwoc3FUkd1tIyIu0pOGB\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:47.256683Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 26,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 495,
+            "total_tokens": 521
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:38:47.257234Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:38:46.650490Z",
+      "end_time": "2026-05-27T04:38:47.253684Z",
+      "duration_ms": 603,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ab93161f8e870754",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "1a0bf7451f7ef68e",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3046e02db618664ba140cc0a60cb61a6",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:38:47.261212Z",
+      "end_time": "2026-05-27T04:38:47.261212Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "515fc4f8488761bd",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "c15b5de8a29bcc80",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Get the current shipping status for a customer order",
+            "name": "okahu_demo_cc_tool_get_shipping_status",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_cc_agent_order_lookup",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "1a0bf7451f7ef68e",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3046e02db618664ba140cc0a60cb61a6",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'order_id': 'ORD-SHP-8801'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:47.261212Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"order_id\": \"ORD-SHP-8801\", \"status_code\": \"DLVD\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:47.261212Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:38:47.265666Z",
+      "end_time": "2026-05-27T04:38:48.208077Z",
+      "duration_ms": 942,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "fda815d6f0690ebf",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "c15b5de8a29bcc80",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3046e02db618664ba140cc0a60cb61a6",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an order lookup specialist. You look up customer order details, warranty information, and shipping status. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. After the order lookup tool returns, relay order_id, customer, product, amount, date, status, and return_eligible exactly as provided — do not use return_eligible to draw conclusions about refund eligibility; that determination belongs exclusively to the eligibility specialist. After the warranty tool returns, relay the warranty information provided. For any question about shipping status, carrier, or tracking, call the get_shipping_status tool before answering. After the shipping status tool returns, relay the status information provided.\"}",
+              "{\"human\": \"What carrier delivered order ORD-SHP-8801?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_yrxXWRRrvDOiogG2VIXB00iu\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_cc_tool_get_shipping_status\\\", \\\"args\\\": {\\\"order_id\\\": \\\"ORD-SHP-8801\\\"}, \\\"id\\\": \\\"call_5Pjkgwoc3FUkd1tIyIu0pOGB\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"order_id\\\": \\\"ORD-SHP-8801\\\", \\\"status_code\\\": \\\"DLVD\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:47.266534Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The shipping status for order ORD-SHP-8801 is \\\"DLVD,\\\" which means your order has been delivered. However, the status code does not include details about the carrier name.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:48.208077Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 39,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 563,
+            "total_tokens": 602
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:38:48.208077Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:38:47.268546Z",
+      "end_time": "2026-05-27T04:38:48.207052Z",
+      "duration_ms": 939,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "eb3f646425bd88ef",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "fda815d6f0690ebf",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3046e02db618664ba140cc0a60cb61a6",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:38:48.213585Z",
+      "end_time": "2026-05-27T04:38:49.350275Z",
+      "duration_ms": 1137,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "42e68343c1442549",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "3341dcf8255b2e77",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_order_lookup",
+            "from_agent_span_id": "c15b5de8a29bcc80",
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "fda815d6f0690ebf",
+        "last.inference": "e814d3e3b759eccf:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d547b0220819de6186735faf27c19476",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What carrier delivered order ORD-SHP-8801?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:48.213585Z"
+        },
+        {
+          "attributes": {
+            "response": "The order ORD-SHP-8801 has been delivered, but the status code did not include the carrier name. For carrier details, please contact the order lookup specialist again, as they typically use a dedicated shipping status tool for this information."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:49.350275Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:38:48.216336Z",
+      "end_time": "2026-05-27T04:38:49.341221Z",
+      "duration_ms": 1125,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "4e5fcdd656c03df2",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "e814d3e3b759eccf",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d547b0220819de6186735faf27c19476",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:38:48.216336Z",
+      "end_time": "2026-05-27T04:38:49.341221Z",
+      "duration_ms": 1125,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e814d3e3b759eccf",
+      "trace_id": "f8c84301458ba5adf928cf4aec15b708",
+      "parent_id": "42e68343c1442549",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d547b0220819de6186735faf27c19476",
+        "scope.agentic.session": "b6bbfee65bd24d84bbe02dfd1d5a85a9",
+        "scope.agentic.turn": "e71ab0981d5a721ed27621b72ddd3976",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t18_minor_carrier_inference_from_dlvd",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"What carrier delivered order ORD-SHP-8801?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_yrxXWRRrvDOiogG2VIXB00iu\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"The shipping status for order ORD-SHP-8801 is \\\"DLVD,\\\" which means your order has been delivered. However, the status code does not include details about the carrier name.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:48.216336Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The order ORD-SHP-8801 has been delivered, but the status code did not include the carrier name. For carrier details, please contact the order lookup specialist again, as they typically use a dedicated shipping status tool for this information.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:49.341221Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 49,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 573,
+            "total_tokens": 622
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:38:49.341221Z"
+        }
+      ]
+    }
+  ]
+}

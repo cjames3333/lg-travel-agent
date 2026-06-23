@@ -1,0 +1,745 @@
+{
+  "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+  "start_time": "2026-05-27T04:38:02.901066Z",
+  "end_time": "2026-05-27T04:38:07.103212Z",
+  "duration_ms": 4202,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:38:02.901066Z",
+      "end_time": "2026-05-27T04:38:07.103212Z",
+      "duration_ms": 4202,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "79e18770a9a37413",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "ae7d91dd711e2bc9",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "03c4022494b4ef98:*",
+        "monocle.last.agent.invocation.id": "3ac15e7abb63b98e",
+        "monocle.last.agent.name": "okahu_demo_cc_agent_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Was a signature required when my order ORD-STD-0033 was delivered?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:02.901066Z"
+        },
+        {
+          "attributes": {
+            "response": "The status code for your order ORD-STD-0033 is \"DLVD,\" indicating it has been delivered. Unfortunately, the status code doesn't specify if a signature was required. Please check your email confirmation or tracking message from the carrier for more details on delivery signature requirements."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:07.103212Z"
+        }
+      ]
+    },
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:38:02.901066Z",
+      "end_time": "2026-05-27T04:38:07.103212Z",
+      "duration_ms": 4202,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ae7d91dd711e2bc9",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_cc_customer_care_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "03c4022494b4ef98:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:38:02.903075Z",
+      "end_time": "2026-05-27T04:38:04.118999Z",
+      "duration_ms": 1216,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c4511edfba65519f",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "79e18770a9a37413",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "833c7a7b03b0efb6:transfer_to_okahu_demo_cc_agent_order_lookup",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "99cc3770882dfbe1e31b0cf5bb6a60b7",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Was a signature required when my order ORD-STD-0033 was delivered?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:02.903075Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_cc_agent_order_lookup"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:04.118999Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:38:02.907694Z",
+      "end_time": "2026-05-27T04:38:04.105889Z",
+      "duration_ms": 1198,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "833c7a7b03b0efb6",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "c4511edfba65519f",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_cc_agent_order_lookup",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "99cc3770882dfbe1e31b0cf5bb6a60b7",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"Was a signature required when my order ORD-STD-0033 was delivered?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:02.907694Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_cc_agent_order_lookup\", \"args\": {}, \"id\": \"call_XzpmRqqdKGaiFFm1ysaDeV7n\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:04.105889Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 17,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 401,
+            "total_tokens": 418
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:38:04.105889Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:38:02.911162Z",
+      "end_time": "2026-05-27T04:38:04.105889Z",
+      "duration_ms": 1195,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "60a1ab6e1bc01413",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "833c7a7b03b0efb6",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "99cc3770882dfbe1e31b0cf5bb6a60b7",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:38:04.118999Z",
+      "end_time": "2026-05-27T04:38:04.744972Z",
+      "duration_ms": 626,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "f9ed0ba644811ee0",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "4faa2a43c7fa1e31",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_cc_tool_get_shipping_status",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8f2cb478e1642cf4ee59e4bf6055bcca",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an order lookup specialist. You look up customer order details, warranty information, and shipping status. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. After the order lookup tool returns, relay order_id, customer, product, amount, date, status, and return_eligible exactly as provided — do not use return_eligible to draw conclusions about refund eligibility; that determination belongs exclusively to the eligibility specialist. After the warranty tool returns, relay the warranty information provided. For any question about shipping status, carrier, or tracking, call the get_shipping_status tool before answering. After the shipping status tool returns, relay the status information provided.\"}",
+              "{\"human\": \"Was a signature required when my order ORD-STD-0033 was delivered?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_XzpmRqqdKGaiFFm1ysaDeV7n\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:04.126779Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_cc_tool_get_shipping_status\", \"args\": {\"order_id\": \"ORD-STD-0033\"}, \"id\": \"call_mWBao1loQV8OTZvQaPeZOzpr\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:04.744972Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 26,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 500,
+            "total_tokens": 526
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:38:04.744972Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:38:04.118999Z",
+      "end_time": "2026-05-27T04:38:05.604089Z",
+      "duration_ms": 1485,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "4faa2a43c7fa1e31",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "79e18770a9a37413",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_supervisor",
+            "from_agent_span_id": "c4511edfba65519f",
+            "name": "okahu_demo_cc_agent_order_lookup",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "833c7a7b03b0efb6",
+        "last.inference": "00fc7d5367593ef5:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8f2cb478e1642cf4ee59e4bf6055bcca",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Was a signature required when my order ORD-STD-0033 was delivered?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:04.118999Z"
+        },
+        {
+          "attributes": {
+            "response": "The status code for your order ORD-STD-0033 is \"DLVD,\" which means it has been delivered. However, the status code does not provide details on whether a signature was required upon delivery. I would recommend checking any email confirmation or tracking message from the carrier for that information, as it is not included in the status update we have."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:05.604089Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:38:04.126779Z",
+      "end_time": "2026-05-27T04:38:04.740422Z",
+      "duration_ms": 614,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2332972278c56736",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "f9ed0ba644811ee0",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8f2cb478e1642cf4ee59e4bf6055bcca",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:38:04.744972Z",
+      "end_time": "2026-05-27T04:38:04.744972Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1ae5b0cb63f64767",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "4faa2a43c7fa1e31",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Get the current shipping status for a customer order",
+            "name": "okahu_demo_cc_tool_get_shipping_status",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_cc_agent_order_lookup",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "f9ed0ba644811ee0",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8f2cb478e1642cf4ee59e4bf6055bcca",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'order_id': 'ORD-STD-0033'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:04.744972Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"order_id\": \"ORD-STD-0033\", \"status_code\": \"DLVD\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:04.744972Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:38:04.752533Z",
+      "end_time": "2026-05-27T04:38:05.597782Z",
+      "duration_ms": 845,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "5f77297cc6b9463c",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "00fc7d5367593ef5",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8f2cb478e1642cf4ee59e4bf6055bcca",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:38:04.752533Z",
+      "end_time": "2026-05-27T04:38:05.602073Z",
+      "duration_ms": 850,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "00fc7d5367593ef5",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "4faa2a43c7fa1e31",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "8f2cb478e1642cf4ee59e4bf6055bcca",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an order lookup specialist. You look up customer order details, warranty information, and shipping status. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. After the order lookup tool returns, relay order_id, customer, product, amount, date, status, and return_eligible exactly as provided — do not use return_eligible to draw conclusions about refund eligibility; that determination belongs exclusively to the eligibility specialist. After the warranty tool returns, relay the warranty information provided. For any question about shipping status, carrier, or tracking, call the get_shipping_status tool before answering. After the shipping status tool returns, relay the status information provided.\"}",
+              "{\"human\": \"Was a signature required when my order ORD-STD-0033 was delivered?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_XzpmRqqdKGaiFFm1ysaDeV7n\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_cc_tool_get_shipping_status\\\", \\\"args\\\": {\\\"order_id\\\": \\\"ORD-STD-0033\\\"}, \\\"id\\\": \\\"call_mWBao1loQV8OTZvQaPeZOzpr\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"order_id\\\": \\\"ORD-STD-0033\\\", \\\"status_code\\\": \\\"DLVD\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:04.752533Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The status code for your order ORD-STD-0033 is \\\"DLVD,\\\" which means it has been delivered. However, the status code does not provide details on whether a signature was required upon delivery. I would recommend checking any email confirmation or tracking message from the carrier for that information, as it is not included in the status update we have.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:05.602073Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 72,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 568,
+            "total_tokens": 640
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:38:05.602073Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:38:05.608123Z",
+      "end_time": "2026-05-27T04:38:07.087048Z",
+      "duration_ms": 1479,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3ac15e7abb63b98e",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "79e18770a9a37413",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_order_lookup",
+            "from_agent_span_id": "4faa2a43c7fa1e31",
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "00fc7d5367593ef5",
+        "last.inference": "03c4022494b4ef98:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2f4b69be0ea6594a0e15501a1947d64a",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Was a signature required when my order ORD-STD-0033 was delivered?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:05.608123Z"
+        },
+        {
+          "attributes": {
+            "response": "The status code for your order ORD-STD-0033 is \"DLVD,\" indicating it has been delivered. Unfortunately, the status code doesn't specify if a signature was required. Please check your email confirmation or tracking message from the carrier for more details on delivery signature requirements."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:07.087048Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:38:05.610100Z",
+      "end_time": "2026-05-27T04:38:07.087048Z",
+      "duration_ms": 1477,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "03c4022494b4ef98",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "3ac15e7abb63b98e",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2f4b69be0ea6594a0e15501a1947d64a",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"Was a signature required when my order ORD-STD-0033 was delivered?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_XzpmRqqdKGaiFFm1ysaDeV7n\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"The status code for your order ORD-STD-0033 is \\\"DLVD,\\\" which means it has been delivered. However, the status code does not provide details on whether a signature was required upon delivery. I would recommend checking any email confirmation or tracking message from the carrier for that information, as it is not included in the status update we have.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:38:05.610100Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The status code for your order ORD-STD-0033 is \\\"DLVD,\\\" indicating it has been delivered. Unfortunately, the status code doesn't specify if a signature was required. Please check your email confirmation or tracking message from the carrier for more details on delivery signature requirements.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:38:07.087048Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 56,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 611,
+            "total_tokens": 667
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:38:07.087048Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:38:05.618148Z",
+      "end_time": "2026-05-27T04:38:07.087048Z",
+      "duration_ms": 1469,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "19aaf54e8647890a",
+      "trace_id": "519cc15959da90e2045e7a4e93bd0195",
+      "parent_id": "03c4022494b4ef98",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "2f4b69be0ea6594a0e15501a1947d64a",
+        "scope.agentic.session": "cedd27094a5e4d7ebb6632edae674b78",
+        "scope.agentic.turn": "9d0d488e9ff56c7372d7d1065732ad4d",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t17_minor_delivery_signature_inference",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+  "start_time": "2026-05-27T04:29:14.272241Z",
+  "end_time": "2026-05-27T04:29:18.816209Z",
+  "duration_ms": 4544,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:29:14.272241Z",
+      "end_time": "2026-05-27T04:29:18.816209Z",
+      "duration_ms": 4544,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "40b89a9fe52fb172",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "806a8ee3edcafcab",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "06df10b085a9d7c0:*",
+        "monocle.last.agent.invocation.id": "b14e854550d1ab3c",
+        "monocle.last.agent.name": "okahu_demo_cc_agent_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Look up order ORD-A1042"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:14.272241Z"
+        },
+        {
+          "attributes": {
+            "response": "Here are the details for your order:\n\n- **Order ID:** ORD-B1042\n- **Customer:** J. Martinez\n- **Product:** ProMax Keyboard\n- **Amount:** $189.99\n- **Date:** January 15, 2026\n- **Status:** Delivered\n- **Return Eligible:** Yes\n\nPlease let me know if you need any further assistance!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:18.816209Z"
+        }
+      ]
+    },
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:29:14.272241Z",
+      "end_time": "2026-05-27T04:29:18.816209Z",
+      "duration_ms": 4544,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "806a8ee3edcafcab",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_cc_customer_care_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "06df10b085a9d7c0:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:29:14.272241Z",
+      "end_time": "2026-05-27T04:29:15.588918Z",
+      "duration_ms": 1317,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6d68afb9fc284957",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "40b89a9fe52fb172",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "c2585834bb7896fd:transfer_to_okahu_demo_cc_agent_order_lookup",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "a02beceb11c49ba4689957b254fa53d9",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Look up order ORD-A1042"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:14.272241Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_cc_agent_order_lookup"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:15.580522Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:29:14.287597Z",
+      "end_time": "2026-05-27T04:29:15.580522Z",
+      "duration_ms": 1293,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c2585834bb7896fd",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "6d68afb9fc284957",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_cc_agent_order_lookup",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "a02beceb11c49ba4689957b254fa53d9",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"Look up order ORD-A1042\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:14.287597Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_cc_agent_order_lookup\", \"args\": {}, \"id\": \"call_8uj9pHmj7lITYIKZWrn2LUC2\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:15.580522Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 17,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 392,
+            "total_tokens": 409
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:29:15.580522Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:29:14.290450Z",
+      "end_time": "2026-05-27T04:29:15.580522Z",
+      "duration_ms": 1290,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6e9efaf9f57ae3f5",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "c2585834bb7896fd",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "a02beceb11c49ba4689957b254fa53d9",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:29:15.589936Z",
+      "end_time": "2026-05-27T04:29:17.069990Z",
+      "duration_ms": 1480,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "22abebebec2a8d4e",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "40b89a9fe52fb172",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_supervisor",
+            "from_agent_span_id": "6d68afb9fc284957",
+            "name": "okahu_demo_cc_agent_order_lookup",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "c2585834bb7896fd",
+        "last.inference": "4bc9ecd66103b75a:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "75891d21a1584b8559a81c5aa2a3f188",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Look up order ORD-A1042"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:15.591277Z"
+        },
+        {
+          "attributes": {
+            "response": "Here are the details for your order:\n\n- **Order ID:** ORD-B1042\n- **Customer:** J. Martinez\n- **Product:** ProMax Keyboard\n- **Amount:** $189.99\n- **Date:** January 15, 2026\n- **Status:** Delivered\n- **Return Eligible:** Yes\n\nPlease let me know if you need any further assistance!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:17.069990Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:29:15.594012Z",
+      "end_time": "2026-05-27T04:29:16.220136Z",
+      "duration_ms": 626,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2e2b256527fa50c2",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "22abebebec2a8d4e",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_cc_tool_lookup_order",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "75891d21a1584b8559a81c5aa2a3f188",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an order lookup specialist. You look up customer order details, warranty information, and shipping status. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. After the order lookup tool returns, relay order_id, customer, product, amount, date, status, and return_eligible exactly as provided — do not use return_eligible to draw conclusions about refund eligibility; that determination belongs exclusively to the eligibility specialist. After the warranty tool returns, relay the warranty information provided. For any question about shipping status, carrier, or tracking, call the get_shipping_status tool before answering. After the shipping status tool returns, relay the status information provided.\"}",
+              "{\"human\": \"Look up order ORD-A1042\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_8uj9pHmj7lITYIKZWrn2LUC2\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:15.595440Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_cc_tool_lookup_order\", \"args\": {\"order_id\": \"ORD-A1042\"}, \"id\": \"call_Dsm1w0U4Djem1AAqKfHMTXkz\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:16.220136Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 23,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 491,
+            "total_tokens": 514
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:29:16.220136Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:29:15.596440Z",
+      "end_time": "2026-05-27T04:29:16.218145Z",
+      "duration_ms": 622,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1f80bed3258dccbb",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "2e2b256527fa50c2",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "75891d21a1584b8559a81c5aa2a3f188",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:29:16.224329Z",
+      "end_time": "2026-05-27T04:29:16.225450Z",
+      "duration_ms": 1,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0e378ca458c505b4",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "22abebebec2a8d4e",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Look up a customer order by order ID",
+            "name": "okahu_demo_cc_tool_lookup_order",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_cc_agent_order_lookup",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "2e2b256527fa50c2",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "75891d21a1584b8559a81c5aa2a3f188",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'order_id': 'ORD-A1042'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:16.224329Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"order_id\": \"ORD-B1042\", \"customer\": \"J. Martinez\", \"product\": \"ProMax Keyboard\", \"amount\": 189.99, \"date\": \"2026-01-15\", \"status\": \"delivered\", \"return_eligible\": true}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:16.225450Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:29:16.228954Z",
+      "end_time": "2026-05-27T04:29:17.065990Z",
+      "duration_ms": 837,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "4bc9ecd66103b75a",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "22abebebec2a8d4e",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "75891d21a1584b8559a81c5aa2a3f188",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are an order lookup specialist. You look up customer order details, warranty information, and shipping status. You must always call the appropriate tool before responding — never answer without first calling a tool. Do not say you are transferring, forwarding, or routing the customer to anyone; you are the specialist and you answer directly. After the order lookup tool returns, relay order_id, customer, product, amount, date, status, and return_eligible exactly as provided — do not use return_eligible to draw conclusions about refund eligibility; that determination belongs exclusively to the eligibility specialist. After the warranty tool returns, relay the warranty information provided. For any question about shipping status, carrier, or tracking, call the get_shipping_status tool before answering. After the shipping status tool returns, relay the status information provided.\"}",
+              "{\"human\": \"Look up order ORD-A1042\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_8uj9pHmj7lITYIKZWrn2LUC2\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_cc_tool_lookup_order\\\", \\\"args\\\": {\\\"order_id\\\": \\\"ORD-A1042\\\"}, \\\"id\\\": \\\"call_Dsm1w0U4Djem1AAqKfHMTXkz\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"order_id\\\": \\\"ORD-B1042\\\", \\\"customer\\\": \\\"J. Martinez\\\", \\\"product\\\": \\\"ProMax Keyboard\\\", \\\"amount\\\": 189.99, \\\"date\\\": \\\"2026-01-15\\\", \\\"status\\\": \\\"delivered\\\", \\\"return_eligible\\\": true}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:16.229953Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Here are the details for your order:\\n\\n- **Order ID:** ORD-B1042\\n- **Customer:** J. Martinez\\n- **Product:** ProMax Keyboard\\n- **Amount:** $189.99\\n- **Date:** January 15, 2026\\n- **Status:** Delivered\\n- **Return Eligible:** Yes\\n\\nPlease let me know if you need any further assistance!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:17.064840Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 80,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 604,
+            "total_tokens": 684
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:29:17.065990Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:29:16.231645Z",
+      "end_time": "2026-05-27T04:29:17.062538Z",
+      "duration_ms": 831,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1192444c7fbcb248",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "4bc9ecd66103b75a",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "75891d21a1584b8559a81c5aa2a3f188",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:29:17.072917Z",
+      "end_time": "2026-05-27T04:29:18.816209Z",
+      "duration_ms": 1743,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "b14e854550d1ab3c",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "40b89a9fe52fb172",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_order_lookup",
+            "from_agent_span_id": "22abebebec2a8d4e",
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "4bc9ecd66103b75a",
+        "last.inference": "06df10b085a9d7c0:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c7e4aba78c262574c1532d8d3e55030d",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Look up order ORD-A1042"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:17.072917Z"
+        },
+        {
+          "attributes": {
+            "response": "Here are the details for your order:\n\n- **Order ID:** ORD-B1042\n- **Customer:** J. Martinez\n- **Product:** ProMax Keyboard\n- **Amount:** $189.99\n- **Date:** January 15, 2026\n- **Status:** Delivered\n- **Return Eligible:** Yes\n\nPlease let me know if you need any further assistance!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:18.816209Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:29:17.076949Z",
+      "end_time": "2026-05-27T04:29:18.816209Z",
+      "duration_ms": 1739,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "06df10b085a9d7c0",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "b14e854550d1ab3c",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c7e4aba78c262574c1532d8d3e55030d",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"Look up order ORD-A1042\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_order_lookup\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_8uj9pHmj7lITYIKZWrn2LUC2\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_order_lookup\"}",
+              "{\"ai\": \"Here are the details for your order:\\n\\n- **Order ID:** ORD-B1042\\n- **Customer:** J. Martinez\\n- **Product:** ProMax Keyboard\\n- **Amount:** $189.99\\n- **Date:** January 15, 2026\\n- **Status:** Delivered\\n- **Return Eligible:** Yes\\n\\nPlease let me know if you need any further assistance!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:29:17.076949Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Here are the details for your order:\\n\\n- **Order ID:** ORD-B1042\\n- **Customer:** J. Martinez\\n- **Product:** ProMax Keyboard\\n- **Amount:** $189.99\\n- **Date:** January 15, 2026\\n- **Status:** Delivered\\n- **Return Eligible:** Yes\\n\\nPlease let me know if you need any further assistance!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:29:18.815464Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 80,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 610,
+            "total_tokens": 690
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:29:18.815464Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:29:17.078948Z",
+      "end_time": "2026-05-27T04:29:18.814030Z",
+      "duration_ms": 1735,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "4b4058ba6f6a3700",
+      "trace_id": "e009bba3f15e9bb4c6d75f5c2163fa24",
+      "parent_id": "06df10b085a9d7c0",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c7e4aba78c262574c1532d8d3e55030d",
+        "scope.agentic.session": "f7daf2a7cd8145b99162fd5a419fd2f1",
+        "scope.agentic.turn": "9ab02987363f316a5e2c887dd3a9579f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:27:40.011647",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t03_major_order_entity_substitution",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    }
+  ]
+}

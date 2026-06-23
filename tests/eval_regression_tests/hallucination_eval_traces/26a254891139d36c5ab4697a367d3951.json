@@ -1,0 +1,745 @@
+{
+  "trace_id": "26a254891139d36c5ab4697a367d3951",
+  "start_time": "2026-05-28T02:30:40.414262Z",
+  "end_time": "2026-05-28T02:30:46.124268Z",
+  "duration_ms": 5710,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-28T02:30:40.414262Z",
+      "end_time": "2026-05-28T02:30:46.124268Z",
+      "duration_ms": 5710,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ed56c99f6191a077",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_fs_financial_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "6e08d7d8210941b0:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-28T02:30:40.414262Z",
+      "end_time": "2026-05-28T02:30:46.124268Z",
+      "duration_ms": 5710,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ef6a4873f713cbfe",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "ed56c99f6191a077",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "6e08d7d8210941b0:*",
+        "monocle.last.agent.invocation.id": "86e58b0ad67fcb3a",
+        "monocle.last.agent.name": "okahu_demo_fs_agent_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Transfer $5,000 from ACC-4821 to ACC-7733"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:40.414262Z"
+        },
+        {
+          "attributes": {
+            "response": "The following transfer has been completed successfully:\n\n- **Transaction Confirmation ID**: TXN-170815\n- **From Account**: ACC-4821\n- **To Account**: ACC-7733\n- **Amount**: $5,000.00 USD\n- **Status**: Completed\n\nIf you have further requests or need any additional assistance, just let me know!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:46.124268Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-28T02:30:40.430813Z",
+      "end_time": "2026-05-28T02:30:41.763750Z",
+      "duration_ms": 1333,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "d091119f55fd69b2",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "ef6a4873f713cbfe",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_fs_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "83c6837b836ce62a:transfer_to_okahu_demo_fs_agent_fund_transfer",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "e4fd8b8834edb31d827cd949b2a896a5",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Transfer $5,000 from ACC-4821 to ACC-7733"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:40.430813Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_fs_agent_fund_transfer"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:41.763750Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-28T02:30:40.438998Z",
+      "end_time": "2026-05-28T02:30:41.757947Z",
+      "duration_ms": 1319,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "83c6837b836ce62a",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "d091119f55fd69b2",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_fs_agent_fund_transfer",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "e4fd8b8834edb31d827cd949b2a896a5",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an account inquiry specialist, a trade execution specialist, a fund transfer specialist, and an investment suitability specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles only their area. Account inquiry handles: balance checks, portfolio lookups, interest rate queries, and stock ticker information requests. When an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs. For investment requests, check suitability after the trade is executed.\"}",
+              "{\"human\": \"Transfer $5,000 from ACC-4821 to ACC-7733\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:40.438998Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_fs_agent_fund_transfer\", \"args\": {}, \"id\": \"call_NqydACX9jPxP4O3OckrtmiAi\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:41.757947Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 18,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 271,
+            "total_tokens": 289
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-28T02:30:41.757947Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-28T02:30:40.447420Z",
+      "end_time": "2026-05-28T02:30:41.743459Z",
+      "duration_ms": 1296,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "f2eabc19db737e72",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "83c6837b836ce62a",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "e4fd8b8834edb31d827cd949b2a896a5",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-28T02:30:41.771537Z",
+      "end_time": "2026-05-28T02:30:43.766972Z",
+      "duration_ms": 1995,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "4e76c2139da754fb",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "ef6a4873f713cbfe",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_fs_agent_supervisor",
+            "from_agent_span_id": "d091119f55fd69b2",
+            "name": "okahu_demo_fs_agent_fund_transfer",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "83c6837b836ce62a",
+        "last.inference": "7d90ed1ae5b4595c:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "820eab7cac427fdf445e8fe8df115cf1",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Transfer $5,000 from ACC-4821 to ACC-7733"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:41.771537Z"
+        },
+        {
+          "attributes": {
+            "response": "The transfer has been successfully completed. Here are the details:\n\n- **Transaction Confirmation ID**: TXN-170815\n- **From Account**: ACC-4821\n- **To Account**: ACC-7733\n- **Amount**: $5,000.00 USD\n- **Status**: Completed\n\nIf you have any further questions or need additional assistance, feel free to ask!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:43.766972Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-28T02:30:41.772736Z",
+      "end_time": "2026-05-28T02:30:42.701778Z",
+      "duration_ms": 929,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "b794a35f653fe015",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "4e76c2139da754fb",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_fs_tool_transfer_funds",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "820eab7cac427fdf445e8fe8df115cf1",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a fund transfer specialist. You only handle account-to-account fund transfers. After the transfer tool returns a result, provide a confirmation based on the returned fields. If the tool returns no data at all, inform the user you could not confirm the transfer and they should contact support.\"}",
+              "{\"human\": \"Transfer $5,000 from ACC-4821 to ACC-7733\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_fund_transfer\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_NqydACX9jPxP4O3OckrtmiAi\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_fund_transfer\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:41.772736Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_fs_tool_transfer_funds\", \"args\": {\"from_account\": \"ACC-4821\", \"to_account\": \"ACC-7733\", \"amount\": 5000}, \"id\": \"call_6J5ub3jdY0rkVom4uvQvMCz4\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:42.701778Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 37,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 233,
+            "total_tokens": 270
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-28T02:30:42.701778Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-28T02:30:41.775803Z",
+      "end_time": "2026-05-28T02:30:42.698203Z",
+      "duration_ms": 922,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "adc233ebb1a29f2e",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "b794a35f653fe015",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "820eab7cac427fdf445e8fe8df115cf1",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-28T02:30:42.707322Z",
+      "end_time": "2026-05-28T02:30:42.709124Z",
+      "duration_ms": 2,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "02195e6ff845ac7f",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "4e76c2139da754fb",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Transfer funds between two customer accounts",
+            "name": "okahu_demo_fs_tool_transfer_funds",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_fs_agent_fund_transfer",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "b794a35f653fe015",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "820eab7cac427fdf445e8fe8df115cf1",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'from_account': 'ACC-4821', 'to_account': 'ACC-7733', 'amount': 5000.0}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:42.709124Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"transfer_id\": \"TXN-170815\", \"from_account\": \"ACC-4821\", \"to_account\": \"ACC-7733\", \"amount\": 5000.0, \"currency\": \"USD\", \"status\": \"completed\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:42.709124Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-28T02:30:42.711728Z",
+      "end_time": "2026-05-28T02:30:43.766972Z",
+      "duration_ms": 1055,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "7d90ed1ae5b4595c",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "4e76c2139da754fb",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "820eab7cac427fdf445e8fe8df115cf1",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a fund transfer specialist. You only handle account-to-account fund transfers. After the transfer tool returns a result, provide a confirmation based on the returned fields. If the tool returns no data at all, inform the user you could not confirm the transfer and they should contact support.\"}",
+              "{\"human\": \"Transfer $5,000 from ACC-4821 to ACC-7733\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_fund_transfer\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_NqydACX9jPxP4O3OckrtmiAi\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_fund_transfer\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_fs_tool_transfer_funds\\\", \\\"args\\\": {\\\"from_account\\\": \\\"ACC-4821\\\", \\\"to_account\\\": \\\"ACC-7733\\\", \\\"amount\\\": 5000}, \\\"id\\\": \\\"call_6J5ub3jdY0rkVom4uvQvMCz4\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"transfer_id\\\": \\\"TXN-170815\\\", \\\"from_account\\\": \\\"ACC-4821\\\", \\\"to_account\\\": \\\"ACC-7733\\\", \\\"amount\\\": 5000.0, \\\"currency\\\": \\\"USD\\\", \\\"status\\\": \\\"completed\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:42.711728Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The transfer has been successfully completed. Here are the details:\\n\\n- **Transaction Confirmation ID**: TXN-170815\\n- **From Account**: ACC-4821\\n- **To Account**: ACC-7733\\n- **Amount**: $5,000.00 USD\\n- **Status**: Completed\\n\\nIf you have any further questions or need additional assistance, feel free to ask!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:43.766972Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 84,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 345,
+            "total_tokens": 429
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-28T02:30:43.766972Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-28T02:30:42.715314Z",
+      "end_time": "2026-05-28T02:30:43.763006Z",
+      "duration_ms": 1048,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "918a0df64a52f378",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "7d90ed1ae5b4595c",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "820eab7cac427fdf445e8fe8df115cf1",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-28T02:30:43.772942Z",
+      "end_time": "2026-05-28T02:30:46.124268Z",
+      "duration_ms": 2351,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "86e58b0ad67fcb3a",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "ef6a4873f713cbfe",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_fs_agent_fund_transfer",
+            "from_agent_span_id": "4e76c2139da754fb",
+            "name": "okahu_demo_fs_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "7d90ed1ae5b4595c",
+        "last.inference": "6e08d7d8210941b0:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ece69fb8b396b58bd78c256cb262f359",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Transfer $5,000 from ACC-4821 to ACC-7733"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:43.772942Z"
+        },
+        {
+          "attributes": {
+            "response": "The following transfer has been completed successfully:\n\n- **Transaction Confirmation ID**: TXN-170815\n- **From Account**: ACC-4821\n- **To Account**: ACC-7733\n- **Amount**: $5,000.00 USD\n- **Status**: Completed\n\nIf you have further requests or need any additional assistance, just let me know!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:46.124268Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-28T02:30:43.772942Z",
+      "end_time": "2026-05-28T02:30:46.122183Z",
+      "duration_ms": 2349,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "6e08d7d8210941b0",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "86e58b0ad67fcb3a",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ece69fb8b396b58bd78c256cb262f359",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an account inquiry specialist, a trade execution specialist, a fund transfer specialist, and an investment suitability specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles only their area. Account inquiry handles: balance checks, portfolio lookups, interest rate queries, and stock ticker information requests. When an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust account IDs, tickers, amounts, or confirmation IDs. For investment requests, check suitability after the trade is executed.\"}",
+              "{\"human\": \"Transfer $5,000 from ACC-4821 to ACC-7733\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_fs_agent_fund_transfer\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_NqydACX9jPxP4O3OckrtmiAi\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_fs_agent_fund_transfer\"}",
+              "{\"ai\": \"The transfer has been successfully completed. Here are the details:\\n\\n- **Transaction Confirmation ID**: TXN-170815\\n- **From Account**: ACC-4821\\n- **To Account**: ACC-7733\\n- **Amount**: $5,000.00 USD\\n- **Status**: Completed\\n\\nIf you have any further questions or need additional assistance, feel free to ask!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_fs_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_fs_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-28T02:30:43.772942Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The following transfer has been completed successfully:\\n\\n- **Transaction Confirmation ID**: TXN-170815\\n- **From Account**: ACC-4821\\n- **To Account**: ACC-7733\\n- **Amount**: $5,000.00 USD\\n- **Status**: Completed\\n\\nIf you have further requests or need any additional assistance, just let me know!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-28T02:30:46.122183Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 80,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 499,
+            "total_tokens": 579
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-28T02:30:46.122183Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-28T02:30:43.780786Z",
+      "end_time": "2026-05-28T02:30:46.113849Z",
+      "duration_ms": 2333,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "31fff8a5e97cec31",
+      "trace_id": "26a254891139d36c5ab4697a367d3951",
+      "parent_id": "6e08d7d8210941b0",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "ece69fb8b396b58bd78c256cb262f359",
+        "scope.agentic.session": "9f21452ab23c48f4af5fad309aa0ce68",
+        "scope.agentic.turn": "f501729f4e5be0ef21e26fbf025174a1",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T19:30:37.747489",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_fs_t11_no_hal_transfer_boundary",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_fs_financial_agent"
+      },
+      "events": []
+    }
+  ]
+}

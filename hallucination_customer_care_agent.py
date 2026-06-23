@@ -109,16 +109,12 @@ from langchain.agents import create_agent
 from langgraph_supervisor import create_supervisor
 from langchain_core.tools import tool
 
-# Load environment variables
-load_dotenv(override=True)
-MONOCLE_EXPORTER = os.getenv("MONOCLE_EXPORTER")
+# Load environment variables (override=False allows GitHub Actions env vars to take precedence)
+load_dotenv(override=False)
 
 # Enable Monocle tracing
 from monocle_apptrace import setup_monocle_telemetry
-setup_monocle_telemetry(
-    workflow_name="test_cc_customer_care_agent",
-    monocle_exporters_list=MONOCLE_EXPORTER,
-)
+setup_monocle_telemetry(workflow_name="test_cc_customer_care_agent")
 
 import logging
 logger = logging.getLogger(__name__)

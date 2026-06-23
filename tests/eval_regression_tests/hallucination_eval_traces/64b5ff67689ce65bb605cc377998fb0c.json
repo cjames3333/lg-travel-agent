@@ -1,0 +1,801 @@
+{
+  "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+  "start_time": "2026-05-27T22:59:56.948495Z",
+  "end_time": "2026-05-27T23:00:01.491967Z",
+  "duration_ms": 4543,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:59:56.948495Z",
+      "end_time": "2026-05-27T23:00:01.491967Z",
+      "duration_ms": 4543,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e55a37604dc58804",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "88052e051e7773b9",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "9eb67c2b7cf91a50:*",
+        "monocle.last.agent.invocation.id": "0663fc7299ea0ddd",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Denver?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:56.948495Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Denver is 94°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:00:01.491967Z"
+        }
+      ]
+    },
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T22:59:56.948495Z",
+      "end_time": "2026-05-27T23:00:01.491967Z",
+      "duration_ms": 4543,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "88052e051e7773b9",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "9eb67c2b7cf91a50:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:59:56.950611Z",
+      "end_time": "2026-05-27T22:59:58.202684Z",
+      "duration_ms": 1252,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3ce3f0962fbef00a",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "e55a37604dc58804",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "e650f2a7bfb81ae7:transfer_to_okahu_demo_lg_agent_weather_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "9bdbf857972621d6efc4ebbda61b7de8",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Denver?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:56.950611Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_weather_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:58.201694Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:59:56.965027Z",
+      "end_time": "2026-05-27T22:59:58.189856Z",
+      "duration_ms": 1225,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e650f2a7bfb81ae7",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "3ce3f0962fbef00a",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_weather_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "9bdbf857972621d6efc4ebbda61b7de8",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"What is the weather in Denver?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:56.965027Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_weather_assistant\", \"args\": {}, \"id\": \"call_oWUa3fYedxf210VX41y4TUVH\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:58.189856Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 19,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 281,
+            "total_tokens": 300
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:59:58.189856Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:59:56.965027Z",
+      "end_time": "2026-05-27T22:59:58.189856Z",
+      "duration_ms": 1225,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0121dd2734de07a4",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "e650f2a7bfb81ae7",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "9bdbf857972621d6efc4ebbda61b7de8",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:59:58.203059Z",
+      "end_time": "2026-05-27T23:00:00.925319Z",
+      "duration_ms": 2722,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "d8f758b397a2bd5b",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "e55a37604dc58804",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "3ce3f0962fbef00a",
+            "name": "okahu_demo_lg_agent_weather_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "e650f2a7bfb81ae7",
+        "last.inference": "79e9df5c1e8d9044:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c3e83739ca345126f5415eb3bc097f09",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Denver?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:58.203059Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Denver is 94°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:00:00.925319Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:59:58.207871Z",
+      "end_time": "2026-05-27T22:59:58.673732Z",
+      "duration_ms": 466,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "cc4f75a7d07e661f",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "1f9b0e07ba83a1d1",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c3e83739ca345126f5415eb3bc097f09",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:59:58.207871Z",
+      "end_time": "2026-05-27T22:59:58.682191Z",
+      "duration_ms": 474,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1f9b0e07ba83a1d1",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "d8f758b397a2bd5b",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "demo_get_weather",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c3e83739ca345126f5415eb3bc097f09",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a weather information assistant. Please use the tool available to you for checking weather. Pass the city name to the weather tool. Ignore other parts of the requests.\"}",
+              "{\"human\": \"What is the weather in Denver?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_oWUa3fYedxf210VX41y4TUVH\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:58.207871Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"demo_get_weather\", \"args\": {\"city\": \"Denver\"}, \"id\": \"call_UufdsytdXGHx4Qg2fxYTXtFW\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:58.682191Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 15,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 232,
+            "total_tokens": 247
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:59:58.682191Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._arun",
+      "start_time": "2026-05-27T22:59:58.682191Z",
+      "end_time": "2026-05-27T23:00:00.182832Z",
+      "duration_ms": 1501,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "fba69b3d196a8495",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "d8f758b397a2bd5b",
+      "attributes": {
+        "entity": [
+          {
+            "description": "\n    Get mock weather information for a specified city.\n    \n    Args:\n        city: Name of the city to get weather for (e.g., \"London\", \"New York\", \"Tokyo\")\n    \n    Returns:\n        Dictionary containing mock weather information with random temperature between 40-100.\n    ",
+            "name": "demo_get_weather",
+            "type": "tool.mcp"
+          },
+          {
+            "name": "okahu_demo_lg_agent_weather_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "1f9b0e07ba83a1d1",
+        "is_mcp": true,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c3e83739ca345126f5415eb3bc097f09",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:1096",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'city': 'Denver'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:58.682191Z"
+        },
+        {
+          "attributes": {
+            "response": "{'temperature': 94}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:00:00.182832Z"
+        }
+      ]
+    },
+    {
+      "span_name": "mcp.shared.session.BaseSession.send_request",
+      "start_time": "2026-05-27T22:59:59.353946Z",
+      "end_time": "2026-05-27T22:59:59.901124Z",
+      "duration_ms": 547,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "18e6e319d165c5a6",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "fba69b3d196a8495",
+      "attributes": {
+        "entity": [
+          {
+            "name": "demo_get_weather",
+            "server_name": "WeatherServer",
+            "type": "mcp.server",
+            "url": "http://localhost:8007/weather/mcp/"
+          }
+        ],
+        "entity.count": 1,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c3e83739ca345126f5415eb3bc097f09",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "routing",
+        "span.type": "agentic.mcp.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\mcp\\client\\session.py:383",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"city\": \"Denver\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:59:59.353946Z"
+        },
+        {
+          "attributes": {
+            "output": "{\n  \"temperature\": 94\n}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:59:59.901124Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:00:00.185008Z",
+      "end_time": "2026-05-27T23:00:00.925319Z",
+      "duration_ms": 740,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "79e9df5c1e8d9044",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "d8f758b397a2bd5b",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c3e83739ca345126f5415eb3bc097f09",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a weather information assistant. Please use the tool available to you for checking weather. Pass the city name to the weather tool. Ignore other parts of the requests.\"}",
+              "{\"human\": \"What is the weather in Denver?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_oWUa3fYedxf210VX41y4TUVH\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"demo_get_weather\\\", \\\"args\\\": {\\\"city\\\": \\\"Denver\\\"}, \\\"id\\\": \\\"call_UufdsytdXGHx4Qg2fxYTXtFW\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": [{\"type\": \"text\", \"text\": \"{\\n  \\\"temperature\\\": 94\\n}\", \"id\": \"lc_c203f222-02dc-454f-9df0-77a165cff9e4\"}]}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:00:00.185008Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The current temperature in Denver is 94°F.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:00:00.925319Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 11,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 275,
+            "total_tokens": 286
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:00:00.925319Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:00:00.186724Z",
+      "end_time": "2026-05-27T23:00:00.923448Z",
+      "duration_ms": 737,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2d6b43b2234f7926",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "79e9df5c1e8d9044",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "c3e83739ca345126f5415eb3bc097f09",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:00:00.931687Z",
+      "end_time": "2026-05-27T23:00:01.489915Z",
+      "duration_ms": 558,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0663fc7299ea0ddd",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "e55a37604dc58804",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_weather_assistant",
+            "from_agent_span_id": "d8f758b397a2bd5b",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "79e9df5c1e8d9044",
+        "last.inference": "9eb67c2b7cf91a50:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b2c412d6e6cc44194df6cf582af15603",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the weather in Denver?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:00:00.931687Z"
+        },
+        {
+          "attributes": {
+            "response": "The current temperature in Denver is 94°F."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:00:01.489915Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:00:00.936811Z",
+      "end_time": "2026-05-27T23:00:01.482192Z",
+      "duration_ms": 545,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "9eb67c2b7cf91a50",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "0663fc7299ea0ddd",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b2c412d6e6cc44194df6cf582af15603",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"What is the weather in Denver?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_weather_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_oWUa3fYedxf210VX41y4TUVH\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_weather_assistant\"}",
+              "{\"ai\": \"The current temperature in Denver is 94°F.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:00:00.936811Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The current temperature in Denver is 94°F.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:00:01.482192Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 11,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 457,
+            "total_tokens": 468
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:00:01.482192Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:00:00.939068Z",
+      "end_time": "2026-05-27T23:00:01.482192Z",
+      "duration_ms": 543,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "afabd4049ab29026",
+      "trace_id": "64b5ff67689ce65bb605cc377998fb0c",
+      "parent_id": "9eb67c2b7cf91a50",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b2c412d6e6cc44194df6cf582af15603",
+        "scope.agentic.session": "37d52b0ef11c4bbf90239be379587859",
+        "scope.agentic.turn": "1620f35f2681f255693a33975446417",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:59:04.065497",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t06_no_hal_weather_denver",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    }
+  ]
+}

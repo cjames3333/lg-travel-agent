@@ -1,0 +1,745 @@
+{
+  "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+  "start_time": "2026-05-27T23:01:13.975713Z",
+  "end_time": "2026-05-27T23:01:20.090904Z",
+  "duration_ms": 6115,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T23:01:13.975713Z",
+      "end_time": "2026-05-27T23:01:20.090904Z",
+      "duration_ms": 6115,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "5ba1980f0260ecab",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "073c0a7f296b9187:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:01:13.975713Z",
+      "end_time": "2026-05-27T23:01:20.090904Z",
+      "duration_ms": 6115,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "844a48221035fc6e",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "5ba1980f0260ecab",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "073c0a7f296b9187:*",
+        "monocle.last.agent.invocation.id": "53fe675955d7697a",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is spring a good season to visit Tokyo?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:13.975713Z"
+        },
+        {
+          "attributes": {
+            "response": "Spring is indeed a great season to visit Tokyo, thanks to the pleasant weather and the stunning cherry blossom season. It's an excellent time to explore both the urban scene and natural beauty."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:20.090904Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:01:13.990466Z",
+      "end_time": "2026-05-27T23:01:15.127893Z",
+      "duration_ms": 1137,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e767e7f65ceaf147",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "844a48221035fc6e",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "89c92033b9facd1d:transfer_to_okahu_demo_lg_agent_destination_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b1974bc216c28aaf79cad83f0826d463",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is spring a good season to visit Tokyo?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:13.990466Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_destination_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:15.127893Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:01:13.996208Z",
+      "end_time": "2026-05-27T23:01:15.120379Z",
+      "duration_ms": 1124,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "89c92033b9facd1d",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "e767e7f65ceaf147",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_destination_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b1974bc216c28aaf79cad83f0826d463",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Is spring a good season to visit Tokyo?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:13.996894Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_destination_assistant\", \"args\": {}, \"id\": \"call_U7hApSOwVWhOn75A9aW5nJih\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:15.120379Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 19,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 283,
+            "total_tokens": 302
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:01:15.120379Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:01:14.004805Z",
+      "end_time": "2026-05-27T23:01:15.106555Z",
+      "duration_ms": 1102,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "4d4d68f8ac89c0c7",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "89c92033b9facd1d",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "b1974bc216c28aaf79cad83f0826d463",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:01:15.127893Z",
+      "end_time": "2026-05-27T23:01:18.947032Z",
+      "duration_ms": 3819,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "8fb9cf509bbd93a3",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "844a48221035fc6e",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "e767e7f65ceaf147",
+            "name": "okahu_demo_lg_agent_destination_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "89c92033b9facd1d",
+        "last.inference": "fe8c9b930b834457:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "1668b84de1085e4b1cfd5ef06f253f31",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is spring a good season to visit Tokyo?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:15.127893Z"
+        },
+        {
+          "attributes": {
+            "response": "Spring is indeed a wonderful time to visit Tokyo, typically spanning March through May. During this season, you'll experience comfortable weather and the beautiful cherry blossom (sakura) season, which is one of the highlights of visiting Japan.\n\nHere's some essential travel information for Tokyo:\n\n- **Timezone:** Tokyo operates on Japan Standard Time (JST), which is UTC +9. This means they are 9 hours ahead of Coordinated Universal Time.\n- **Local Currency:** The currency in Tokyo is the Japanese Yen (JPY).\n- **Primary Language:** The primary language spoken is Japanese. While English is not widely spoken, you'll find that signage and tourist information are often available in English.\n- **Entry Requirements for US Citizens:** US citizens do not need a visa for short-term visits to Japan, which typically means stays of less than 90 days for purposes such as tourism or business. However, it's important to have a valid passport.\n\nSpring is an ideal time to explore not just Tokyo's urban attractions but also its parks and surrounding nature, making it an excellent choice for your travels."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:18.947032Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:01:15.138632Z",
+      "end_time": "2026-05-27T23:01:15.698509Z",
+      "duration_ms": 560,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "548072ac11f97545",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "8fb9cf509bbd93a3",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_lg_tool_get_destination_info",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "1668b84de1085e4b1cfd5ef06f253f31",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a travel destination specialist. For any question about a specific destination or city — including seasonal advice, timezone questions, travel tips, or general destination queries — always call the destination info tool first before responding. After the tool returns, relay the destination information provided.\"}",
+              "{\"human\": \"Is spring a good season to visit Tokyo?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_U7hApSOwVWhOn75A9aW5nJih\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:15.138632Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_lg_tool_get_destination_info\", \"args\": {\"city\": \"Tokyo\"}, \"id\": \"call_f0xpYSQGJo40DFUYrjF0UWa2\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:15.698509Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 21,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 215,
+            "total_tokens": 236
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:01:15.698509Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:01:15.140646Z",
+      "end_time": "2026-05-27T23:01:15.698509Z",
+      "duration_ms": 558,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "dfeeb77608a7f99f",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "548072ac11f97545",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "1668b84de1085e4b1cfd5ef06f253f31",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T23:01:15.698509Z",
+      "end_time": "2026-05-27T23:01:15.698509Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a8bc4fb3001b1585",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "8fb9cf509bbd93a3",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Get basic destination information for a travel city",
+            "name": "okahu_demo_lg_tool_get_destination_info",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_lg_agent_destination_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "548072ac11f97545",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "1668b84de1085e4b1cfd5ef06f253f31",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'city': 'Tokyo'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:15.698509Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"city\": \"Tokyo\", \"timezone_code\": \"JST\", \"region\": \"Asia\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:15.698509Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:01:15.698509Z",
+      "end_time": "2026-05-27T23:01:18.943483Z",
+      "duration_ms": 3245,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "fe8c9b930b834457",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "8fb9cf509bbd93a3",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "1668b84de1085e4b1cfd5ef06f253f31",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a travel destination specialist. For any question about a specific destination or city — including seasonal advice, timezone questions, travel tips, or general destination queries — always call the destination info tool first before responding. After the tool returns, relay the destination information provided.\"}",
+              "{\"human\": \"Is spring a good season to visit Tokyo?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_U7hApSOwVWhOn75A9aW5nJih\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_lg_tool_get_destination_info\\\", \\\"args\\\": {\\\"city\\\": \\\"Tokyo\\\"}, \\\"id\\\": \\\"call_f0xpYSQGJo40DFUYrjF0UWa2\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"city\\\": \\\"Tokyo\\\", \\\"timezone_code\\\": \\\"JST\\\", \\\"region\\\": \\\"Asia\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:15.698509Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Spring is indeed a wonderful time to visit Tokyo, typically spanning March through May. During this season, you'll experience comfortable weather and the beautiful cherry blossom (sakura) season, which is one of the highlights of visiting Japan.\\n\\nHere's some essential travel information for Tokyo:\\n\\n- **Timezone:** Tokyo operates on Japan Standard Time (JST), which is UTC +9. This means they are 9 hours ahead of Coordinated Universal Time.\\n- **Local Currency:** The currency in Tokyo is the Japanese Yen (JPY).\\n- **Primary Language:** The primary language spoken is Japanese. While English is not widely spoken, you'll find that signage and tourist information are often available in English.\\n- **Entry Requirements for US Citizens:** US citizens do not need a visa for short-term visits to Japan, which typically means stays of less than 90 days for purposes such as tourism or business. However, it's important to have a valid passport.\\n\\nSpring is an ideal time to explore not just Tokyo's urban attractions but also its parks and surrounding nature, making it an excellent choice for your travels.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:18.943483Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 216,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 281,
+            "total_tokens": 497
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:01:18.943483Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:01:15.714582Z",
+      "end_time": "2026-05-27T23:01:18.935522Z",
+      "duration_ms": 3221,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "cfe26051c0cfa1b0",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "fe8c9b930b834457",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "1668b84de1085e4b1cfd5ef06f253f31",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T23:01:18.950083Z",
+      "end_time": "2026-05-27T23:01:20.090904Z",
+      "duration_ms": 1141,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "53fe675955d7697a",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "844a48221035fc6e",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_destination_assistant",
+            "from_agent_span_id": "8fb9cf509bbd93a3",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "fe8c9b930b834457",
+        "last.inference": "073c0a7f296b9187:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "308b21d75d408e1aaeccd270b96343bf",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is spring a good season to visit Tokyo?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:18.950083Z"
+        },
+        {
+          "attributes": {
+            "response": "Spring is indeed a great season to visit Tokyo, thanks to the pleasant weather and the stunning cherry blossom season. It's an excellent time to explore both the urban scene and natural beauty."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:20.090904Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T23:01:18.956133Z",
+      "end_time": "2026-05-27T23:01:20.090904Z",
+      "duration_ms": 1135,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "073c0a7f296b9187",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "53fe675955d7697a",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "308b21d75d408e1aaeccd270b96343bf",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Is spring a good season to visit Tokyo?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_U7hApSOwVWhOn75A9aW5nJih\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}",
+              "{\"ai\": \"Spring is indeed a wonderful time to visit Tokyo, typically spanning March through May. During this season, you'll experience comfortable weather and the beautiful cherry blossom (sakura) season, which is one of the highlights of visiting Japan.\\n\\nHere's some essential travel information for Tokyo:\\n\\n- **Timezone:** Tokyo operates on Japan Standard Time (JST), which is UTC +9. This means they are 9 hours ahead of Coordinated Universal Time.\\n- **Local Currency:** The currency in Tokyo is the Japanese Yen (JPY).\\n- **Primary Language:** The primary language spoken is Japanese. While English is not widely spoken, you'll find that signage and tourist information are often available in English.\\n- **Entry Requirements for US Citizens:** US citizens do not need a visa for short-term visits to Japan, which typically means stays of less than 90 days for purposes such as tourism or business. However, it's important to have a valid passport.\\n\\nSpring is an ideal time to explore not just Tokyo's urban attractions but also its parks and surrounding nature, making it an excellent choice for your travels.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T23:01:18.956133Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Spring is indeed a great season to visit Tokyo, thanks to the pleasant weather and the stunning cherry blossom season. It's an excellent time to explore both the urban scene and natural beauty.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T23:01:20.090904Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 37,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 664,
+            "total_tokens": 701
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T23:01:20.090904Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T23:01:18.956133Z",
+      "end_time": "2026-05-27T23:01:20.090904Z",
+      "duration_ms": 1135,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a7c6e69717f51e7f",
+      "trace_id": "0f44958e686d89e008b64e42d6b9c93b",
+      "parent_id": "073c0a7f296b9187",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "308b21d75d408e1aaeccd270b96343bf",
+        "scope.agentic.session": "ed9f5a7836aa4322b5ad088b7a9b5b58",
+        "scope.agentic.turn": "43ccaa0eef11a741d4c1ba21926281ea",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T16:01:12.224310",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t10_minor_tokyo_seasonal_characterization",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    }
+  ]
+}

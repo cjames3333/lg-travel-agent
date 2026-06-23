@@ -1,0 +1,745 @@
+{
+  "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+  "start_time": "2026-05-27T04:16:12.055849Z",
+  "end_time": "2026-05-27T04:16:22.703305Z",
+  "duration_ms": 10647,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T04:16:12.055849Z",
+      "end_time": "2026-05-27T04:16:22.703305Z",
+      "duration_ms": 10647,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "070dca4e05404b0d",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "e28ca28483bd3c6d:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:16:12.055849Z",
+      "end_time": "2026-05-27T04:16:22.703305Z",
+      "duration_ms": 10647,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "b0970c1136e63f38",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "070dca4e05404b0d",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "e28ca28483bd3c6d:*",
+        "monocle.last.agent.invocation.id": "c14d2a76e5c1d691",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is Tokyo's timezone (JST) practical for daily video calls with New York?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:12.055849Z"
+        },
+        {
+          "attributes": {
+            "response": "The timezone in Tokyo is Japan Standard Time (JST), UTC+9. This makes Tokyo usually 14 hours ahead of New York when New York is on Eastern Standard Time (EST) and 13 hours ahead during Eastern Daylight Time (EDT). For daily video calls, this means:\n\n- **Morning in New York (e.g., 9 AM EST)**: Late evening in Tokyo (11 PM JST).\n- **Afternoon in New York (3 PM EST)**: Very early morning in Tokyo (5 AM JST).\n- **Evening in New York (9 PM EST)**: Mid-day in Tokyo (11 AM JST).\n\nFor practicality, scheduling calls when it's late evening in New York aligns with Tokyo's mid-morning, this tends to be the most convenient overlap."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:22.703305Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:16:12.060817Z",
+      "end_time": "2026-05-27T04:16:15.116665Z",
+      "duration_ms": 3056,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "267d2bea3e5800b2",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "cb0b9ba63df466cb",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d17a204588541caf4f8239c9b2e559ee",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:16:12.060817Z",
+      "end_time": "2026-05-27T04:16:15.116665Z",
+      "duration_ms": 3056,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "cb0b9ba63df466cb",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "49707d39879e150b",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_destination_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d17a204588541caf4f8239c9b2e559ee",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Is Tokyo's timezone (JST) practical for daily video calls with New York?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:12.060817Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_destination_assistant\", \"args\": {}, \"id\": \"call_Fju3dYExZPt76Beb8eCS84Ex\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:15.116665Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 19,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 291,
+            "total_tokens": 310
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:16:15.116665Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:16:12.060817Z",
+      "end_time": "2026-05-27T04:16:15.125067Z",
+      "duration_ms": 3064,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "49707d39879e150b",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "b0970c1136e63f38",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "cb0b9ba63df466cb:transfer_to_okahu_demo_lg_agent_destination_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "d17a204588541caf4f8239c9b2e559ee",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is Tokyo's timezone (JST) practical for daily video calls with New York?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:12.060817Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_destination_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:15.125067Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:16:15.125067Z",
+      "end_time": "2026-05-27T04:16:19.390666Z",
+      "duration_ms": 4266,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "48af8d3dbbc3139e",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "b0970c1136e63f38",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "49707d39879e150b",
+            "name": "okahu_demo_lg_agent_destination_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "cb0b9ba63df466cb",
+        "last.inference": "c5701251cc24d02f:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f33eccd88d063a3504eb15da220ca831",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is Tokyo's timezone (JST) practical for daily video calls with New York?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:15.125067Z"
+        },
+        {
+          "attributes": {
+            "response": "Tokyo operates on Japan Standard Time (JST), which is UTC+9. \n\nFor comparing with New York, which is on Eastern Standard Time (EST) or Eastern Daylight Time (EDT), this means Tokyo is usually 14 hours ahead of New York (when New York is on EST, UTC-5) or 13 hours ahead during daylight saving time (EDT, UTC-4).\n\n**Practicality of Scheduling Video Calls:**\n- **Morning in New York (e.g., 9 AM EST)**: It's late evening in Tokyo (11 PM JST).\n- **Afternoon in New York (e.g., 3 PM EST)**: It's very early morning in Tokyo (5 AM JST).\n- **Evening in New York (e.g., 9 PM EST)**: It's mid-day in Tokyo (11 AM JST).\n\n**Best Times for Calls** could be during New York's late evening to overlap with Tokyo's mid-morning or early afternoon.\n\n**Additional Tokyo Travel Information:**\n- **Local Currency**: Japanese Yen (JPY)\n- **Primary Language**: Japanese\n- **Entry Requirements for US Citizens**: US citizens need a valid passport. For stays up to 90 days for tourism or business, a visa is not typically required.\n\nPlan your calls keeping these time differences in mind to facilitate smooth communication!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:19.390666Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:16:15.125067Z",
+      "end_time": "2026-05-27T04:16:15.904633Z",
+      "duration_ms": 780,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a8ffcbae0beb369d",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "48af8d3dbbc3139e",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_lg_tool_get_destination_info",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f33eccd88d063a3504eb15da220ca831",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a travel destination specialist. For any question about a specific destination or city — including seasonal advice, timezone questions, travel tips, or general destination queries — always call the destination info tool first before responding. After the tool returns, relay the destination information provided.\"}",
+              "{\"human\": \"Is Tokyo's timezone (JST) practical for daily video calls with New York?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Fju3dYExZPt76Beb8eCS84Ex\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:15.125067Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_lg_tool_get_destination_info\", \"args\": {\"city\": \"Tokyo\"}, \"id\": \"call_exzaVPmzbof0tuJXxRYSuVTz\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:15.904633Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 21,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 223,
+            "total_tokens": 244
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:16:15.904633Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:16:15.132682Z",
+      "end_time": "2026-05-27T04:16:15.902656Z",
+      "duration_ms": 770,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "96e5412489ebea9c",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "a8ffcbae0beb369d",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f33eccd88d063a3504eb15da220ca831",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T04:16:15.907845Z",
+      "end_time": "2026-05-27T04:16:15.909009Z",
+      "duration_ms": 1,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "d3239a86dead3a77",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "48af8d3dbbc3139e",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Get basic destination information for a travel city",
+            "name": "okahu_demo_lg_tool_get_destination_info",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_lg_agent_destination_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "a8ffcbae0beb369d",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f33eccd88d063a3504eb15da220ca831",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'city': 'Tokyo'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:15.909009Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"city\": \"Tokyo\", \"timezone_code\": \"JST\", \"region\": \"Asia\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:15.909009Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:16:15.912548Z",
+      "end_time": "2026-05-27T04:16:19.388064Z",
+      "duration_ms": 3476,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c5701251cc24d02f",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "48af8d3dbbc3139e",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f33eccd88d063a3504eb15da220ca831",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a travel destination specialist. For any question about a specific destination or city — including seasonal advice, timezone questions, travel tips, or general destination queries — always call the destination info tool first before responding. After the tool returns, relay the destination information provided.\"}",
+              "{\"human\": \"Is Tokyo's timezone (JST) practical for daily video calls with New York?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Fju3dYExZPt76Beb8eCS84Ex\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_lg_tool_get_destination_info\\\", \\\"args\\\": {\\\"city\\\": \\\"Tokyo\\\"}, \\\"id\\\": \\\"call_exzaVPmzbof0tuJXxRYSuVTz\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"city\\\": \\\"Tokyo\\\", \\\"timezone_code\\\": \\\"JST\\\", \\\"region\\\": \\\"Asia\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:15.912548Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Tokyo operates on Japan Standard Time (JST), which is UTC+9. \\n\\nFor comparing with New York, which is on Eastern Standard Time (EST) or Eastern Daylight Time (EDT), this means Tokyo is usually 14 hours ahead of New York (when New York is on EST, UTC-5) or 13 hours ahead during daylight saving time (EDT, UTC-4).\\n\\n**Practicality of Scheduling Video Calls:**\\n- **Morning in New York (e.g., 9 AM EST)**: It's late evening in Tokyo (11 PM JST).\\n- **Afternoon in New York (e.g., 3 PM EST)**: It's very early morning in Tokyo (5 AM JST).\\n- **Evening in New York (e.g., 9 PM EST)**: It's mid-day in Tokyo (11 AM JST).\\n\\n**Best Times for Calls** could be during New York's late evening to overlap with Tokyo's mid-morning or early afternoon.\\n\\n**Additional Tokyo Travel Information:**\\n- **Local Currency**: Japanese Yen (JPY)\\n- **Primary Language**: Japanese\\n- **Entry Requirements for US Citizens**: US citizens need a valid passport. For stays up to 90 days for tourism or business, a visa is not typically required.\\n\\nPlan your calls keeping these time differences in mind to facilitate smooth communication!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:19.388064Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 275,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 289,
+            "total_tokens": 564
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:16:19.388064Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:16:15.913908Z",
+      "end_time": "2026-05-27T04:16:19.386063Z",
+      "duration_ms": 3472,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2aa944e9fb1605ff",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "c5701251cc24d02f",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "f33eccd88d063a3504eb15da220ca831",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T04:16:19.391665Z",
+      "end_time": "2026-05-27T04:16:22.700781Z",
+      "duration_ms": 3309,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "e28ca28483bd3c6d",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "c14d2a76e5c1d691",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4716f063ff266480c78e41191afefff8",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Is Tokyo's timezone (JST) practical for daily video calls with New York?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_destination_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_Fju3dYExZPt76Beb8eCS84Ex\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_destination_assistant\"}",
+              "{\"ai\": \"Tokyo operates on Japan Standard Time (JST), which is UTC+9. \\n\\nFor comparing with New York, which is on Eastern Standard Time (EST) or Eastern Daylight Time (EDT), this means Tokyo is usually 14 hours ahead of New York (when New York is on EST, UTC-5) or 13 hours ahead during daylight saving time (EDT, UTC-4).\\n\\n**Practicality of Scheduling Video Calls:**\\n- **Morning in New York (e.g., 9 AM EST)**: It's late evening in Tokyo (11 PM JST).\\n- **Afternoon in New York (e.g., 3 PM EST)**: It's very early morning in Tokyo (5 AM JST).\\n- **Evening in New York (e.g., 9 PM EST)**: It's mid-day in Tokyo (11 AM JST).\\n\\n**Best Times for Calls** could be during New York's late evening to overlap with Tokyo's mid-morning or early afternoon.\\n\\n**Additional Tokyo Travel Information:**\\n- **Local Currency**: Japanese Yen (JPY)\\n- **Primary Language**: Japanese\\n- **Entry Requirements for US Citizens**: US citizens need a valid passport. For stays up to 90 days for tourism or business, a visa is not typically required.\\n\\nPlan your calls keeping these time differences in mind to facilitate smooth communication!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:19.395725Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The timezone in Tokyo is Japan Standard Time (JST), UTC+9. This makes Tokyo usually 14 hours ahead of New York when New York is on Eastern Standard Time (EST) and 13 hours ahead during Eastern Daylight Time (EDT). For daily video calls, this means:\\n\\n- **Morning in New York (e.g., 9 AM EST)**: Late evening in Tokyo (11 PM JST).\\n- **Afternoon in New York (3 PM EST)**: Very early morning in Tokyo (5 AM JST).\\n- **Evening in New York (9 PM EST)**: Mid-day in Tokyo (11 AM JST).\\n\\nFor practicality, scheduling calls when it's late evening in New York aligns with Tokyo's mid-morning, this tends to be the most convenient overlap.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:22.700781Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 160,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 731,
+            "total_tokens": 891
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T04:16:22.700781Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T04:16:19.391665Z",
+      "end_time": "2026-05-27T04:16:22.702306Z",
+      "duration_ms": 3311,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c14d2a76e5c1d691",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "b0970c1136e63f38",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_destination_assistant",
+            "from_agent_span_id": "48af8d3dbbc3139e",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "c5701251cc24d02f",
+        "last.inference": "e28ca28483bd3c6d:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4716f063ff266480c78e41191afefff8",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Is Tokyo's timezone (JST) practical for daily video calls with New York?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T04:16:19.391665Z"
+        },
+        {
+          "attributes": {
+            "response": "The timezone in Tokyo is Japan Standard Time (JST), UTC+9. This makes Tokyo usually 14 hours ahead of New York when New York is on Eastern Standard Time (EST) and 13 hours ahead during Eastern Daylight Time (EDT). For daily video calls, this means:\n\n- **Morning in New York (e.g., 9 AM EST)**: Late evening in Tokyo (11 PM JST).\n- **Afternoon in New York (3 PM EST)**: Very early morning in Tokyo (5 AM JST).\n- **Evening in New York (9 PM EST)**: Mid-day in Tokyo (11 AM JST).\n\nFor practicality, scheduling calls when it's late evening in New York aligns with Tokyo's mid-morning, this tends to be the most convenient overlap."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T04:16:22.702306Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T04:16:19.395725Z",
+      "end_time": "2026-05-27T04:16:22.692072Z",
+      "duration_ms": 3296,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "82b4139af83b214c",
+      "trace_id": "169a498f747fe227bd56c00bdc6cf8ee",
+      "parent_id": "e28ca28483bd3c6d",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "4716f063ff266480c78e41191afefff8",
+        "scope.agentic.session": "58aaa829d19f49318f3cb7d376deac73",
+        "scope.agentic.turn": "9aea73a98a25b609053477eb5fea5c52",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-26T21:10:53.140884",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t09_minor_tokyo_timezone_call_suitability",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    }
+  ]
+}

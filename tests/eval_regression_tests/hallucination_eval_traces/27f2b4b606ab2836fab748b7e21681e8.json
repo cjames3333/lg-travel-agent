@@ -1,0 +1,745 @@
+{
+  "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+  "start_time": "2026-05-27T22:49:53.501995Z",
+  "end_time": "2026-05-27T22:49:57.047341Z",
+  "duration_ms": 3545,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T22:49:53.501995Z",
+      "end_time": "2026-05-27T22:49:57.047341Z",
+      "duration_ms": 3545,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "f93f4cde73dab2f7",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_lg_travel_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "5742970dcd6ad6fd:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:49:53.501995Z",
+      "end_time": "2026-05-27T22:49:57.047341Z",
+      "duration_ms": 3545,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "cc0212038d726b21",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "f93f4cde73dab2f7",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "5742970dcd6ad6fd:*",
+        "monocle.last.agent.invocation.id": "c4717ca492756e3e",
+        "monocle.last.agent.name": "okahu_demo_lg_agent_travel_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Book a hotel in Paris, Texas"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:53.501995Z"
+        },
+        {
+          "attributes": {
+            "response": "Your booking at Hotel Republique in Paris, France, has been confirmed."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:57.047341Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:49:53.514240Z",
+      "end_time": "2026-05-27T22:49:54.396561Z",
+      "duration_ms": 882,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "977dcc3709890fb5",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "cc0212038d726b21",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "0130bb57c58ff6dc:transfer_to_okahu_demo_lg_agent_lodging_assistant",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3be4605b080f6ff02e96d911b5943e81",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Book a hotel in Paris, Texas"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:53.514240Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_lg_agent_lodging_assistant"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:54.396561Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:49:53.518588Z",
+      "end_time": "2026-05-27T22:49:54.382677Z",
+      "duration_ms": 864,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "0130bb57c58ff6dc",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "977dcc3709890fb5",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_lg_agent_lodging_assistant",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3be4605b080f6ff02e96d911b5943e81",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Book a hotel in Paris, Texas\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:53.518588Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_lg_agent_lodging_assistant\", \"args\": {}, \"id\": \"call_lQPHwlU9eBv1hlrJvO1KnHYg\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:54.382677Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 21,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 281,
+            "total_tokens": 302
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:49:54.382677Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:49:53.522410Z",
+      "end_time": "2026-05-27T22:49:54.366418Z",
+      "duration_ms": 844,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "1a90d8680699aa69",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "0130bb57c58ff6dc",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "3be4605b080f6ff02e96d911b5943e81",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:49:54.397576Z",
+      "end_time": "2026-05-27T22:49:55.833153Z",
+      "duration_ms": 1436,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ccbfa3d64cdd7fcb",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "cc0212038d726b21",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_travel_supervisor",
+            "from_agent_span_id": "977dcc3709890fb5",
+            "name": "okahu_demo_lg_agent_lodging_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "0130bb57c58ff6dc",
+        "last.inference": "f6fff0924cbb93e8:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "848c134864a46659d3ec13cb8f4ce3f9",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Book a hotel in Paris, Texas"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:54.397576Z"
+        },
+        {
+          "attributes": {
+            "response": "Your booking at Hotel Republique in Paris, France, has been confirmed."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:55.833153Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:49:54.402366Z",
+      "end_time": "2026-05-27T22:49:55.006130Z",
+      "duration_ms": 604,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c2b27f697c06ee5d",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "ccbfa3d64cdd7fcb",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_lg_tool_book_hotel",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "848c134864a46659d3ec13cb8f4ce3f9",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a hotel booking assistant. You only handle hotel booking. Book the hotel if the user explicitly asks — just handle that part, ignore other parts of the request. Do not ask for clarification — if the user does not name a specific hotel, use 'any available hotel' as the hotel_name parameter and proceed immediately. When calling the hotel booking tool, pass hotel_name and the destination city as separate parameters. After the hotel tool returns a result, confirm the booking by stating the hotel name and full location (city and country) as provided by the tool.\"}",
+              "{\"human\": \"Book a hotel in Paris, Texas\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_lodging_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_lQPHwlU9eBv1hlrJvO1KnHYg\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_lodging_assistant\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:54.402366Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_lg_tool_book_hotel\", \"args\": {\"hotel_name\": \"any available hotel\", \"city\": \"Paris\"}, \"id\": \"call_pnlLFftZx9iKzM0vb3bRpCHN\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:55.006130Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 28,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 337,
+            "total_tokens": 365
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:49:55.006130Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:49:54.405695Z",
+      "end_time": "2026-05-27T22:49:55.006130Z",
+      "duration_ms": 600,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "412a8f0ca70e5123",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "c2b27f697c06ee5d",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "848c134864a46659d3ec13cb8f4ce3f9",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T22:49:55.013233Z",
+      "end_time": "2026-05-27T22:49:55.014250Z",
+      "duration_ms": 1,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "2090fe34478c68f6",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "ccbfa3d64cdd7fcb",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Book a hotel for a stay",
+            "name": "okahu_demo_lg_tool_book_hotel",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_lg_agent_lodging_assistant",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "c2b27f697c06ee5d",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "848c134864a46659d3ec13cb8f4ce3f9",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'hotel_name': 'any available hotel', 'city': 'Paris', 'country': None}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:55.013233Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"hotel_name\": \"Hotel Republique (Paris, France)\", \"city\": \"Paris\", \"country\": \"France\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:55.014250Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:49:55.017462Z",
+      "end_time": "2026-05-27T22:49:55.833153Z",
+      "duration_ms": 816,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "f6fff0924cbb93e8",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "ccbfa3d64cdd7fcb",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "848c134864a46659d3ec13cb8f4ce3f9",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a hotel booking assistant. You only handle hotel booking. Book the hotel if the user explicitly asks — just handle that part, ignore other parts of the request. Do not ask for clarification — if the user does not name a specific hotel, use 'any available hotel' as the hotel_name parameter and proceed immediately. When calling the hotel booking tool, pass hotel_name and the destination city as separate parameters. After the hotel tool returns a result, confirm the booking by stating the hotel name and full location (city and country) as provided by the tool.\"}",
+              "{\"human\": \"Book a hotel in Paris, Texas\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_lodging_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_lQPHwlU9eBv1hlrJvO1KnHYg\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_lodging_assistant\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_lg_tool_book_hotel\\\", \\\"args\\\": {\\\"hotel_name\\\": \\\"any available hotel\\\", \\\"city\\\": \\\"Paris\\\"}, \\\"id\\\": \\\"call_pnlLFftZx9iKzM0vb3bRpCHN\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"hotel_name\\\": \\\"Hotel Republique (Paris, France)\\\", \\\"city\\\": \\\"Paris\\\", \\\"country\\\": \\\"France\\\"}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:55.017462Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Your booking at Hotel Republique in Paris, France, has been confirmed.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:55.833153Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 16,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 417,
+            "total_tokens": 433
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:49:55.833153Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:49:55.021745Z",
+      "end_time": "2026-05-27T22:49:55.833153Z",
+      "duration_ms": 811,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "086e26b5ee159acd",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "f6fff0924cbb93e8",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "848c134864a46659d3ec13cb8f4ce3f9",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:49:55.833153Z",
+      "end_time": "2026-05-27T22:49:57.047341Z",
+      "duration_ms": 1214,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c4717ca492756e3e",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "cc0212038d726b21",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_lg_agent_lodging_assistant",
+            "from_agent_span_id": "ccbfa3d64cdd7fcb",
+            "name": "okahu_demo_lg_agent_travel_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "f6fff0924cbb93e8",
+        "last.inference": "5742970dcd6ad6fd:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "a563740872a09d2ae00536f9ef90160f",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "Book a hotel in Paris, Texas"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:55.833153Z"
+        },
+        {
+          "attributes": {
+            "response": "Your booking at Hotel Republique in Paris, France, has been confirmed."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:57.047341Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:49:55.838833Z",
+      "end_time": "2026-05-27T22:49:57.046446Z",
+      "duration_ms": 1208,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "5742970dcd6ad6fd",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "c4717ca492756e3e",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "a563740872a09d2ae00536f9ef90160f",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage a hotel booking assistant, a flight booking assistant, a weather assistant, and a destination specialist. Assign each part of the user's request to the appropriate specialist. Each assistant handles only their own area. If the user asks about weather, delegate to the weather assistant. If the user asks for destination info, currency, timezone, or travel tips for a city, delegate to the destination specialist. When an agent returns a result, relay the returned field values exactly as provided — do not invent or change hotel_name, city, country, or booking references.\"}",
+              "{\"human\": \"Book a hotel in Paris, Texas\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_lg_agent_lodging_assistant\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_lQPHwlU9eBv1hlrJvO1KnHYg\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_lg_agent_lodging_assistant\"}",
+              "{\"ai\": \"Your booking at Hotel Republique in Paris, France, has been confirmed.\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_lg_agent_travel_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_lg_agent_travel_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:49:55.838833Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"Your booking at Hotel Republique in Paris, France, has been confirmed.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:49:57.046446Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 16,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 474,
+            "total_tokens": 490
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:49:57.046446Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:49:55.840841Z",
+      "end_time": "2026-05-27T22:49:57.038979Z",
+      "duration_ms": 1198,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "5ebefb9b39febba5",
+      "trace_id": "27f2b4b606ab2836fab748b7e21681e8",
+      "parent_id": "5742970dcd6ad6fd",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "a563740872a09d2ae00536f9ef90160f",
+        "scope.agentic.session": "079e0b9c729e4cd1a1e2a75aa5f341ad",
+        "scope.agentic.turn": "8b7912b2ad74689710f0d9ecc0db809f",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:49:51.305458",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_lgs_t01_major_paris_texas_hotel_substitution",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_lg_travel_agent"
+      },
+      "events": []
+    }
+  ]
+}

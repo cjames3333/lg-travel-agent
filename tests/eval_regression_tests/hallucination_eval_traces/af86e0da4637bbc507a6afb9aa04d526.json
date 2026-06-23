@@ -1,0 +1,745 @@
+{
+  "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+  "start_time": "2026-05-27T22:40:56.616746Z",
+  "end_time": "2026-05-27T22:41:04.070462Z",
+  "duration_ms": 7454,
+  "status": {
+    "code": "ok",
+    "message": null
+  },
+  "spans": [
+    {
+      "span_name": "workflow",
+      "start_time": "2026-05-27T22:40:56.616746Z",
+      "end_time": "2026-05-27T22:41:04.070462Z",
+      "duration_ms": 7454,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a0ce44076728afb5",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "attributes": {
+        "entity": [
+          {
+            "name": "test_cc_customer_care_agent",
+            "type": "workflow.langgraph"
+          },
+          {
+            "name": "generic",
+            "type": "app_hosting.generic"
+          }
+        ],
+        "last.inference": "10f4337371188553:*",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.type": "workflow",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:40:56.616746Z",
+      "end_time": "2026-05-27T22:41:04.070462Z",
+      "duration_ms": 7454,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "38e108db3709b7e9",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "a0ce44076728afb5",
+      "attributes": {
+        "entity": [
+          {
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "10f4337371188553:*",
+        "monocle.last.agent.invocation.id": "c483d5a096805dc8",
+        "monocle.last.agent.name": "okahu_demo_cc_agent_supervisor",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "turn",
+        "span.type": "agentic.turn",
+        "span_source": "C:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\monocle_test_tools\\runner\\lg_runner.py:27",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the return policy for electronics?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:40:56.616746Z"
+        },
+        {
+          "attributes": {
+            "response": "The return policy for electronics is as follows:\n\n1. **Policy Code**: ELEC-30\n2. **Return Period**: You can return electronics products within 30 days of purchase.\n3. **Restocking Fee**: A restocking fee will apply to returned electronics items."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:41:04.070462Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:40:56.638100Z",
+      "end_time": "2026-05-27T22:40:58.367090Z",
+      "duration_ms": 1729,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "613f6a072608dcab",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "38e108db3709b7e9",
+      "attributes": {
+        "entity": [
+          {
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "last.inference": "ab7fd2fd77d39262:transfer_to_okahu_demo_cc_agent_eligibility",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "555a8987b71a947ff9feffab87eae09a",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the return policy for electronics?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:40:56.641000Z"
+        },
+        {
+          "attributes": {
+            "response": "Successfully transferred to okahu_demo_cc_agent_eligibility"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:40:58.367090Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:40:56.645031Z",
+      "end_time": "2026-05-27T22:40:58.362141Z",
+      "duration_ms": 1717,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ab7fd2fd77d39262",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "613f6a072608dcab",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "transfer_to_okahu_demo_cc_agent_eligibility",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "555a8987b71a947ff9feffab87eae09a",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "delegation",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"What is the return policy for electronics?\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:40:56.646787Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"transfer_to_okahu_demo_cc_agent_eligibility\", \"args\": {}, \"id\": \"call_yKCmfFOGK7pEchSipeOTUPVZ\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:40:58.362141Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 18,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 393,
+            "total_tokens": 411
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:40:58.362141Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:40:56.651215Z",
+      "end_time": "2026-05-27T22:40:58.351223Z",
+      "duration_ms": 1700,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "bf2ed22765ab5631",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "ab7fd2fd77d39262",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "555a8987b71a947ff9feffab87eae09a",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:40:58.369098Z",
+      "end_time": "2026-05-27T22:41:00.412916Z",
+      "duration_ms": 2044,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "488257483f006b15",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "23bde2383ae320a4",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          },
+          {
+            "name": "okahu_demo_cc_tool_get_return_policy",
+            "type": "tool.function"
+          }
+        ],
+        "entity.count": 3,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "81475aaf3c82dc438354520e9dcaa7d0",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "tool_call",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a refund eligibility and return policy specialist. You assess whether orders qualify for a refund and explain the applicable return policy to customers. \\nWhen asked about eligibility:\\n  1. Use the check_eligibility tool to assess the order\\n  2. Relay the eligibility status exactly as provided\\n\\nWhen asked about return policies:\\n  1. Use the get_return_policy tool for the relevant product category\\n  2. Relay the policy information returned by the tool\\n\\nAlways be thorough and reference the tool outputs you receive.\"}",
+              "{\"human\": \"What is the return policy for electronics?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_yKCmfFOGK7pEchSipeOTUPVZ\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:40:58.371601Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": {\"name\": \"okahu_demo_cc_tool_get_return_policy\", \"args\": {\"product_category\": \"electronics\"}, \"id\": \"call_rl6uaBnsnXtPQyC3s2v3CQcD\", \"type\": \"tool_call\"}}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:41:00.412916Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 21,
+            "finish_reason": "tool_calls",
+            "finish_type": "tool_call",
+            "prompt_tokens": 257,
+            "total_tokens": 278
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:41:00.412916Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:40:58.369098Z",
+      "end_time": "2026-05-27T22:41:03.032190Z",
+      "duration_ms": 4663,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "23bde2383ae320a4",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "38e108db3709b7e9",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_supervisor",
+            "from_agent_span_id": "613f6a072608dcab",
+            "name": "okahu_demo_cc_agent_eligibility",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "ab7fd2fd77d39262",
+        "last.inference": "a20cd6f3c77fc60c:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "81475aaf3c82dc438354520e9dcaa7d0",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph_supervisor\\supervisor.py:116",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the return policy for electronics?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:40:58.369098Z"
+        },
+        {
+          "attributes": {
+            "response": "The return policy for electronics is as follows:\n\n1. **Policy Code**: ELEC-30\n2. **Return Period**: You can return electronics products within 30 days of purchase.\n3. **Restocking Fee**: A restocking fee will apply to returned electronics items.\n\nIf you have any more questions or need further assistance, feel free to ask!"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:41:03.032190Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:40:58.371601Z",
+      "end_time": "2026-05-27T22:41:00.404960Z",
+      "duration_ms": 2033,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "ccf476456d264ca3",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "488257483f006b15",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "81475aaf3c82dc438354520e9dcaa7d0",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langchain_core.tools.structured.StructuredTool._run",
+      "start_time": "2026-05-27T22:41:00.412916Z",
+      "end_time": "2026-05-27T22:41:00.412916Z",
+      "duration_ms": 0,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "15c45b95074317da",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "23bde2383ae320a4",
+      "attributes": {
+        "entity": [
+          {
+            "description": "Get the return policy details for a product category",
+            "name": "okahu_demo_cc_tool_get_return_policy",
+            "type": "tool.langgraph"
+          },
+          {
+            "name": "okahu_demo_cc_agent_eligibility",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 2,
+        "inference.decision.span.id": "488257483f006b15",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "81475aaf3c82dc438354520e9dcaa7d0",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "content_generation",
+        "span.type": "agentic.tool.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\tools\\base.py:967",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": "{'product_category': 'electronics'}"
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:41:00.412916Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"product_category\": \"electronics\", \"policy_code\": \"ELEC-30\", \"restocking_fee_applies\": true}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:41:00.412916Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:41:00.421044Z",
+      "end_time": "2026-05-27T22:41:03.032190Z",
+      "duration_ms": 2611,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "a20cd6f3c77fc60c",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "23bde2383ae320a4",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "81475aaf3c82dc438354520e9dcaa7d0",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You are a refund eligibility and return policy specialist. You assess whether orders qualify for a refund and explain the applicable return policy to customers. \\nWhen asked about eligibility:\\n  1. Use the check_eligibility tool to assess the order\\n  2. Relay the eligibility status exactly as provided\\n\\nWhen asked about return policies:\\n  1. Use the get_return_policy tool for the relevant product category\\n  2. Relay the policy information returned by the tool\\n\\nAlways be thorough and reference the tool outputs you receive.\"}",
+              "{\"human\": \"What is the return policy for electronics?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_yKCmfFOGK7pEchSipeOTUPVZ\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"okahu_demo_cc_tool_get_return_policy\\\", \\\"args\\\": {\\\"product_category\\\": \\\"electronics\\\"}, \\\"id\\\": \\\"call_rl6uaBnsnXtPQyC3s2v3CQcD\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"{\\\"product_category\\\": \\\"electronics\\\", \\\"policy_code\\\": \\\"ELEC-30\\\", \\\"restocking_fee_applies\\\": true}\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:41:00.421044Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The return policy for electronics is as follows:\\n\\n1. **Policy Code**: ELEC-30\\n2. **Return Period**: You can return electronics products within 30 days of purchase.\\n3. **Restocking Fee**: A restocking fee will apply to returned electronics items.\\n\\nIf you have any more questions or need further assistance, feel free to ask!\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:41:03.032190Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 76,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 327,
+            "total_tokens": 403
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:41:03.032190Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:41:00.421044Z",
+      "end_time": "2026-05-27T22:41:03.032190Z",
+      "duration_ms": 2611,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "76dbfceb2d51f662",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "a20cd6f3c77fc60c",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "81475aaf3c82dc438354520e9dcaa7d0",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    },
+    {
+      "span_name": "langgraph.graph.state.CompiledStateGraph.ainvoke",
+      "start_time": "2026-05-27T22:41:03.037590Z",
+      "end_time": "2026-05-27T22:41:04.070462Z",
+      "duration_ms": 1033,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "c483d5a096805dc8",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "38e108db3709b7e9",
+      "attributes": {
+        "entity": [
+          {
+            "from_agent": "okahu_demo_cc_agent_eligibility",
+            "from_agent_span_id": "23bde2383ae320a4",
+            "name": "okahu_demo_cc_agent_supervisor",
+            "type": "agent.langgraph"
+          }
+        ],
+        "entity.count": 1,
+        "inference.decision.span.id": "a20cd6f3c77fc60c",
+        "last.inference": "10f4337371188553:*",
+        "monocle.last.agent.invocation.id": "",
+        "monocle.last.agent.name": "",
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "9900c0b0eef64feef99ef9827c340314",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "content_processing",
+        "span.type": "agentic.invocation",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py:706",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "What is the return policy for electronics?"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:41:03.039603Z"
+        },
+        {
+          "attributes": {
+            "response": "The return policy for electronics is as follows:\n\n1. **Policy Code**: ELEC-30\n2. **Return Period**: You can return electronics products within 30 days of purchase.\n3. **Restocking Fee**: A restocking fee will apply to returned electronics items."
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:41:04.070462Z"
+        }
+      ]
+    },
+    {
+      "span_name": "langchain.chat_models.base.BaseChatModel.ainvoke",
+      "start_time": "2026-05-27T22:41:03.041644Z",
+      "end_time": "2026-05-27T22:41:04.070462Z",
+      "duration_ms": 1029,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "10f4337371188553",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "c483d5a096805dc8",
+      "attributes": {
+        "entity": [
+          {
+            "inference_endpoint": "https://api.openai.com/v1/",
+            "provider_name": "api.openai.com",
+            "type": "inference.openai"
+          },
+          {
+            "name": "gpt-4o",
+            "type": "model.llm.gpt-4o"
+          }
+        ],
+        "entity.count": 2,
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "9900c0b0eef64feef99ef9827c340314",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.subtype": "turn_end",
+        "span.type": "inference.framework",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\langchain_core\\runnables\\base.py:5708",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": [
+        {
+          "attributes": {
+            "input": [
+              "{\"system\": \"You manage an order lookup specialist, a refund eligibility specialist, and a refund processing specialist. Assign each part of the user's request to the appropriate agent. Each specialist handles ONLY their designated area:\\n  - Order lookup specialist: order detail lookups, warranty inquiries. For delivery status, carrier, tracking, or signature questions, route to the order lookup specialist — these always require calling the shipping status tool.\\n  - Eligibility specialist: refund eligibility checks, return policy questions, exchange and return qualification. Return policy questions and 'qualifies for return/exchange' questions ALWAYS go to the eligibility specialist. For any request that references a specific order AND asks about eligibility, return qualification, or exchange qualification, ALWAYS route to BOTH the order lookup specialist AND the eligibility specialist — the return_eligible field from order lookup is NOT a substitute for an eligibility determination.\\n  - Refund processing specialist: processing approved refunds only. Route refund requests to the refund processing specialist.\\nWhen an agent returns a result, relay all returned field values exactly as provided — do not substitute, invent, or adjust order IDs, amounts, refund IDs, warranty codes, or eligibility status.\"}",
+              "{\"human\": \"What is the return policy for electronics?\"}",
+              "{\"ai\": \"[{\\\"name\\\": \\\"transfer_to_okahu_demo_cc_agent_eligibility\\\", \\\"args\\\": {}, \\\"id\\\": \\\"call_yKCmfFOGK7pEchSipeOTUPVZ\\\", \\\"type\\\": \\\"tool_call\\\"}]\"}",
+              "{\"tool\": \"Successfully transferred to okahu_demo_cc_agent_eligibility\"}",
+              "{\"ai\": \"The return policy for electronics is as follows:\\n\\n1. **Policy Code**: ELEC-30\\n2. **Return Period**: You can return electronics products within 30 days of purchase.\\n3. **Restocking Fee**: A restocking fee will apply to returned electronics items.\\n\\nIf you have any more questions or need further assistance, feel free to ask!\"}",
+              "{\"ai\": \"Transferring back to okahu_demo_cc_agent_supervisor\"}",
+              "{\"tool\": \"Successfully transferred back to okahu_demo_cc_agent_supervisor\"}"
+            ]
+          },
+          "name": "data.input",
+          "timestamp": "2026-05-27T22:41:03.041644Z"
+        },
+        {
+          "attributes": {
+            "response": "{\"ai\": \"The return policy for electronics is as follows:\\n\\n1. **Policy Code**: ELEC-30\\n2. **Return Period**: You can return electronics products within 30 days of purchase.\\n3. **Restocking Fee**: A restocking fee will apply to returned electronics items.\"}"
+          },
+          "name": "data.output",
+          "timestamp": "2026-05-27T22:41:04.070462Z"
+        },
+        {
+          "attributes": {
+            "completion_tokens": 60,
+            "finish_reason": "stop",
+            "finish_type": "success",
+            "prompt_tokens": 613,
+            "total_tokens": 673
+          },
+          "name": "metadata",
+          "timestamp": "2026-05-27T22:41:04.070462Z"
+        }
+      ]
+    },
+    {
+      "span_name": "openai.resources.chat.completions.AsyncCompletions.create",
+      "start_time": "2026-05-27T22:41:03.043657Z",
+      "end_time": "2026-05-27T22:41:04.070462Z",
+      "duration_ms": 1027,
+      "status": {
+        "code": "ok",
+        "message": null
+      },
+      "span_id": "3bb6ec5d50e17f5c",
+      "trace_id": "af86e0da4637bbc507a6afb9aa04d526",
+      "parent_id": "10f4337371188553",
+      "attributes": {
+        "monocle_apptrace.language": "python",
+        "monocle_apptrace.version": "0.8.0",
+        "scope.agentic.invocation": "9900c0b0eef64feef99ef9827c340314",
+        "scope.agentic.session": "5e01efac3e0c4293b9a39fc18ce2e8bb",
+        "scope.agentic.turn": "511fcc4d937fef2566dcae408c782b57",
+        "scope.git.commit.hash": "88b09be0dfa1ee17c56baf24c90e936cce02284d",
+        "scope.git.run.id": "2026-05-27T15:40:54.320031",
+        "scope.git.workflow.name": "local",
+        "scope.test_name": "test_cc_t11_major_return_policy_unsourced_claims",
+        "span.type": "inference.modelapi",
+        "span_source": "c:\\K_Coding\\git_src\\lg-travel-agent-CJAMES\\lg-travel-agent\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py:384",
+        "workflow.name": "test_cc_customer_care_agent"
+      },
+      "events": []
+    }
+  ]
+}
