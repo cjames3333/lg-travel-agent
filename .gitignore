@@ -213,4 +213,22 @@ mcp.out
 venv*
 
 # Temporary files
-tmp/.mcp.json
+tmp/
+.mcp.json
+
+# Local development and evaluation files (keep local, don't commit)
+.claude/
+eval_job_logs*.json
+generate*.py
+expand*.py
+hallucination_eval*.json
+hallucination_eval*.txt
+hallucination_eval*.md
+hallucination_eval*.csv
+hallucination*.json
+hallucination*.txt
+hallucination*.docx
+run_hallucination*.py
+update_hallucination_scenarios.py
+hallucination_silent_failures_guide.md
+okahu_eval_test_scenarios.json
